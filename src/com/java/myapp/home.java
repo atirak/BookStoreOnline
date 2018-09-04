@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.java.myapp;
 
 import com.mongodb.BasicDBObject;
@@ -36,22 +31,11 @@ import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-/**
- *
- * @author I3
- */
 public class home extends javax.swing.JFrame {
-
-    /**
-     * Creates new form home
-     */
-    public home() {
-        
-        initComponents();
-       
+    public home() {        
+        initComponents();       
             setWin();
-            getModeil();
-        
+            setModeil();        
     }
 public void close(){
         WindowEvent winclose = new WindowEvent(this,WindowEvent.WINDOW_CLOSING);
@@ -1009,10 +993,34 @@ public void close(){
     }// </editor-fold>//GEN-END:initComponents
 static String[] arr;
 static MongoClientURI uri ;
-MongoClient mongo ;
-    private void setWin(){
-        try {
-            jPanel2.setVisible(true);
+static MongoClient mongo ;
+static DB db;
+static DBCollection user;
+static DBCollection books;
+static DBCollection orders;
+static DBObject dockUser;
+static DBObject dockBook;
+static int id_user =0;
+static boolean admin=false;
+static String nameuse;
+public  ArrayList<String> obname = new ArrayList<>();
+public  ArrayList<Integer> obprice = new ArrayList<>();
+public  ArrayList<Integer> Value = new ArrayList<>();
+ String n ;
+ int p ;
+ int i = 0 ;
+ int sumprice;
+ int sum ;
+ int r = 0;
+static double lastidbook;  
+static DefaultListModel modeil;
+
+private void setid(int id,boolean admin){
+    id_user = id;
+    this.admin = admin;
+}
+private void setAllVisibleFalse(){
+            jPanel2.setVisible(false);
             jPanel3.setVisible(false);
             jPanel4.setVisible(false);
             jPanel5.setVisible(false);
@@ -1041,240 +1049,418 @@ MongoClient mongo ;
             im_book.setVisible(false);
             jLabel60.setVisible(false);
             EX_book2.setVisible(false);
-            
-            
-                    
-           Random rand = new Random();
-           uri = new MongoClientURI("mongodb://book:p12345@ds243212.mlab.com:43212/bkstore");
-            mongo = new MongoClient(uri);
-            DB db = mongo.getDB(uri.getDatabase());
-            DBCollection user = db.getCollection("users");
-            DBCollection books = db.getCollection("books");
-           
-            
-            
-            BasicDBObject searchQuery ;
-            DBObject dock;
-            String nameuse;
-            
-          
+            jButton2.setVisible(false);
+            jButton5.setVisible(false);
+            jButton13.setVisible(false);
+            jSpinner1.setVisible(false);
+            jLabel61.setVisible(false);
+            if(admin!=true&&id_user!=0){
+                jButton5.setVisible(true);
+            }else if(admin==true&&id_user!=0){
+                jButton2.setVisible(true);
+            }
+}
+private void createArray(){
             DBCursor cursor = books.find();
-             
-             double count =(double)books.count();
-               arr = new String[(int)count];
-       int icount=0;               
-       while (cursor.hasNext()) {
-           
-                        
-			DBObject dockran= cursor.next();
-                      
-                        arr[icount]=(String) dockran.get("name_Book");
-                        
-                        icount++;
-                        dock=null;
-		}
-           for(int i0=0;i0<3;i0++){
-            
-             int n1 = rand.nextInt(arr.length-1);
-             
-            BasicDBObject searchQuery2  = new BasicDBObject();
-            BasicDBObject searchQuery3  = new BasicDBObject();
-            searchQuery2.put("name_Book",arr[n1]);
-            DBObject dock2= books.findOne(searchQuery2);
-            
-            
-           
-           String name = (String)dock2.get("name_Book");
-           double price = (Double)dock2.get("Pirce");
-           
-           
-           
-           searchQuery3.put("filename", name);
-           GridFS gfsPhoto = new GridFS(db, "photo");
-           GridFSDBFile imageForOutput = gfsPhoto.findOne(searchQuery3);
-            
-          new File("C:\\imgBS").mkdirs();
-           if(i0==0){
+            arr = new String[(int)books.count()];
+            int icount=0;               
+             while (cursor.hasNext()) {
+                DBObject dockran= cursor.next();
+                arr[icount]=(String) dockran.get("name_Book");
+                
+                if(icount==arr.length-1)
+                    lastidbook = (double) dockran.get("book_id");
                
-              imageForOutput.writeTo("C:\\imgBS\\IMGbooksmain.png");
-               BufferedImage img = ImageIO.read( new File("C:\\imgBS\\IMGbooksmain.png") );
+                icount++;
+                        
+		}
+}
+private void randomBook(){
+    try{
+        Random rand = new Random();
+        for(int i=0;i<3;i++){
+            int numrandom = rand.nextInt(arr.length-1);
+             
+            BasicDBObject searchQuery  = new BasicDBObject();
+            searchQuery.put("name_Book",arr[numrandom]);
+            dockBook= books.findOne(searchQuery);
             
-             Image newImage = img.getScaledInstance(jLabel5.getWidth(), jLabel5.getHeight(), Image.SCALE_DEFAULT);                 
-            jLabel5.setIcon(new ImageIcon(newImage));
-          
-         
-           jLabel3.setText(name);
-          jLabel2.setText("ราคา : "+String.valueOf(price));
-          
-         
-         
+            String name = (String)dockBook.get("name_Book");
+            double price = (Double)dockBook.get("Pirce");
+            BasicDBObject searchQueryPhoto  = new BasicDBObject();
+            searchQueryPhoto.put("filename", name);
             
-         }else if(i0==1){
-               imageForOutput.writeTo("C:\\imgBS\\IMGbooksmain2.png");
-               BufferedImage img = ImageIO.read( new File("C:\\imgBS\\IMGbooksmain2.png") );
+            GridFS gfsPhoto = new GridFS(db, "photo");
+            GridFSDBFile imageForOutput = gfsPhoto.findOne(searchQueryPhoto);
             
-             Image newImage = img.getScaledInstance(jLabel6.getWidth(), jLabel6.getHeight(), Image.SCALE_DEFAULT);                 
-            jLabel6.setIcon(new ImageIcon(newImage));
-          
-         
-           jLabel11.setText(name);
-           jLabel12.setText("ราคา : "+String.valueOf(price));
-           
-              
-        }else{
-               imageForOutput.writeTo("C:\\imgBS\\IMGbooksmain3.png");
-               BufferedImage img = ImageIO.read( new File("C:\\imgBS\\IMGbooksmain3.png") );
-            
-             Image newImage = img.getScaledInstance(jLabel7.getWidth(), jLabel7.getHeight(), Image.SCALE_DEFAULT);                 
-            jLabel7.setIcon(new ImageIcon(newImage));
-          
-         
-           jLabel9.setText(name);
-           jLabel13.setText("ราคา : "+String.valueOf(price));
-           
-              
+            new File("C:\\imgBS").mkdirs();
+            imageForOutput.writeTo("C:\\imgBS\\IMGbooksmain.png");
+            BufferedImage img = ImageIO.read( new File("C:\\imgBS\\IMGbooksmain.png") );
+            Image newImage = img.getScaledInstance(jLabel5.getWidth(), jLabel5.getHeight(), Image.SCALE_DEFAULT);  
+           if(i==0){
+             jLabel5.setIcon(new ImageIcon(newImage));
+             jLabel3.setText(name);
+             jLabel2.setText("ราคา : "+String.valueOf(price));
+           }else if(i==1){
+             jLabel6.setIcon(new ImageIcon(newImage));
+             jLabel11.setText(name);
+             jLabel12.setText("ราคา : "+String.valueOf(price));
+           }else{
+             jLabel7.setIcon(new ImageIcon(newImage));
+             jLabel9.setText(name);
+             jLabel13.setText("ราคา : "+String.valueOf(price));
+           }
+        }  }catch (IOException ex) {
+            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
         }
-            
-            
-            }  
-            
-
-           if(admin==true){
+}
+private void checkUserAndSet(){
+            if(admin==true){
                jButton2.setVisible(true);
-           }else if(id_user!=0){
+            }else if(id_user!=0){
                jButton5.setVisible(true);
                jButton13.setVisible(true);
                jSpinner1.setVisible(true);
-               
-                    }
+            }
             if(id_user!=0){
-                searchQuery  = new BasicDBObject();
-            searchQuery.put("id_user", id_user);
-              dock= user.findOne(searchQuery);
-              nameuse = (String) dock.get("username");
-            jButton1.setText("ออกจากระบบ");
-              jLabel1.setText(nameuse);
-              
+                jButton1.setText("ออกจากระบบ");
+                jLabel1.setText(nameuse);
             }else{
                 jLabel1.setText("ผู้เยี่ยมชม");
                 jButton1.setText("เข้าสู่ระบบ หรือ สมัคร");
-                 jButton2.setVisible(false);
-           jButton5.setVisible(false);
-           jButton13.setVisible(false);
-            jSpinner1.setVisible(false);
-             
+                jButton2.setVisible(false);
+                jButton5.setVisible(false);
+                jButton13.setVisible(false);
+                jSpinner1.setVisible(false);
             }
-          
-         
-            
-           
-        }catch (IOException ex) {
-            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
-        } 
-    
-      
-        
 }
-    
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        if(id_user==0){
-        
-        jPanel5.setVisible(true);
-        jPanel7.setVisible(false);
-      jPanel3.setVisible(false);
-                 
-       
-       jPanel2.setVisible(false);
-        jPanel6.setVisible(false);
-        jPanel4.setVisible(false);
-        
-        }else{
-            id_user=0;
-            admin=false;
-             jPanel5.setVisible(false);
-        jPanel7.setVisible(false);
-      jPanel3.setVisible(false);
-      
+private void orderClear(){
+    DefaultListModel modeil = new DefaultListModel();                
                 obname.clear();
                 obprice.clear();
                 Value.clear();
-                   
-                     
-                  DefaultListModel modeil = new DefaultListModel();
-               
-                
-                obname.clear();
-                obprice.clear();
-                Value.clear();
-                
                 sumprice=0;
                 jList2.setModel(modeil);
                 jTextField2.setText(null);
-                credit.setText(null);   
-                 
-                sumprice=0;
-                
-                jTextField2.setText(null);
                 credit.setText(null);
+}
+private void orderAdd(){
+                BasicDBObject add  = new BasicDBObject();
+                BasicDBObject addP = new BasicDBObject();
                  
-       
-       jPanel2.setVisible(true);
-        jPanel6.setVisible(false);
-        jPanel4.setVisible(false);
-             setWin();
-        }
-        jTextField3.setText(null);
-        jTextField4.setText(null);
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
- 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      jPanel7.setVisible(true);
-      jPanel3.setVisible(false);
-        
-        jPanel5.setVisible(false);
-        
-       
-       jPanel2.setVisible(false);
-        jPanel6.setVisible(false);
-        jPanel4.setVisible(false);
-       
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
-    static boolean N = false;
-    private void ดูหนังสือActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ดูหนังสือActionPerformed
-       
-           
-        jPanel3.setVisible(true);
-        jPanel4.setVisible(false);
-        jPanel5.setVisible(false);
-        jPanel6.setVisible(false);
-       jPanel7.setVisible(false);
-       jPanel2.setVisible(false);
-       
-        sh_book.setText(null);
-        jLabel16.setText(null);
-        jLabel17.setText(null);
-        jLabel18.setText(null);
-        jLabel19.setText(null);
-        jLabel20.setText(null);
-        jLabel21.setText(null);
-        jLabel22.setText(null);
-        jLabel23.setText(null);
-        imgs.setIcon(null);
-        
+                add.put("id_order",(double)orders.count()+1);
+                add.put("doc_type", "Order");
+                add.put("id_user", id_user);
+                add.put("all_price", sumprice);
+                List<DBObject> idb = new ArrayList<>();
                 
-       
-        
-       
-          
- 
-    }//GEN-LAST:event_ดูหนังสือActionPerformed
- static DefaultListModel modeil;
- public static DefaultListModel getModeil(){
-      modeil = new DefaultListModel();
+                for(int i=0;i<obname.size();i++){
+                    BasicDBObject addD = new BasicDBObject();                   
+                    addD.put("book_name", obname.get(i));
+                    addD.put("amount",Value.get(i) );                
+                    idb.add(addD);
+                }
+                add.put("Orderlist", idb);                 
+                addP.put("credit",credit.getText());
+                addP.put("status","success");
+                add.put("Payment",addP);
+                orders.insert(add);
+}
+private void orderList(){
+    int currentValue = (Integer)jSpinner1.getValue();
+        boolean flag=false;
+        int ncount=0;
+            if(obname.isEmpty()){
+                obname.add(n);
+                obprice.add(p);
+                Value.add(currentValue);
+            }else{
+                for(String s:obname){
+                    if(s.equals(n)){
+                        flag=true;
+                        break;
+                    }if(flag==false){
+                        ncount++; 
+                    }
+                }
+            if(flag==false){
+                obname.add(n);
+                obprice.add(p);
+                Value.add(currentValue);
+            }else{
+                obprice.set(ncount, obprice.get(ncount)+p);
+                Value.set(ncount,Value.get(ncount)+currentValue);
+            }
+         }
+            jSpinner1.setValue(new Integer(1));
+            sumprice += p*currentValue;
+            orderShow();
+         
+}
+private void orderShow(){
+        DefaultListModel modeil = new DefaultListModel();
+        int count=0;
+        for(String coll : obname){ 
+                    modeil.addElement(coll+"     จำนวน "+Value.get(count)+" เล่ม");
+                    count++;
+                }
+            jList2.setModel(modeil);           
+            jTextField2.setText(sumprice+"");
+}
+private boolean setBook(BasicDBObject search){
+                try{
+                    DBObject a = books.findOne(search);
+                if(a!=null){
+                String name = (String) a.get("name_Book");
+                String author = (String) a.get("name_Author");
+                String type = (String) a.get("Type_Book");
+                double price = (Double) a.get("Pirce");
+                int priceint = (int) price;
+                DBObject b = (DBObject) a.get("Detail");
+                String publisher = (String) b.get("publisher");
+                double year = (Double) b.get("year");
+                int yearint = (int) year;
+                String language = (String) b.get("language");
+                double nump = (Double) b.get("num_pages");
+                int numint = (int) nump;
+               
+                jLabel16.setText("ชื่อหนังสือ : "+name);
+                jLabel17.setText("ชื่อผู้แต่ง : "+author);
+                jLabel18.setText("ประเภทหนังสือ : "+type);
+                jLabel19.setText("ราคาหนังสือ : "+priceint);
+                jLabel20.setText("สำนักพิมพ์ : "+publisher);
+                jLabel21.setText("ปีที่พิมพ์ : "+yearint);
+                jLabel22.setText("ภาษาที่พิมพ์ : "+language);
+                jLabel23.setText("จำนวนหน้า : "+numint);
 
+                n = name;
+                p = priceint;
+
+                BasicDBObject searchQuery  = new BasicDBObject();
+                searchQuery.put("filename", name);
+                GridFS gfsPhoto = new GridFS(db, "photo");
+                GridFSDBFile imageForOutput = gfsPhoto.findOne(searchQuery);
+                if(imageForOutput!=null){
+                   
+
+                    imageForOutput.writeTo("C:\\imgBS\\IMGbooksTEMP.png");
+                    BufferedImage img = ImageIO.read( new File("C:\\imgBS\\IMGbooksTEMP.png") );
+
+                    Image newImage = img.getScaledInstance(imgs.getWidth(), imgs.getHeight(), Image.SCALE_DEFAULT);
+                    imgs.setIcon(new ImageIcon(newImage));
+                    if(admin!=true&&id_user!=0){
+                        jButton13.setVisible(true);
+                        jSpinner1.setVisible(true);
+                    }
+                    return false;
+                } 
+                }
+                }catch (IOException ex) {
+                Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+            }return true;
+}
+private void setVisibleEditfield(Boolean flag){
+                jLabel45.setVisible(flag);
+                jLabel48.setVisible(flag);
+                jLabel49.setVisible(flag);
+                jLabel47.setVisible(flag);
+                jLabel56.setVisible(flag);
+                jLabel53.setVisible(flag);
+                jLabel58.setVisible(flag);
+                jLabel59.setVisible(flag);
+                n_book.setVisible(flag);
+                n_au.setVisible(flag);
+                T_book.setVisible(flag);
+                P_book.setVisible(flag);
+                shu.setVisible(flag);
+                year_b.setVisible(flag);
+                L_book.setVisible(flag);
+                np.setVisible(flag);
+                upskill.setVisible(flag);
+                deskill.setVisible(flag);
+                jLabel59.setVisible(flag);
+                im_book.setVisible(flag);
+                jLabel60.setVisible(flag);
+                EX_book2.setVisible(flag);
+                jLabel61.setVisible(flag);
+    
+}
+private void setEditBook(BasicDBObject search){
+            try{
+            dockBook= books.findOne(search);
+            if(dockBook==null){
+                JOptionPane.showMessageDialog(this, "ไม่มี หนังสือ นี้ในระบบ");
+                setVisibleEditfield(false);
+
+            }else{
+                
+                JOptionPane.showMessageDialog(this, "มี หนังสือ นี้ในระบบ");
+                setVisibleEditfield(true);
+                
+                n_book.setText((String) dockBook.get("name_Book"));
+                n_au.setText((String) dockBook.get("name_Author"));
+                T_book.setText((String) dockBook.get("Type_Book"));
+                double price =(Double) dockBook.get("Pirce");
+                P_book.setText(Double.toString(price));
+
+              DBObject detail = (DBObject) dockBook.get("Detail");
+              shu.setText((String) detail.get("publisher"));
+              double year =(Double) detail.get("year");
+              int yearint = (int) year;
+              year_b.setText(yearint+"");
+              L_book.setText((String) detail.get("language"));
+              double nump =(Double) detail.get("num_pages");
+              int numint = (int) nump;
+              np.setText(numint+"");
+              
+                BasicDBObject searchQuery  = new BasicDBObject();
+                searchQuery.put("filename", n_book.getText());
+                GridFS gfsPhoto = new GridFS(db, "photo");
+                GridFSDBFile imageForOutput = gfsPhoto.findOne(searchQuery);
+                if(imageForOutput!=null){
+                    imageForOutput.writeTo("C:\\imgBS\\IMGbooksTEMPEdit.png");
+                    BufferedImage img = ImageIO.read( new File("C:\\imgBS\\IMGbooksTEMPEdit.png") );
+
+                    Image newImage = img.getScaledInstance(jLabel61.getWidth(), jLabel61.getHeight(), Image.SCALE_DEFAULT);
+                    jLabel61.setIcon(new ImageIcon(newImage));
+                }
+            }}catch (IOException ex) {
+                Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+            }
+}
+private void deleteBook(){
+            BasicDBObject de  = new BasicDBObject();
+            de.put("name_Book",search.getText());
+            
+            GridFS gfsPhoto = new GridFS(db, "photo");
+            gfsPhoto.remove(search.getText());
+            
+            books.remove(de);
+}
+private void editUpdate(){
+    try {
+            BasicDBObject documents = new BasicDBObject();
+            documents.put("name_Book",search.getText());
+
+            BasicDBObject ndocuments = new BasicDBObject();
+            BasicDBObject ndocuments1 = new BasicDBObject();
+            dockBook= books.findOne(documents);
+         
+            ndocuments.put("name_Book",n_book.getText());
+            ndocuments.put("name_Author",n_au.getText());
+            ndocuments.put("Type_Book",T_book.getText());
+            ndocuments.put("Pirce",Double.valueOf(P_book.getText()));
+            ndocuments1.put("publisher",shu.getText());
+            ndocuments1.put("year",Double.valueOf(year_b.getText()));
+            ndocuments1.put("language",L_book.getText());
+            ndocuments1.put("num_pages",Double.valueOf(np.getText()));
+            ndocuments.put("Detail",ndocuments1);
+
+            if(!im_book.getText().isEmpty()){
+               File imageFile = new File(im_book.getText());
+            GridFS gfsPhoto = new GridFS(db, "photo");
+            gfsPhoto.remove((String)dockBook.get("name_Book"));
+            GridFSInputFile gfsFile = gfsPhoto.createFile(imageFile);
+            gfsFile.setFilename(n_book.getText());
+            gfsFile.save(); 
+            }            
+            BasicDBObject searchQuery = new BasicDBObject();
+            searchQuery.put("$set",ndocuments);
+
+            books.update(documents, searchQuery);            
+        } catch (IOException ex) {
+           
+        }
+}
+private void addBook(){
+     try {
+            BasicDBObject document = new BasicDBObject();
+            BasicDBObject document1 = new BasicDBObject();
+            document.put("book_id",lastidbook+1.0);
+            document.put("doc_Type","Book");
+            document.put("name_Book",name_book.getText());
+            document.put("name_Author",n_author.getText());
+            document.put("Type_Book",type_book.getText());
+            document.put("Pirce",Double.valueOf(jprice.getText()));
+            document1.put("publisher",jpup.getText());
+            document1.put("year",Double.valueOf(jyear.getText()));
+            document1.put("language",jlang.getText());
+            document1.put("num_pages",Double.valueOf(jnum.getText()));
+           
+            File imageFile = new File(jImgUP.getText());
+            GridFS gfsPhoto = new GridFS(db, "photo");
+            GridFSInputFile gfsFile = gfsPhoto.createFile(imageFile);
+            gfsFile.setFilename(name_book.getText());
+            gfsFile.save();
+
+            document.put("Detail",document1);
+            books.insert(document);
+            JOptionPane.showMessageDialog(this, "เพิ่มข็อมูลรียบร้อย");                        
+        } catch (IOException ex) {            
+        }
+}
+private void resetTextAdd(){    
+           name_book.setText(null);
+           n_author.setText(null);
+           type_book.setText(null);
+           jprice.setText(null);
+           jpup.setText(null);
+           jyear.setText(null);
+           jlang.setText(null);
+           jnum.setText(null);
+           jImgUP.setText(null);
+           jLabel50.setIcon(null);
+}
+private boolean notNullAdd(){
+            if(name_book.getText().isEmpty()|| n_author.getText().isEmpty()
+                    ||type_book.getText().isEmpty()||jprice.getText().isEmpty()
+                    ||jpup.getText().isEmpty()||jyear.getText().isEmpty()
+                    ||jlang.getText().isEmpty()||jnum.getText().isEmpty()
+                    ||jImgUP.getText().isEmpty()){
+                return false;
+            }return true;
+}
+private void createUser() {
+            String ID = jTextField5.getText();
+            String passf =jTextField6.getText();
+            String passs =jTextField7.getText();
+            String email =jTextField8.getText();
+            String Hnum =jTextField9.getText();
+            String street =jTextField12.getText();
+            String subdis =jTextField10.getText();
+            String dis =jTextField11.getText();
+            String prov =jTextField13.getText();
+            String zip =jTextField14.getText();
+                BasicDBObject add  = new BasicDBObject();
+                BasicDBObject addD = new BasicDBObject();
+                add.put("id_user",(double)user.count()+1);
+                add.put("doc_type", "User");
+                add.put("username", ID);
+                add.put("password", passf);
+                add.put("id_type", "custumer");
+                addD.put("house_num",Hnum);
+                addD.put("street",street);
+                addD.put("sub_district",subdis);
+                addD.put("district",dis);
+                addD.put("province",prov);
+                addD.put("zip_code",Double.valueOf(zip));
+                addD.put("email",email);
+                add.put("Address",addD);
+                user.insert(add);
+                
+                jTextField5.setText(null);
+                jTextField6.setText(null);
+                jTextField7.setText(null);
+                jTextField8.setText(null);
+                jTextField9.setText(null);
+                jTextField12.setText(null);
+                jTextField10.setText(null);
+                jTextField11.setText(null);
+                jTextField13.setText(null);
+                jTextField14.setText(null);
+    }
+public static DefaultListModel setModeil(){
+      modeil = new DefaultListModel();
 		for(int m=arr.length-1;m>=1;m--){
 			int index = m;
 			for(int ni=0;ni<m;ni++){
@@ -1284,80 +1470,74 @@ MongoClient mongo ;
 					else if((int)arr[ni].charAt(1)==(int)arr[index].charAt(1)){
 						if((int)arr[ni].charAt(2)>(int)arr[index].charAt(2))
 							index = ni;
-					}
-						
+					}				
 				}
 				else if((int)arr[ni].charAt(0)>(int)arr[index].charAt(0))
-					index = ni;
-				
+					index = ni;				
 			}
-			String temp = arr[index];
-			
-			arr[index]=arr[m];
-			
-			arr[m] =temp;
-        
+			String temp = arr[index];			
+			arr[index]=arr[m];			
+			arr[m] =temp;        
                 }
                 for(String coll : arr){ 
                     modeil.addElement(coll); 
                 }
                 return modeil;
  }
+    private void setWin(){
+        try {
+            setAllVisibleFalse();
+            jPanel2.setVisible(true);         
+            uri = new MongoClientURI("mongodb://book:p12345@ds243212.mlab.com:43212/bkstore");
+            mongo = new MongoClient(uri);
+            db = mongo.getDB(uri.getDatabase());
+            user = db.getCollection("users");
+            books = db.getCollection("books");
+            orders = db.getCollection("order");
+            createArray();
+            randomBook();
+            
+        }catch (IOException ex) {
+            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+        }  
+}
+    
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if(id_user==0){
+            setAllVisibleFalse();
+            jPanel5.setVisible(true);       
+        }else{
+            id_user=0;
+            admin=false;
+            setAllVisibleFalse();
+            orderClear(); 
+            jPanel2.setVisible(true);
+            checkUserAndSet();
+        }
+            jTextField3.setText(null);
+            jTextField4.setText(null);       
+    }//GEN-LAST:event_jButton1ActionPerformed
+ 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        setAllVisibleFalse(); 
+        jPanel7.setVisible(true);   
+    }//GEN-LAST:event_jButton2ActionPerformed
+    
+    private void ดูหนังสือActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ดูหนังสือActionPerformed
+        setAllVisibleFalse(); 
+        jPanel3.setVisible(true);        
+    }//GEN-LAST:event_ดูหนังสือActionPerformed
+ 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        
-        jPanel3.setVisible(false);
-        jPanel4.setVisible(false);
-        jPanel5.setVisible(false);
-        
-       jPanel7.setVisible(false);
-       jPanel2.setVisible(false);
-       jPanel6.setVisible(true);
-        sh_book.setText(null);
-        jLabel16.setText(null);
-        jLabel17.setText(null);
-        jLabel18.setText(null);
-        jLabel19.setText(null);
-        jLabel20.setText(null);
-        jLabel21.setText(null);
-        jLabel22.setText(null);
-        jLabel23.setText(null);
-        imgs.setIcon(null);
-        
-                
-        
-        
-  
-
-       
-                jList3.setModel(modeil);
-                
-        
+       setAllVisibleFalse();
+       jPanel6.setVisible(true);  
+       jList3.setModel(modeil);     
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-         jPanel3.setVisible(false);
-        
-        jPanel5.setVisible(false);
-        
-       jPanel7.setVisible(false);
-       jPanel2.setVisible(false);
-        jPanel6.setVisible(false);;
+        setAllVisibleFalse();
         jPanel4.setVisible(true);
-         if(!obname.isEmpty()){
-        DefaultListModel modeil = new DefaultListModel();
-        int i1=0;
-        for(String coll : obname){ 
-                    modeil.addElement(coll+"     จำนวน "+Value.get(i1)+" เล่ม");
-                    i1++;
-                }
-        
-                
-                jList2.setModel(modeil);
-           
-jTextField2.setText(sumprice+"");
-         }else{
+        if(obname.isEmpty()){         
               JOptionPane.showMessageDialog(this, "คุณยังไม่ได้เลือกสินค้า");
          }
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -1374,7 +1554,8 @@ jTextField2.setText(sumprice+"");
         jLabel22.setText(null);
         jLabel23.setText(null);
         imgs.setIcon(null);
-        
+        jSpinner1.setVisible(false);
+        jButton13.setVisible(false);
        
         
         
@@ -1382,17 +1563,9 @@ jTextField2.setText(sumprice+"");
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        try {
-           
-            DB db = mongo.getDB(uri.getDatabase());
-            DBCollection table = db.getCollection("books");
             BasicDBObject search  = new BasicDBObject();
-            search.put("name_Book",sh_book.getText());
-            DBObject a = table.findOne(search);
-
-         
-
-            if(a==null){
+            search.put("name_Book",sh_book.getText());      
+            if(setBook(search)){
                 jLabel16.setText("ไม่พบหนังสือ");
                 jLabel17.setText(null);
                 jLabel18.setText(null);
@@ -1401,60 +1574,9 @@ jTextField2.setText(sumprice+"");
                 jLabel21.setText(null);
                 jLabel22.setText(null);
                 jLabel23.setText(null);
-                imgs.setIcon(null);
-                 
-                
-
-            }else{
-                               
-                String name = (String) a.get("name_Book");
-                String author = (String) a.get("name_Author");
-                String type = (String) a.get("Type_Book");
-                double price = (Double) a.get("Pirce");
-                int priceint = (int) price;
-                DBObject b = (DBObject) a.get("Detail");
-                String publisher = (String) b.get("publisher");
-                double year = (Double) b.get("year");
-                int yearint = (int) year;
-                String language = (String) b.get("language");
-                double nump = (Double) b.get("num_pages");
-                int numint = (int) nump;
-               
-                
-                jLabel16.setText("ชื่อหนังสือ : "+name);
-                jLabel17.setText("ชื่อผู้แต่ง : "+author);
-                jLabel18.setText("ประเภทหนังสือ : "+type);
-                jLabel19.setText("ราคาหนังสือ : "+priceint);
-                jLabel20.setText("สำนักพิมพ์ : "+publisher);
-                jLabel21.setText("ปีที่พิมพ์ : "+yearint);
-                jLabel22.setText("ภาษาที่พิมพ์ : "+language);
-                jLabel23.setText("จำนวนหน้า : " +numint);
-                 jPanel13.setVisible(true);
-            
-                
-
-                n = name;
-                p = priceint;
-               
-                
-
-                BasicDBObject searchQuery  = new BasicDBObject();
-                searchQuery.put("filename", name);
-                GridFS gfsPhoto = new GridFS(db, "photo");
-                GridFSDBFile imageForOutput = gfsPhoto.findOne(searchQuery);
-                if(imageForOutput!=null){
-                   
-
-                    imageForOutput.writeTo("C:\\imgBS\\IMGbooksTEMP.png");
-                    BufferedImage img = ImageIO.read( new File("C:\\imgBS\\IMGbooksTEMP.png") );
-
-                    Image newImage = img.getScaledInstance(imgs.getWidth(), imgs.getHeight(), Image.SCALE_DEFAULT);
-                    imgs.setIcon(new ImageIcon(newImage));
-
-                }
-
-            }} catch (IOException ex) {
-                Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+                imgs.setIcon(null); 
+                jSpinner1.setVisible(false);
+                jButton13.setVisible(false);
             }
     }//GEN-LAST:event_jButton11ActionPerformed
 
@@ -1463,51 +1585,12 @@ jTextField2.setText(sumprice+"");
     }//GEN-LAST:event_jSpinner1AncestorAdded
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        int currentValue = (Integer)jSpinner1.getValue();
-        boolean flag=false;
-         int ncount=0;
+        
          if(jLabel23.getText()==null){
-             
              JOptionPane.showMessageDialog(this, "ต้องค้นหาสินค้า หรือเลือกสินค้าก่อนใส่ตะกร้า");
-             
          }else{
-             
-         if(obname.isEmpty()){
-         obname.add(n);
-        obprice.add(p);
-        Value.add(currentValue);
-        
-         }else{
-          
-        
-        for(String s:obname){
-            
-            
-            if(s.equals(n)){
-              flag=true;
-              break;
-            }if(flag==false){
-               ncount++; 
-            }
-            
-            }
-        if(flag==false){
-        obname.add(n);
-        obprice.add(p);
-        Value.add(currentValue);
-        
-        }else{
-            obprice.set(ncount, obprice.get(ncount)+p);
-             Value.set(ncount,Value.get(ncount)+currentValue);
-             
-        
-        }
-         }
-       jSpinner1.setValue(new Integer(1));
-
-            sumprice += p*currentValue;
-
-        JOptionPane.showMessageDialog(this, "ใส่ตะกร้าแล้ว");
+            orderList();
+            JOptionPane.showMessageDialog(this, "ใส่ตะกร้าแล้ว");
     }//GEN-LAST:event_jButton13ActionPerformed
     }
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -1515,101 +1598,21 @@ jTextField2.setText(sumprice+"");
     }//GEN-LAST:event_jTextField2ActionPerformed
  DefaultListModel dim2 = new DefaultListModel();
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-          try {
-
-            /**** Connect to MongoDB ****/
-            // Since 2.10.0, uses MongoClient
-            
-            DB db = mongo.getDB(uri.getDatabase());
-            boolean log = true;
-
-            DBCollection table = db.getCollection("order");
-            
-    
-            
             if(obname.isEmpty()){
-                JOptionPane.showMessageDialog(this, "คุณยังไม่ได้เลือกสินค้า");
-                log=true;
+                JOptionPane.showMessageDialog(this, "คุณยังไม่ได้เลือกสินค้า");              
             }else if(credit.getText().isEmpty()){
-                JOptionPane.showMessageDialog(this, "กรุณากรอกเลขบัตร เพื่อใช้ชำระเงิน");
-                log=true;
-            }
-            else{
-                log=false;
-            }
-
-            
-
-            if(log==false){
-                BasicDBObject add  = new BasicDBObject();
-                BasicDBObject addP = new BasicDBObject();
-                 
-                add.put("id_order",(double)table.count()+1);
-                add.put("doc_type", "Order");
-                add.put("id_user", id_user);
-                add.put("all_price", sumprice);
-                List<DBObject> idb = new ArrayList<>();
-                
-                for(int i=0;i<obname.size();i++){
-                    BasicDBObject addD = new BasicDBObject();
-                   
-                addD.put("book_name", obname.get(i));
-               addD.put("amount",Value.get(i) );
-                
-                idb.add(addD);
-                }
-                add.put("Orderlist", idb);
-                 
-                addP.put("credit",credit.getText());
-                addP.put("status","success");
-                add.put("Payment",addP);
-                table.insert(add);
-                JOptionPane.showMessageDialog(this, "สั่งซื้อเสร็จสิ้น");
-                
-                DefaultListModel modeil = new DefaultListModel();
-                obname.clear();
-                obprice.clear();
-                Value.clear();
-                
-                sumprice=0;
-                jList2.setModel(modeil);
-                jTextField2.setText(null);
-                credit.setText(null);
-                
-            }
-
-            //} catch (UnknownHostException e) {
-            //e.printStackTrace();
-        } catch (Exception e) {
-            //e.printStackTrace();
-        }
-
+                JOptionPane.showMessageDialog(this, "กรุณากรอกเลขบัตร เพื่อใช้ชำระเงิน");              
+            }else{
+              orderAdd();
+              JOptionPane.showMessageDialog(this, "สั่งซื้อเสร็จสิ้น");
+              orderClear();
+            }   
     }//GEN-LAST:event_jButton9ActionPerformed
- int sum ;
- int r = 0;
+
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
-        jPanel3.setVisible(false);
-        jPanel4.setVisible(false);
-        jPanel5.setVisible(false);
-        jPanel6.setVisible(false);
-       jPanel7.setVisible(false);
-       jPanel2.setVisible(true);
-       
-        sh_book.setText(null);
-        jLabel16.setText(null);
-        jLabel17.setText(null);
-        jLabel18.setText(null);
-        jLabel19.setText(null);
-        jLabel20.setText(null);
-        jLabel21.setText(null);
-        jLabel22.setText(null);
-        jLabel23.setText(null);
-        imgs.setIcon(null);
-        
-                
-        
-        
+       setAllVisibleFalse();
+       jPanel2.setVisible(true);       
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
@@ -1617,61 +1620,45 @@ jTextField2.setText(sumprice+"");
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        try {
-
-            /**** Connect to MongoDB ****/
-            // Since 2.10.0, uses MongoClient
-           
-            DB db = mongo.getDB(uri.getDatabase());
-            boolean log = false;
-
-            DBCollection table = db.getCollection("users");
+         try {            
             String ID = jTextField3.getText();
             String PASS =jTextField4.getText();
 
             BasicDBObject searchQuery  = new BasicDBObject();
-
             searchQuery.put("username", ID);
 
-            DBObject dock= table.findOne(searchQuery);
-            if(dock==null){
+           dockUser = user.findOne(searchQuery);
+            if(dockUser==null){
                 JOptionPane.showMessageDialog(this, "ไม่มี username นี้ในระบบ");
                 jTextField3.setText(null);
                 jTextField4.setText(null);
             }
-
-            String pass = (String) dock.get("password");
-            String type = (String) dock.get("id_type");
-
-           
+            String pass = (String) dockUser.get("password");
+            String type = (String) dockUser.get("id_type");
+          
             if(pass.equals(PASS)){
-                JOptionPane.showMessageDialog(this, "success");
-                log=true;
+                JOptionPane.showMessageDialog(this, "success");                
+                nameuse=ID;
+                double id_userdb = (double)dockUser.get("id_user");
+                int id_use = (int) id_userdb;
+                if(type.equals("admin")){
+                    setid(id_use,true);
+                   jPanel5.setVisible(false);
+                   jPanel2.setVisible(true);
+                   checkUserAndSet();
+                }else if(type.equals("custumer")){
+                    setid(id_use,false);
+                    jPanel5.setVisible(false);
+                    jPanel2.setVisible(true);
+                    checkUserAndSet(); 
+                }
             }else{
                 JOptionPane.showMessageDialog(this, "password ไม่ถูกต้อง");
                 jTextField4.setText(null);
             }
-            double iduse = (Double) dock.get("id_user");
-            int id_use = (int) iduse;
-           
-            if(log==true){
-                if(type.equals("admin")){
-                    setid(id_use,true);
-                   jPanel5.setVisible(false);
-                   setWin();
-
-                }else if(type.equals("custumer")){
-                    setid(id_use,false);
-                    jPanel5.setVisible(false);
-                    setWin(); 
-                }
-            }
-
+            
         } catch (Exception e) {
-            //e.printStackTrace();
         }
-
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
@@ -1707,80 +1694,30 @@ jTextField2.setText(sumprice+"");
     }//GEN-LAST:event_jTextField14ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        // TODO add your handling code here:
-        try {
-
-            /**** Connect to MongoDB ****/
-            // Since 2.10.0, uses MongoClient
-          
-            DB db = mongo.getDB(uri.getDatabase());
-            boolean log = true;
-
-            DBCollection table = db.getCollection("users");
+        try {  
+            if(jTextField5.getText().isEmpty()||jTextField6.getText().isEmpty()||jTextField7.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "โปรดใส่ข้อมูลที่จำเป็นในการเข้าระบบ");
+            }else{
             String ID = jTextField5.getText();
             String passf =jTextField6.getText();
             String passs =jTextField7.getText();
-            String email =jTextField8.getText();
-            String Hnum =jTextField9.getText();
-            String street =jTextField12.getText();
-            String subdis =jTextField10.getText();
-            String dis =jTextField11.getText();
-            String prov =jTextField13.getText();
-            String zip =jTextField14.getText();
-
             BasicDBObject searchQuery  = new BasicDBObject();
             searchQuery.put("username", ID);
 
-            DBObject dock= table.findOne(searchQuery);
+            dockUser = user.findOne(searchQuery);
           
-            if(dock!=null){
+            if(dockUser!=null){
                 JOptionPane.showMessageDialog(this, "username ซ้ำ");
-                log=true;
+                
             }else{
-                log=false;
-            }
-
-            if(!passs.equals(passf)){
+                if(!passs.equals(passf)){
                 JOptionPane.showMessageDialog(this, "Password ไม่ตรงกัน");
-                log=true;
-            }else{
-                log=false;
+                }else{
+                createUser();
             }
-
-            if(log==false){
-                BasicDBObject add  = new BasicDBObject();
-                BasicDBObject addD = new BasicDBObject();
-                add.put("id_user",(double)table.count()+1);
-                add.put("doc_type", "User");
-                add.put("username", ID);
-                add.put("password", passf);
-                add.put("id_type", "custumer");
-                addD.put("house_num",Hnum);
-                addD.put("street",street);
-                addD.put("sub_district",subdis);
-                addD.put("district",dis);
-                addD.put("province",prov);
-                addD.put("zip_code",Double.valueOf(zip));
-                addD.put("email",email);
-                add.put("Address",addD);
-                table.insert(add);
-                JOptionPane.showMessageDialog(this, "สมัครสมาชิกสำเร็จ");
-                jTextField5.setText(null);
-                jTextField6.setText(null);
-                jTextField7.setText(null);
-                jTextField8.setText(null);
-                jTextField9.setText(null);
-                jTextField12.setText(null);
-                jTextField10.setText(null);
-                jTextField11.setText(null);
-                jTextField13.setText(null);
-                jTextField14.setText(null);
             }
-
-            //} catch (UnknownHostException e) {
-            //e.printStackTrace();
+            }   
         } catch (Exception e) {
-            //e.printStackTrace();
         }
     }//GEN-LAST:event_jButton18ActionPerformed
 
@@ -1789,101 +1726,19 @@ jTextField2.setText(sumprice+"");
     }//GEN-LAST:event_jpupActionPerformed
 
     private void deskillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deskillActionPerformed
-        DBCollection table2;
-        DB db2;
-
-        
-           
-            db2 = mongo.getDB(uri.getDatabase());
-            table2 = db2.getCollection("books");
-
-            BasicDBObject de  = new BasicDBObject();
-            de.put("name_Book",search.getText());
-            
-            GridFS gfsPhoto = new GridFS(db2, "photo");
-            gfsPhoto.remove(search.getText());
-
-            table2.remove(de);
+            deleteBook();
             JOptionPane.showMessageDialog(this, "ลบเรียบร้อยแล้ว");
-n_book.setText(null);
-                n_au.setText(null);
-                T_book.setText(null);
-                P_book.setText(null);
-                shu.setText(null);
-                year_b.setText(null);
-                L_book.setText(null);
-                np.setText(null);
-                search.setText(null);
-                im_book.setText(null);
-                
-                jLabel61.setIcon(null);
+            setVisibleEditfield(false);  
             search.setText(null);
-            getModeil();
+            setModeil();
         
     }//GEN-LAST:event_deskillActionPerformed
 
     private void upskillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upskillActionPerformed
-        DBCollection table0;
-        DB db0;
-
-        try {
-            
-            db0 = mongo.getDB(uri.getDatabase());
-            table0 = db0.getCollection("books");
-               
-            BasicDBObject documents = new BasicDBObject();
-            documents.put("name_Book",search.getText());
-
-            BasicDBObject ndocuments = new BasicDBObject();
-            BasicDBObject ndocuments1 = new BasicDBObject();
-             DBObject dock= table0.findOne(documents);
-         
-            
-            
-             
-            ndocuments.put("name_Book",n_book.getText());
-            ndocuments.put("name_Author",n_au.getText());
-            ndocuments.put("Type_Book",T_book.getText());
-            ndocuments.put("Pirce",Double.valueOf(P_book.getText()));
-            ndocuments1.put("publisher",shu.getText());
-            ndocuments1.put("year",Double.valueOf(year_b.getText()));
-            ndocuments1.put("language",L_book.getText());
-            ndocuments1.put("num_pages",Double.valueOf(np.getText()));
-            ndocuments.put("Detail",ndocuments1);
-
-            if(!im_book.getText().isEmpty()){
-               File imageFile = new File(im_book.getText());
-            GridFS gfsPhoto = new GridFS(db0, "photo");
-            gfsPhoto.remove((String)dock.get("name_Book"));
-            GridFSInputFile gfsFile = gfsPhoto.createFile(imageFile);
-            gfsFile.setFilename(n_book.getText());
-            gfsFile.save(); 
-            }
-            
-            BasicDBObject searchQuery = new BasicDBObject();
-            searchQuery.put("$set",ndocuments);
-
-            table0.update(documents, searchQuery);
-            
-
-            JOptionPane.showMessageDialog(this, "แก้ไขเรียบร้อย");
-            
-                n_book.setText(null);
-                n_au.setText(null);
-                T_book.setText(null);
-                P_book.setText(null);
-                shu.setText(null);
-                year_b.setText(null);
-                L_book.setText(null);
-                np.setText(null);
-                search.setText(null);
-                im_book.setText(null);
-                search.setText(null);
-                jLabel61.setIcon(null);
-            getModeil();
-        } catch (IOException ex) {
-           
-        }
+            editUpdate();    
+            JOptionPane.showMessageDialog(this, "แก้ไขเรียบร้อย");            
+            setVisibleEditfield(false);   
+            setModeil();       
     }//GEN-LAST:event_upskillActionPerformed
 
     private void T_bookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_T_bookActionPerformed
@@ -1903,90 +1758,10 @@ n_book.setText(null);
     }//GEN-LAST:event_searchActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        DBCollection table;
-        DB db;
-
-        
-
-           
-            db = mongo.getDB(uri.getDatabase());
-            table = db.getCollection("books");
             BasicDBObject sq  = new BasicDBObject();
 
-            sq.put("name_Book", search.getText());
-            
-            DBObject dock= table.findOne(sq);
-            if(dock==null){
-                JOptionPane.showMessageDialog(this, "ไม่มี หนังสือ นี้ในระบบ");
-                jLabel45.setVisible(false);
-                jLabel48.setVisible(false);
-                jLabel49.setVisible(false);
-                jLabel47.setVisible(false);
-                jLabel56.setVisible(false);
-                jLabel53.setVisible(false);
-                jLabel58.setVisible(false);
-                jLabel59.setVisible(false);
-                n_book.setVisible(false);
-                n_au.setVisible(false);
-                T_book.setVisible(false);
-                P_book.setVisible(false);
-                shu.setVisible(false);
-                year_b.setVisible(false);
-                L_book.setVisible(false);
-                np.setVisible(false);
-                upskill.setVisible(false);
-                deskill.setVisible(false);
-                jLabel59.setVisible(false);
-                im_book.setVisible(false);
-                jLabel60.setVisible(false);
-                EX_book2.setVisible(false);
-
-            }else{
-                JOptionPane.showMessageDialog(this, "มี หนังสือ นี้ในระบบ");
-                jLabel45.setVisible(true);
-                jLabel48.setVisible(true);
-                jLabel49.setVisible(true);
-                jLabel47.setVisible(true);
-                jLabel56.setVisible(true);
-                jLabel53.setVisible(true);
-                jLabel58.setVisible(true);
-                jLabel59.setVisible(true);
-                n_book.setVisible(true);
-                n_au.setVisible(true);
-                T_book.setVisible(true);
-                P_book.setVisible(true);
-                shu.setVisible(true);
-                year_b.setVisible(true);
-                L_book.setVisible(true);
-                np.setVisible(true);
-                upskill.setVisible(true);
-                deskill.setVisible(true);
-                jLabel59.setVisible(true);
-                im_book.setVisible(true);
-                jLabel60.setVisible(true);
-                EX_book2.setVisible(true);
-                
-                n_book.setText((String) dock.get("name_Book"));
-                n_au.setText((String) dock.get("name_Author"));
-                T_book.setText((String) dock.get("Type_Book"));
-                double price =(Double) dock.get("Pirce");
-                 P_book.setText(Double.toString(price));
-
-              DBObject detail = (DBObject) dock.get("Detail");
-              shu.setText((String) detail.get("publisher"));
-              double year =(Double) detail.get("year");
-              int yearint = (int) year;
-              year_b.setText(yearint+"");
-              L_book.setText((String) detail.get("language"));
-              double nump =(Double) detail.get("num_pages");
-              int numint = (int) nump;
-              np.setText(numint+"");
-              
-
-            }
-            
-            
-       
+            sq.put("name_Book", search.getText());  
+            setEditBook(sq);        
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void n_bookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n_bookActionPerformed
@@ -1994,57 +1769,13 @@ n_book.setText(null);
     }//GEN-LAST:event_n_bookActionPerformed
 
     private void dtskillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dtskillActionPerformed
-        DBCollection table;
-        DB db;
-
-        try {
-            
-            db = mongo.getDB(uri.getDatabase());
-            table = db.getCollection("books");
-            
-            BasicDBObject sqget  = new BasicDBObject();
-            sqget.put("name_Book", arr[arr.length-1]);          
-            DBObject dockget= table.findOne(sqget);
-            
-            BasicDBObject document = new BasicDBObject();
-            BasicDBObject document1 = new BasicDBObject();
-            document.put("book_id",(Double)dockget.get("book_id")+1.0);
-            document.put("doc_Type","Book");
-            document.put("name_Book",name_book.getText());
-            document.put("name_Author",n_author.getText());
-            document.put("Type_Book",type_book.getText());
-            document.put("Pirce",Double.valueOf(jprice.getText()));
-            document1.put("publisher",jpup.getText());
-            document1.put("year",Double.valueOf(jyear.getText()));
-            document1.put("language",jlang.getText());
-            document1.put("num_pages",Double.valueOf(jnum.getText()));
-           
-            File imageFile = new File(jImgUP.getText());
-            GridFS gfsPhoto = new GridFS(db, "photo");
-            GridFSInputFile gfsFile = gfsPhoto.createFile(imageFile);
-            gfsFile.setFilename(name_book.getText());
-            gfsFile.save();
-
-         
-            document.put("Detail",document1);
-            table.insert(document);
-            JOptionPane.showMessageDialog(this, "เพิ่มข็อมูลรียบร้อย");
-            
-           name_book.setText(null);
-           n_author.setText(null);
-           type_book.setText(null);
-           jprice.setText(null);
-           jpup.setText(null);
-           jyear.setText(null);
-           jlang.setText(null);
-           jnum.setText(null);
-           jImgUP.setText(null);
-           jLabel50.setIcon(null);
-           getModeil();
-            
-        } catch (IOException ex) {
-            
-        }
+            if(notNullAdd()){
+            addBook();
+            resetTextAdd();
+            setModeil();
+            }else{
+                JOptionPane.showMessageDialog(this, "คุณใส่รายละเอียดไม่ครบ");
+            }        
     }//GEN-LAST:event_dtskillActionPerformed
 
     private void EX_bookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EX_bookActionPerformed
@@ -2054,15 +1785,10 @@ n_book.setText(null);
         img.showOpenDialog(null);
         File f = img.getSelectedFile();
         if(f!=null){
-            
                 String file = f.getAbsolutePath();
-                
                 jImgUP.setText(file);
-                
-                
                 jLabel50.setIcon(new ImageIcon(new ImageIcon(file).getImage().getScaledInstance(jLabel50.getWidth(),jLabel50.getHeight(), Image.SCALE_DEFAULT)));
-            
-        }
+            }
     }//GEN-LAST:event_EX_bookActionPerformed
 
     private void jImgUPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jImgUPActionPerformed
@@ -2075,62 +1801,10 @@ n_book.setText(null);
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         jPanel3.setVisible(true);
-        try {
-           
-            DB db = mongo.getDB(uri.getDatabase());
-            DBCollection table = db.getCollection("books");
             BasicDBObject search  = new BasicDBObject();
             search.put("name_Book",jLabel9.getText());
-            DBObject a = table.findOne(search);
-
-         
-               
-                
-                String name = (String) a.get("name_Book");
-                String author = (String) a.get("name_Author");
-                String type = (String) a.get("Type_Book");
-                double price = (Double) a.get("Pirce");
-                int priceint = (int) price;
-                DBObject b = (DBObject) a.get("Detail");
-                String publisher = (String) b.get("publisher");
-                double year = (Double) b.get("year");
-                int yearint = (int) year;
-                String language = (String) b.get("language");
-                double nump = (Double) b.get("num_pages");
-                int numint = (int) nump;
-               
-
-                jLabel16.setText("ชื่อหนังสือ : "+name);
-                jLabel17.setText("ชื่อผู้แต่ง : "+author);
-                jLabel18.setText("ประเภทหนังสือ : "+type);
-                jLabel19.setText("ราคาหนังสือ : "+priceint);
-                jLabel20.setText("สำนักพิมพ์ : "+publisher);
-                jLabel21.setText("ปีที่พิมพ์ : "+yearint);
-                jLabel22.setText("ภาษาที่พิมพ์ : "+language);
-                jLabel23.setText("จำนวนหน้า : "+numint);
-
-                n = name;
-                p = priceint;
-
-                BasicDBObject searchQuery  = new BasicDBObject();
-                searchQuery.put("filename", name);
-                GridFS gfsPhoto = new GridFS(db, "photo");
-                GridFSDBFile imageForOutput = gfsPhoto.findOne(searchQuery);
-                if(imageForOutput!=null){
-                 
-
-                    imageForOutput.writeTo("C:\\imgBS\\IMGbooksTEMP.png");
-                    BufferedImage img = ImageIO.read( new File("C:\\imgBS\\IMGbooksTEMP.png") );
-
-                    Image newImage = img.getScaledInstance(imgs.getWidth(), imgs.getHeight(), Image.SCALE_DEFAULT);
-                    imgs.setIcon(new ImageIcon(newImage));
-
-                jPanel2.setVisible(false);
-
-            }} catch (IOException ex) {
-                Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        
+            setBook(search);
+            jPanel2.setVisible(false);        
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jpriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpriceActionPerformed
@@ -2144,197 +1818,43 @@ n_book.setText(null);
     private void EX_book2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EX_book2ActionPerformed
         JFileChooser img = new JFileChooser();
          FileFilter imageFilter = new FileNameExtensionFilter("Image files", ImageIO.getReaderFileSuffixes());
-            img.setFileFilter(imageFilter);
+        img.setFileFilter(imageFilter);
         img.showOpenDialog(null);
         File f = img.getSelectedFile();
-        if(f!=null){
-            
-                String file = f.getAbsolutePath();
-                
-               im_book.setText(file);
-                
-                
+        if(f!=null){            
+                String file = f.getAbsolutePath();                
+                im_book.setText(file);          
                 jLabel61.setIcon(new ImageIcon(new ImageIcon(file).getImage().getScaledInstance(jLabel61.getWidth(),jLabel61.getHeight(), Image.SCALE_DEFAULT)));
         }
     }//GEN-LAST:event_EX_book2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
          jPanel3.setVisible(true);
-        try {
-           
-            DB db = mongo.getDB(uri.getDatabase());
-            DBCollection table = db.getCollection("books");
             BasicDBObject search  = new BasicDBObject();
             search.put("name_Book",jLabel3.getText());
-            DBObject a = table.findOne(search);
-
-           
-
-           
-                
-                String name = (String) a.get("name_Book");
-                String author = (String) a.get("name_Author");
-                String type = (String) a.get("Type_Book");
-                double price = (Double) a.get("Pirce");
-                int priceint = (int) price;
-                DBObject b = (DBObject) a.get("Detail");
-                String publisher = (String) b.get("publisher");
-                double year = (Double) b.get("year");
-                int yearint = (int) year;
-                String language = (String) b.get("language");
-                double nump = (Double) b.get("num_pages");
-                int numint = (int) nump;
-                
-
-                jLabel16.setText("ชื่อหนังสือ : "+name);
-                jLabel17.setText("ชื่อผู้แต่ง : "+author);
-                jLabel18.setText("ประเภทหนังสือ : "+type);
-                jLabel19.setText("ราคาหนังสือ : "+priceint);
-                jLabel20.setText("สำนักพิมพ์ : "+publisher);
-                jLabel21.setText("ปีที่พิมพ์ : "+yearint);
-                jLabel22.setText("ภาษาที่พิมพ์ : "+language);
-                jLabel23.setText("จำนวนหน้า : "+numint);
-
-                n = name;
-                p = priceint;
-
-                BasicDBObject searchQuery  = new BasicDBObject();
-                searchQuery.put("filename", name);
-                GridFS gfsPhoto = new GridFS(db, "photo");
-                GridFSDBFile imageForOutput = gfsPhoto.findOne(searchQuery);
-                if(imageForOutput!=null){
-                  
-
-                    imageForOutput.writeTo("C:\\imgBS\\IMGbooksTEMP.png");
-                    BufferedImage img = ImageIO.read( new File("C:\\imgBS\\IMGbooksTEMP.png") );
-
-                    Image newImage = img.getScaledInstance(imgs.getWidth(), imgs.getHeight(), Image.SCALE_DEFAULT);
-                    imgs.setIcon(new ImageIcon(newImage));
-
-                jPanel2.setVisible(false);
-
-            }} catch (IOException ex) {
-                Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
+            setBook(search);
+            jPanel2.setVisible(false);           
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        jPanel3.setVisible(true);
-        try {
-           
-            DB db = mongo.getDB(uri.getDatabase());
-            DBCollection table = db.getCollection("books");
+            jPanel3.setVisible(true);
             BasicDBObject search  = new BasicDBObject();
             search.put("name_Book",jLabel11.getText());
-            DBObject a = table.findOne(search);
+            setBook(search);
+            jPanel2.setVisible(false);
 
-          
-
-           
-                
-                String name = (String) a.get("name_Book");
-                String author = (String) a.get("name_Author");
-                String type = (String) a.get("Type_Book");
-                double price = (Double) a.get("Pirce");
-                int priceint = (int) price;
-                DBObject b = (DBObject) a.get("Detail");
-                String publisher = (String) b.get("publisher");
-                double year = (Double) b.get("year");
-                int yearint = (int) year;
-                String language = (String) b.get("language");
-                double nump = (Double) b.get("num_pages");
-                int numint = (int) nump;
-                
-                jLabel16.setText("ชื่อหนังสือ : "+name);
-                jLabel17.setText("ชื่อผู้แต่ง : "+author);
-                jLabel18.setText("ประเภทหนังสือ : "+type);
-                jLabel19.setText("ราคาหนังสือ : "+priceint);
-                jLabel20.setText("สำนักพิมพ์ : "+publisher);
-                jLabel21.setText("ปีที่พิมพ์ : "+yearint);
-                jLabel22.setText("ภาษาที่พิมพ์ : "+language);
-                jLabel23.setText("จำนวนหน้า : "+numint);
-
-                n = name;
-                p = priceint;
-
-                BasicDBObject searchQuery  = new BasicDBObject();
-                searchQuery.put("filename", name);
-                GridFS gfsPhoto = new GridFS(db, "photo");
-                GridFSDBFile imageForOutput = gfsPhoto.findOne(searchQuery);
-                if(imageForOutput!=null){
-                  
-
-                    imageForOutput.writeTo("C:\\imgBS\\IMGbooksTEMP.png");
-                    BufferedImage img = ImageIO.read( new File("C:\\imgBS\\IMGbooksTEMP.png") );
-
-                    Image newImage = img.getScaledInstance(imgs.getWidth(), imgs.getHeight(), Image.SCALE_DEFAULT);
-                    imgs.setIcon(new ImageIcon(newImage));
-
-                jPanel2.setVisible(false);
-
-            }} catch (IOException ex) {
-                Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            
 
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-      jPanel3.setVisible(true);
-        try {
-            
-            DB db = mongo.getDB(uri.getDatabase());
-            DBCollection table = db.getCollection("books");
+      jPanel3.setVisible(true);                 
             BasicDBObject search  = new BasicDBObject();
             
             if(!jList3.isSelectionEmpty()){
-            search.put("name_Book",jList3.getSelectedValue().toString());
-            DBObject a = table.findOne(search);
-
-                String name = (String) a.get("name_Book");
-                String author = (String) a.get("name_Author");
-                String type = (String) a.get("Type_Book");
-                double price = (Double) a.get("Pirce");
-                int priceint = (int) price;
-                DBObject b = (DBObject) a.get("Detail");
-                String publisher = (String) b.get("publisher");
-                double year = (Double) b.get("year");
-                int yearint = (int) year;
-                String language = (String) b.get("language");
-                double nump = (Double) b.get("num_pages");
-                int numint = (int) nump;
-               
-                jLabel16.setText("ชื่อหนังสือ : "+name);
-                jLabel17.setText("ชื่อผู้แต่ง : "+author);
-                jLabel18.setText("ประเภทหนังสือ : "+type);
-                jLabel19.setText("ราคาหนังสือ : "+priceint);
-                jLabel20.setText("สำนักพิมพ์ : "+publisher);
-                jLabel21.setText("ปีที่พิมพ์ : "+yearint);
-                jLabel22.setText("ภาษาที่พิมพ์ : "+language);
-                jLabel23.setText("จำนวนหน้า : "+numint);
-
-                n = name;
-                p = priceint;
-
-                BasicDBObject searchQuery  = new BasicDBObject();
-                searchQuery.put("filename", name);
-                GridFS gfsPhoto = new GridFS(db, "photo");
-                GridFSDBFile imageForOutput = gfsPhoto.findOne(searchQuery);
-                if(imageForOutput!=null){
-                   
-
-                    imageForOutput.writeTo("C:\\imgBS\\IMGbooksTEMP.png");
-                    BufferedImage img = ImageIO.read( new File("C:\\imgBS\\IMGbooksTEMP.png") );
-
-                    Image newImage = img.getScaledInstance(imgs.getWidth(), imgs.getHeight(), Image.SCALE_DEFAULT);
-                    imgs.setIcon(new ImageIcon(newImage));
-                    
-                
-                jPanel6.setVisible(false);
-                }
-
-            }} catch (IOException ex) {
-                Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+                search.put("name_Book",jList3.getSelectedValue().toString());
+                setBook(search);
+                jPanel6.setVisible(false);                
             }
     }//GEN-LAST:event_jButton15ActionPerformed
 
@@ -2345,52 +1865,8 @@ n_book.setText(null);
     private void year_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_year_bActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_year_bActionPerformed
-static int id_user =0;
-static boolean admin=false;
-public  ArrayList<String> obname = new ArrayList<>();
-public  ArrayList<Integer> obprice = new ArrayList<>();
-public  ArrayList<Integer> Value = new ArrayList<>();
-
-
-        
- String n ;
- int p ;
- int i = 0 ;
- int sumprice;
-    
-public void setid(int a,boolean b){
-    id_user=a;
-   admin=b;
-}
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+          java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new home().setVisible(true);
             }
@@ -2540,4 +2016,6 @@ public void setid(int a,boolean b){
     private javax.swing.JTextField year_b;
     private javax.swing.JButton ดูหนังสือ;
     // End of variables declaration//GEN-END:variables
+
+    
 }
