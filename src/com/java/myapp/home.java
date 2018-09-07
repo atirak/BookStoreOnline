@@ -49,14 +49,29 @@ public void close(){
         jMenu1 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel64 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        ดูหนังสือ = new javax.swing.JButton();
+        jPanel14 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
-        jPanel14 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        sh_book = new javax.swing.JTextField();
+        jButton11 = new javax.swing.JButton();
+        jLabel65 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        imgs = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
+        jButton13 = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
@@ -154,22 +169,6 @@ public void close(){
         jLabel62 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
         credit = new javax.swing.JTextField();
-        jPanel3 = new javax.swing.JPanel();
-        imgs = new javax.swing.JLabel();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        sh_book = new javax.swing.JTextField();
-        jSpinner1 = new javax.swing.JSpinner();
-        jButton13 = new javax.swing.JButton();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jPanel13 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -191,90 +190,197 @@ public void close(){
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconImages(null);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 60));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel64.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel64.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel64.setText("Book Store");
-        jPanel1.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, -1, 50));
+        jLabel64.setFont(new java.awt.Font("EQ Feel Good", 0, 48)); // NOI18N
+        jLabel64.setForeground(new java.awt.Color(255, 153, 0));
+        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_General_Ledger_50px.png"))); // NOI18N
+        jLabel64.setText(" Book Store");
+        jPanel1.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 50));
 
-        jButton1.setBackground(new java.awt.Color(66, 95, 38));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("เข้าสู่ระบบ หรือ สมัคร");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 70, 140, 30));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setForeground(java.awt.Color.gray);
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Ekkamai Standard", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 153, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_Male_User_25px_1.png"))); // NOI18N
         jLabel1.setText("ผู้เยี่ยมชม");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 20, 190, 50));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, 240, 40));
 
-        jButton2.setBackground(new java.awt.Color(255, 153, 0));
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton2.setText("แก้ไขหนังสือ");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 70, 110, 30));
+        jPanel14.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton5.setText("ตระกร้าสินค้า");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 70, 100, 30));
-
-        ดูหนังสือ.setBackground(new java.awt.Color(255, 105, 180));
-        ดูหนังสือ.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        ดูหนังสือ.setText("ค้นดู");
-        ดูหนังสือ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ดูหนังสือActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ดูหนังสือ, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, 30));
-
-        jButton4.setBackground(new java.awt.Color(255, 105, 180));
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jButton4.setBackground(new java.awt.Color(255, 153, 0));
+        jButton4.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_Open_Book_25px.png"))); // NOI18N
         jButton4.setText("หนังสือทั้งหมด");
+        jButton4.setBorder(null);
+        jButton4.setBorderPainted(false);
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.setFocusable(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, -1, 30));
+        jPanel14.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 160, 40));
 
-        jButton17.setBackground(new java.awt.Color(255, 105, 180));
-        jButton17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jButton17.setBackground(new java.awt.Color(255, 153, 0));
+        jButton17.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
+        jButton17.setForeground(new java.awt.Color(255, 255, 255));
+        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_Home_25px_1.png"))); // NOI18N
         jButton17.setText("หน้าหลัก");
+        jButton17.setBorder(null);
+        jButton17.setBorderPainted(false);
+        jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton17.setFocusable(false);
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton17ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 90, 30));
+        jPanel14.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 130, 40));
 
-        jPanel14.setBackground(new java.awt.Color(246, 181, 255));
-        jPanel1.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 70, 1080, 40));
+        jButton1.setBackground(new java.awt.Color(255, 153, 0));
+        jButton1.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_Name_25px.png"))); // NOI18N
+        jButton1.setText("เข้าสู่ระบบ");
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setFocusable(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel14.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 0, 120, 40));
+
+        jButton5.setBackground(new java.awt.Color(255, 153, 0));
+        jButton5.setFont(new java.awt.Font("Ekkamai Standard", 0, 24)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_Shopping_Cart_25px.png"))); // NOI18N
+        jButton5.setText("0");
+        jButton5.setBorder(null);
+        jButton5.setBorderPainted(false);
+        jButton5.setFocusable(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel14.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 0, 80, 40));
+
+        sh_book.setBackground(new java.awt.Color(255, 153, 0));
+        sh_book.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        sh_book.setForeground(new java.awt.Color(255, 255, 255));
+        sh_book.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+        sh_book.setText("กรอกเพื่อค้นหา");
+        sh_book.setBorder(null);
+        sh_book.setCaretColor(new java.awt.Color(255, 255, 255));
+        sh_book.setRequestFocusEnabled(false);
+        sh_book.setSelectedTextColor(new java.awt.Color(0, 0, 0));
+        sh_book.setSelectionColor(new java.awt.Color(255, 255, 255));
+        jPanel14.add(sh_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 100, 40));
+
+        jButton11.setBackground(new java.awt.Color(255, 153, 0));
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_Search_25px.png"))); // NOI18N
+        jButton11.setBorder(null);
+        jButton11.setBorderPainted(false);
+        jButton11.setFocusable(false);
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jPanel14.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 0, 40, 40));
+
+        jLabel65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_Search_Bar_25px.png"))); // NOI18N
+        jPanel14.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, -1, -1));
+
+        jButton2.setBackground(new java.awt.Color(255, 153, 0));
+        jButton2.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_Edit_Column_25px.png"))); // NOI18N
+        jButton2.setText("แก้ไขหนังสือ");
+        jButton2.setBorder(null);
+        jButton2.setBorderPainted(false);
+        jButton2.setFocusable(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel14.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 140, 40));
+
+        jPanel1.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 60, 1080, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 100));
 
-        jPanel7.setBackground(new java.awt.Color(233, 246, 246));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel3.add(imgs, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 310, 360));
+
+        jSpinner1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        jSpinner1.setVerifyInputWhenFocusTarget(false);
+        jSpinner1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jSpinner1AncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jPanel3.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 400, 130, 50));
+
+        jButton13.setBackground(new java.awt.Color(255, 204, 0));
+        jButton13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton13.setText("หยิบใส่ตะกร้า");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 390, 130, 70));
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 90, 320, 50));
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, 270, 50));
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 270, 50));
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 270, 50));
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 270, 50));
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 240, 270, 50));
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 270, 270, 50));
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 300, 270, 50));
+
+        jPanel13.setBackground(new java.awt.Color(232, 246, 246));
+        jPanel3.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 410, 310));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 500));
+
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
@@ -541,7 +647,7 @@ public void close(){
 
         getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 500));
 
-        jPanel6.setBackground(new java.awt.Color(221, 246, 246));
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jList3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -566,7 +672,7 @@ public void close(){
 
         getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 500));
 
-        jPanel5.setBackground(new java.awt.Color(221, 246, 246));
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -753,7 +859,7 @@ public void close(){
 
         getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 500));
 
-        jPanel4.setBackground(new java.awt.Color(221, 246, 246));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextField2.setEditable(false);
@@ -814,83 +920,7 @@ public void close(){
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 500));
 
-        jPanel3.setBackground(new java.awt.Color(221, 246, 246));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel3.add(imgs, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 310, 360));
-
-        jButton10.setBackground(new java.awt.Color(0, 191, 255));
-        jButton10.setText("ค้นหาใหม่");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 80, 30));
-
-        jButton11.setBackground(new java.awt.Color(0, 191, 255));
-        jButton11.setText("ค้นหา");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, -1, 30));
-        jPanel3.add(sh_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 180, 30));
-
-        jSpinner1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
-        jSpinner1.setVerifyInputWhenFocusTarget(false);
-        jSpinner1.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                jSpinner1AncestorAdded(evt);
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        jPanel3.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 400, 130, 50));
-
-        jButton13.setBackground(new java.awt.Color(255, 204, 0));
-        jButton13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton13.setText("หยิบใส่ตะกร้า");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 390, 130, 70));
-
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 90, 320, 50));
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, 270, 50));
-
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 270, 50));
-
-        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 270, 50));
-
-        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 270, 50));
-
-        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 240, 270, 50));
-
-        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 270, 270, 50));
-
-        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 300, 270, 50));
-
-        jPanel13.setBackground(new java.awt.Color(232, 246, 246));
-        jPanel3.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 410, 310));
-
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 500));
-
-        jPanel2.setBackground(new java.awt.Color(221, 246, 246));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1124,10 +1154,11 @@ private void checkUserAndSet(){
             }
             if(id_user!=0){
                 jButton1.setText("ออกจากระบบ");
+                jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_Exit_25px.png"))); 
                 jLabel1.setText(nameuse);
             }else{
                 jLabel1.setText("ผู้เยี่ยมชม");
-                jButton1.setText("เข้าสู่ระบบ หรือ สมัคร");
+                jButton1.setText("เข้าสู่ระบบ");
                 jButton2.setVisible(false);
                 jButton5.setVisible(false);
                 jButton13.setVisible(false);
@@ -1165,6 +1196,7 @@ private void orderAdd(){
                 addP.put("status","success");
                 add.put("Payment",addP);
                 orders.insert(add);
+                jButton5.setText("0");
 }
 private void orderList(){
     int currentValue = (Integer)jSpinner1.getValue();
@@ -1194,6 +1226,8 @@ private void orderList(){
          }
             jSpinner1.setValue(new Integer(1));
             sumprice += p*currentValue;
+            int val = Integer.parseInt(jButton5.getText())+currentValue;
+            jButton5.setText(Integer.toString(val));
             orderShow();
          
 }
@@ -1522,12 +1556,7 @@ public static DefaultListModel setModeil(){
         setAllVisibleFalse(); 
         jPanel7.setVisible(true);   
     }//GEN-LAST:event_jButton2ActionPerformed
-    
-    private void ดูหนังสือActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ดูหนังสือActionPerformed
-        setAllVisibleFalse(); 
-        jPanel3.setVisible(true);        
-    }//GEN-LAST:event_ดูหนังสือActionPerformed
- 
+     
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        setAllVisibleFalse();
        jPanel6.setVisible(true);  
@@ -1542,28 +1571,10 @@ public static DefaultListModel setModeil(){
          }
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-
-        sh_book.setText(null);
-        jLabel16.setText(null);
-        jLabel17.setText(null);
-        jLabel18.setText(null);
-        jLabel19.setText(null);
-        jLabel20.setText(null);
-        jLabel21.setText(null);
-        jLabel22.setText(null);
-        jLabel23.setText(null);
-        imgs.setIcon(null);
-        jSpinner1.setVisible(false);
-        jButton13.setVisible(false);
-       
-        
-        
-
-    }//GEN-LAST:event_jButton10ActionPerformed
-
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-            BasicDBObject search  = new BasicDBObject();
+        setAllVisibleFalse();
+        jPanel3.setVisible(true);    
+        BasicDBObject search  = new BasicDBObject();
             search.put("name_Book",sh_book.getText());      
             if(setBook(search)){
                 jLabel16.setText("ไม่พบหนังสือ");
@@ -1885,7 +1896,6 @@ public static DefaultListModel setModeil(){
     private javax.swing.JTextField im_book;
     private javax.swing.JLabel imgs;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton15;
@@ -1962,6 +1972,7 @@ public static DefaultListModel setModeil(){
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -2014,7 +2025,6 @@ public static DefaultListModel setModeil(){
     private javax.swing.JTextField type_book;
     private javax.swing.JButton upskill;
     private javax.swing.JTextField year_b;
-    private javax.swing.JButton ดูหนังสือ;
     // End of variables declaration//GEN-END:variables
 
     
