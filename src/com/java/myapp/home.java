@@ -29,6 +29,7 @@ import javax.imageio.ImageIO;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -269,6 +270,27 @@ public void close(){
         jLabel43 = new javax.swing.JLabel();
         jButton14 = new javax.swing.JButton();
         jLabel51 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel86 = new javax.swing.JLabel();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
+        jButton16 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jLabel104 = new javax.swing.JLabel();
+        jLabel106 = new javax.swing.JLabel();
+        jLabel107 = new javax.swing.JLabel();
+        jButton23 = new javax.swing.JButton();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel110 = new javax.swing.JLabel();
+        jLabel111 = new javax.swing.JLabel();
 
         jMenu1.setText("jMenu1");
 
@@ -1592,6 +1614,152 @@ public void close(){
         jLabel51.setText("jLabel6");
         jPanel15.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 270, 150, 210));
 
+        jLabel57.setFont(new java.awt.Font("Ekkamai Standard", 1, 40)); // NOI18N
+        jLabel57.setForeground(java.awt.Color.gray);
+        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel57.setText("หนังสือใหม่");
+        jPanel15.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 600, -1, -1));
+
+        jLabel86.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel86.setText("jLabel7");
+        jPanel15.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 670, 150, 210));
+
+        jLabel92.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel92.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel92.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel92.setText("name");
+        jPanel15.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 900, 150, -1));
+
+        jLabel93.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel93.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel93.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel93.setText("price");
+        jPanel15.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 930, 130, -1));
+
+        jButton16.setBackground(new java.awt.Color(255, 153, 0));
+        jButton16.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
+        jButton16.setForeground(new java.awt.Color(0, 51, 51));
+        jButton16.setText("เลือกดู");
+        jButton16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+        jPanel15.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 960, -1, -1));
+
+        jButton19.setBackground(new java.awt.Color(255, 153, 0));
+        jButton19.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
+        jButton19.setForeground(new java.awt.Color(0, 51, 51));
+        jButton19.setText("เลือกดู");
+        jButton19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+        jPanel15.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 960, -1, -1));
+
+        jLabel94.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel94.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel94.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel94.setText("price");
+        jPanel15.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 930, 130, -1));
+
+        jLabel95.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel95.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel95.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel95.setText("name");
+        jPanel15.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 900, 150, -1));
+
+        jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel96.setText("jLabel5");
+        jPanel15.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 670, 150, 210));
+
+        jLabel97.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel97.setText("jLabel6");
+        jPanel15.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 670, 150, 210));
+
+        jLabel98.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel98.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel98.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel98.setText("name");
+        jPanel15.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 900, 150, -1));
+
+        jLabel101.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel101.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel101.setText("price");
+        jPanel15.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 930, 130, -1));
+
+        jButton21.setBackground(new java.awt.Color(255, 153, 0));
+        jButton21.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
+        jButton21.setForeground(new java.awt.Color(0, 51, 51));
+        jButton21.setText("เลือกดู");
+        jButton21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+        jPanel15.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 960, -1, -1));
+
+        jButton22.setBackground(new java.awt.Color(255, 153, 0));
+        jButton22.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
+        jButton22.setForeground(new java.awt.Color(0, 51, 51));
+        jButton22.setText("เลือกดู");
+        jButton22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+        jPanel15.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 960, -1, -1));
+
+        jLabel104.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel104.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel104.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel104.setText("price");
+        jPanel15.add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 930, 130, -1));
+
+        jLabel106.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel106.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel106.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel106.setText("name");
+        jPanel15.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 900, 150, -1));
+
+        jLabel107.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel107.setText("jLabel6");
+        jPanel15.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 670, 150, 210));
+
+        jButton23.setBackground(new java.awt.Color(255, 153, 0));
+        jButton23.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
+        jButton23.setForeground(new java.awt.Color(0, 51, 51));
+        jButton23.setText("เลือกดู");
+        jButton23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+        jPanel15.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 960, -1, -1));
+
+        jLabel108.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel108.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel108.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel108.setText("price");
+        jPanel15.add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 930, 130, -1));
+
+        jLabel110.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel110.setForeground(new java.awt.Color(0, 0, 102));
+        jLabel110.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel110.setText("name");
+        jPanel15.add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 900, 150, -1));
+
+        jLabel111.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel111.setText("jLabel6");
+        jPanel15.add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 670, 150, 210));
+
         jScrollPane1.setViewportView(jPanel15);
 
         panelHome.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 480));
@@ -1677,6 +1845,22 @@ private void setAllVisibleFalse(){
                 jButton2.setVisible(true);
             }
 }
+private void setBookNew(String s1,double s2,JLabel a1,JLabel a2,JLabel a3){
+    try{
+            BasicDBObject searchQueryPhoto  = new BasicDBObject();
+            searchQueryPhoto.put("filename", s1);
+            imageForOutput = gfsPhoto.findOne(searchQueryPhoto);
+            imageForOutput.writeTo("C:\\imgBS\\IMGbooksNew.png");
+             img = ImageIO.read( new File("C:\\imgBS\\IMGbooksNew.png") );
+             newImage = img.getScaledInstance(jLabel5.getWidth(), jLabel5.getHeight(), Image.SCALE_DEFAULT);  
+           
+             a1.setIcon(new ImageIcon(newImage));
+             a2.setText(s1);
+             a3.setText("ราคา : "+String.valueOf(s2));
+           }catch (IOException ex) {
+            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+}
 private void createArray(){
             DBCursor cursor = books.find();
             arr = new String[(int)books.count()];
@@ -1684,10 +1868,22 @@ private void createArray(){
              while (cursor.hasNext()) {
                 DBObject dockran= cursor.next();
                 arr[icount]=(String) dockran.get("name_Book");
-                
-                if(icount==arr.length-1)
-                    lastidbook = (double) dockran.get("book_id");
-               
+                if(icount==arr.length-5){
+                    setBookNew(arr[icount],(Double)dockran.get("Pirce"),jLabel111,jLabel110,jLabel108);
+                }
+                if(icount==arr.length-4){
+                    setBookNew(arr[icount],(Double)dockran.get("Pirce"),jLabel107,jLabel106,jLabel104);
+                }
+                if(icount==arr.length-3){
+                    setBookNew(arr[icount],(Double)dockran.get("Pirce"),jLabel97,jLabel98,jLabel101);
+                }
+                if(icount==arr.length-2){
+                    setBookNew(arr[icount],(Double)dockran.get("Pirce"),jLabel96,jLabel95,jLabel94);
+                }
+                if(icount==arr.length-1){
+                lastidbook = (double) dockran.get("book_id");
+                setBookNew(arr[icount],(Double)dockran.get("Pirce"),jLabel86,jLabel92,jLabel93);
+                }
                 icount++;
                         
 		} Arrays.sort(arr);
@@ -1695,7 +1891,7 @@ private void createArray(){
 private void randomBook(){
     try{
         Random rand = new Random();
-        for(int i=0;i<3;i++){
+        for(int i=0;i<5;i++){
             int numrandom = rand.nextInt(arr.length-1);
              
             BasicDBObject searchQuery  = new BasicDBObject();
@@ -1710,7 +1906,7 @@ private void randomBook(){
             
             imageForOutput = gfsPhoto.findOne(searchQueryPhoto);
             
-            new File("C:\\imgBS").mkdirs();
+            
             imageForOutput.writeTo("C:\\imgBS\\IMGbooksmain.png");
              img = ImageIO.read( new File("C:\\imgBS\\IMGbooksmain.png") );
              newImage = img.getScaledInstance(jLabel5.getWidth(), jLabel5.getHeight(), Image.SCALE_DEFAULT);  
@@ -1722,10 +1918,18 @@ private void randomBook(){
              jLabel6.setIcon(new ImageIcon(newImage));
              jLabel11.setText(name);
              jLabel12.setText("ราคา : "+String.valueOf(price));
-           }else{
+           }else if(i==2){
              jLabel7.setIcon(new ImageIcon(newImage));
              jLabel9.setText(name);
              jLabel13.setText("ราคา : "+String.valueOf(price));
+           }else if(i==3){
+             jLabel41.setIcon(new ImageIcon(newImage));
+             jLabel39.setText(name);
+             jLabel40.setText("ราคา : "+String.valueOf(price));
+           }else if(i==4){
+             jLabel51.setIcon(new ImageIcon(newImage));
+             jLabel42.setText(name);
+             jLabel43.setText("ราคา : "+String.valueOf(price));
            }
         }  }catch (IOException ex) {
             Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
@@ -2282,8 +2486,7 @@ private void checkPage(){
            }
 }
 private void setScroll(){
-    jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
-    jScrollPane6.getVerticalScrollBar().setUnitIncrement(16);
+    
     this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
          if(arr.length-1>countBook+10){
         loopBook(10);
@@ -2309,9 +2512,13 @@ private void setScrollRe(){
          this.setCursor(Cursor.getDefaultCursor());
        
 }
-
+private void setOther(){
+    jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
+    jScrollPane6.getVerticalScrollBar().setUnitIncrement(16);
+}
     private void setWin(){
         try {
+            new File("C:\\imgBS").mkdirs();
             setAllVisibleFalse();
             panelHome.setVisible(true);         
             uri = new MongoClientURI("mongodb://book:p12345@ds243212.mlab.com:43212/bkstore");
@@ -2324,7 +2531,7 @@ private void setScrollRe(){
             createArray();
             randomBook();
             setScroll();
-            
+            setOther();
            
         }catch (IOException ex) {
             Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
@@ -2682,11 +2889,19 @@ private void setScrollRe(){
     }//GEN-LAST:event_jpupActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        panelBook.setVisible(true);
+            BasicDBObject search  = new BasicDBObject();
+            search.put("name_Book",jLabel39.getText());
+            setBook(search);
+            panelHome.setVisible(false);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
+        panelBook.setVisible(true);
+            BasicDBObject search  = new BasicDBObject();
+            search.put("name_Book",jLabel42.getText());
+            setBook(search);
+            panelHome.setVisible(false);
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
@@ -2781,6 +2996,46 @@ private void setScrollRe(){
         setAllVisibleFalse();
         panelAllBook.setVisible(true);
     }//GEN-LAST:event_jLabel55MouseClicked
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+       panelBook.setVisible(true);
+            BasicDBObject search  = new BasicDBObject();
+            search.put("name_Book",jLabel92.getText());
+            setBook(search);
+            panelHome.setVisible(false);
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+      panelBook.setVisible(true);
+            BasicDBObject search  = new BasicDBObject();
+            search.put("name_Book",jLabel95.getText());
+            setBook(search);
+            panelHome.setVisible(false);
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        panelBook.setVisible(true);
+            BasicDBObject search  = new BasicDBObject();
+            search.put("name_Book",jLabel98.getText());
+            setBook(search);
+            panelHome.setVisible(false);
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        panelBook.setVisible(true);
+            BasicDBObject search  = new BasicDBObject();
+            search.put("name_Book",jLabel106.getText());
+            setBook(search);
+            panelHome.setVisible(false);
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        panelBook.setVisible(true);
+            BasicDBObject search  = new BasicDBObject();
+            search.put("name_Book",jLabel110.getText());
+            setBook(search);
+            panelHome.setVisible(false);
+    }//GEN-LAST:event_jButton23ActionPerformed
     public static void main(String args[]) {
           java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -2807,10 +3062,15 @@ private void setScrollRe(){
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
@@ -2832,11 +3092,18 @@ private void setScrollRe(){
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
     private javax.swing.JLabel jLabel103;
+    private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel106;
+    private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel110;
+    private javax.swing.JLabel jLabel111;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel124;
@@ -2918,6 +3185,7 @@ private void setScrollRe(){
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
@@ -2949,12 +3217,20 @@ private void setScrollRe(){
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
     private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
