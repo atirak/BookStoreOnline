@@ -79,28 +79,27 @@ public void close(){
         n_au = new javax.swing.JTextField();
         P_book = new javax.swing.JTextField();
         jLabel49 = new javax.swing.JLabel();
-        T_book = new javax.swing.JTextField();
         upskill = new javax.swing.JButton();
         deskill = new javax.swing.JButton();
         jLabel53 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
-        shu = new javax.swing.JTextField();
-        year_b = new javax.swing.JTextField();
-        L_book = new javax.swing.JTextField();
         np = new javax.swing.JTextField();
         jLabel60 = new javax.swing.JLabel();
         im_book = new javax.swing.JTextField();
         EX_book2 = new javax.swing.JButton();
         jLabel61 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox5 = new javax.swing.JComboBox<>();
         panelAdd = new javax.swing.JPanel();
         jLabel87 = new javax.swing.JLabel();
         jLabel88 = new javax.swing.JLabel();
         jLabel89 = new javax.swing.JLabel();
         jLabel90 = new javax.swing.JLabel();
         jLabel91 = new javax.swing.JLabel();
-        type_book = new javax.swing.JTextField();
         n_author = new javax.swing.JTextField();
         name_book = new javax.swing.JTextField();
         jImgUP = new javax.swing.JTextField();
@@ -112,12 +111,13 @@ public void close(){
         jLabel100 = new javax.swing.JLabel();
         jLabel102 = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
-        jpup = new javax.swing.JTextField();
-        jyear = new javax.swing.JTextField();
-        jlang = new javax.swing.JTextField();
         jnum = new javax.swing.JTextField();
         jLabel105 = new javax.swing.JLabel();
         jLabel109 = new javax.swing.JLabel();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        jComboBox8 = new javax.swing.JComboBox<>();
+        jComboBox9 = new javax.swing.JComboBox<>();
         panelAllBookImg = new javax.swing.JPanel();
         jLabel123 = new javax.swing.JLabel();
         jLabel124 = new javax.swing.JLabel();
@@ -204,7 +204,6 @@ public void close(){
         jLabel34 = new javax.swing.JLabel();
         jTextField11 = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
         jTextField14 = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
         jButton18 = new javax.swing.JButton();
@@ -220,6 +219,7 @@ public void close(){
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         panelLogin = new javax.swing.JPanel();
         jLabel67 = new javax.swing.JLabel();
         jTextField15 = new javax.swing.JTextField();
@@ -291,6 +291,12 @@ public void close(){
         jLabel108 = new javax.swing.JLabel();
         jLabel110 = new javax.swing.JLabel();
         jLabel111 = new javax.swing.JLabel();
+        Panel1 = new javax.swing.JPanel();
+        jLabel112 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel113 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         jMenu1.setText("jMenu1");
 
@@ -508,13 +514,6 @@ public void close(){
         jLabel49.setText("ประเภทหนังสือ");
         panelEdit.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, -1, -1));
 
-        T_book.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                T_bookActionPerformed(evt);
-            }
-        });
-        panelEdit.add(T_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 171, -1));
-
         upskill.setBackground(new java.awt.Color(0, 153, 51));
         upskill.setForeground(new java.awt.Color(255, 255, 255));
         upskill.setText("บันทึกการแก้ไข");
@@ -554,15 +553,6 @@ public void close(){
         jLabel59.setForeground(java.awt.Color.gray);
         jLabel59.setText("รูปหนังสือ");
         panelEdit.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, -1, -1));
-        panelEdit.add(shu, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 171, -1));
-
-        year_b.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                year_bActionPerformed(evt);
-            }
-        });
-        panelEdit.add(year_b, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 171, -1));
-        panelEdit.add(L_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 171, -1));
         panelEdit.add(np, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 171, -1));
 
         jLabel60.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -590,6 +580,28 @@ public void close(){
 
         jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         panelEdit.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 100, 130));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ไทย", "english" }));
+        panelEdit.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 70, -1));
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ", "" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
+        panelEdit.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, -1, -1));
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล", " " }));
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
+        panelEdit.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, -1, -1));
+
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
+        panelEdit.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 70, -1));
 
         getContentPane().add(panelEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
@@ -620,7 +632,6 @@ public void close(){
         jLabel91.setForeground(java.awt.Color.gray);
         jLabel91.setText("ประเภทหนังสือ");
         panelAdd.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, -1, -1));
-        panelAdd.add(type_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 221, -1));
 
         n_author.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -687,15 +698,6 @@ public void close(){
         jLabel103.setForeground(java.awt.Color.gray);
         jLabel103.setText("จำนวนหน้า");
         panelAdd.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, -1, -1));
-
-        jpup.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jpupActionPerformed(evt);
-            }
-        });
-        panelAdd.add(jpup, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 221, -1));
-        panelAdd.add(jyear, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 221, -1));
-        panelAdd.add(jlang, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 221, -1));
         panelAdd.add(jnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 221, -1));
 
         jLabel105.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -703,6 +705,23 @@ public void close(){
         jLabel105.setText("ปีที่พิมพ์");
         panelAdd.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, -1, -1));
         panelAdd.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 220, 100, 130));
+
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ", "" }));
+        panelAdd.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, -1, -1));
+
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล", " " }));
+        jComboBox7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox7ActionPerformed(evt);
+            }
+        });
+        panelAdd.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, -1, -1));
+
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
+        panelAdd.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 70, -1));
+
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ไทย", "english" }));
+        panelAdd.add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 70, -1));
 
         getContentPane().add(panelAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
@@ -1124,6 +1143,8 @@ public void close(){
 
         panelRegis.setBackground(new java.awt.Color(255, 255, 255));
         panelRegis.setToolTipText("");
+        panelRegis.setMinimumSize(new java.awt.Dimension(950, 500));
+        panelRegis.setPreferredSize(new java.awt.Dimension(950, 500));
         panelRegis.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel24.setFont(new java.awt.Font("Ekkamai Standard", 1, 24)); // NOI18N
@@ -1235,14 +1256,6 @@ public void close(){
         jLabel35.setText("จังหวัด");
         panelRegis.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 80, -1));
 
-        jTextField13.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
-            }
-        });
-        panelRegis.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 290, 180, -1));
-
         jTextField14.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jTextField14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1312,6 +1325,14 @@ public void close(){
 
         jPanel16.setBackground(new java.awt.Color(255, 255, 204));
         panelRegis.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 860, 470));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "กรุงเทพมหานคร ", "กระบี่ ", "กาญจนบุรี ", "กาฬสินธุ์ ", "กำแพงเพชร ", "ขอนแก่น ", "จันทบุรี ", "ฉะเชิงเทรา ", "ชลบุรี ", "ชัยนาท ", "ชัยภูมิ ", "ชุมพร ", "เชียงราย ", "เชียงใหม่ ", "ตรัง ", "ตราด ", "ตาก ", "นครนายก ", "นครปฐม ", "นครพนม ", "นครราชสีมา ", "นครศรีธรรมราช ", "นครสวรรค์ ", "นนทบุรี ", "นราธิวาส ", "น่าน ", "บึงกาฬ ", "บุรีรัมย์ ", "ปทุมธานี ", "ประจวบคีรีขันธ์ ", "ปราจีนบุรี ", "ปัตตานี ", "พระนครศรีอยุธยา ", "พังงา ", "พัทลุง ", "พิจิตร ", "พิษณุโลก ", "เพชรบุรี ", "เพชรบูรณ์ ", "แพร่ ", "พะเยา ", "ภูเก็ต ", "มหาสารคาม ", "มุกดาหาร ", "แม่ฮ่องสอน ", "ยะลา ", "ยโสธร ", "ร้อยเอ็ด ", "ระนอง ", "ระยอง ", "ราชบุรี ", "ลพบุรี ", "ลำปาง ", "ลำพูน ", "เลย ", "ศรีสะเกษ ", "สกลนคร ", "สงขลา ", "สตูล ", "สมุทรปราการ ", "สมุทรสงคราม ", "สมุทรสาคร ", "สระแก้ว ", "สระบุรี ", "สิงห์บุรี ", "สุโขทัย ", "สุพรรณบุรี ", "สุราษฎร์ธานี ", "สุรินทร์ ", "หนองคาย ", "หนองบัวลำภู ", "อ่างทอง ", "อุดรธานี ", "อุทัยธานี ", "อุตรดิตถ์ ", "อุบลราชธานี ", "อำนาจเจริญ " }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        panelRegis.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, -1));
 
         getContentPane().add(panelRegis, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
@@ -1766,6 +1787,52 @@ public void close(){
 
         getContentPane().add(panelHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
+        jLabel112.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
+        jLabel112.setText("สมัครสมาชิก BOOKBURI");
+
+        jButton3.setText("ตกลง");
+
+        jLabel113.setText("หมายเหตุ ทางสำนักพิมพ์ขอสงวนสิทธิ์ในการเปลี่ยนแปลงเงื่อนไขต่างๆ โดยมีการแจ้งให้ทราบล่วงหน้า");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("ยินดีต้อนรับเพื่อนๆ สู่การสมัครสมาชิกของสำนักพิมพ์ BOOKBURI ค่ะ...\nกรุณาอ่านรายละเอียด กฎ กติกาในการเป็นสมาชิกโปรแกรม BOOKBURI ด้านล่างนี้ให้ละเอียด\nก่อนทำการคลิก \"ตกลง\" เพื่อให้การใช้งานโปรแกรมร่วมกันมีแต่ความสุข สนุกสนาน นะจ๊ะ\n\n1.กรุณากรอกรายละเอียดส่วนตัวในใบสมัครให้ถูกต้องตามความเป็นจริง เพื่อผลประโยชน์\nและความสะดวกแก่ตัวสมาชิก ในการรับสิทธิพิเศษต่างๆ จากสำนักพิมพ์ BOOKBURI\n\n2.ชื่อสมาชิก และ รหัสผ่านถือเป็นสมบัติส่วนบุคคลที่เพื่อนๆ จะต้องดูแลรักษา\nเพราะหากเกิดการกระทำไม่สมควร ภายใต้ชื่อสมาชิกในโปรแกรม BOOKBURI\nทางสำนักพิมพ์ BOOKBURI จะไม่รับผิดชอบไม่ว่ากรณีใดๆ\n\n3.สำนักพิมพ์ BOOKBURI จะระงับการให้บริการแก่สมาชิกทันที หากพบว่าสมาชิกมีเจตนา\n\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพ อันนำไปสู่การเสื่อมเสียของสถาบันชาติ ศาสนา พระมหากษัตริย์\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพ อันสื่อไปถึงความลามก อนาจาร\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพถึงผู้อื่นไปในทางเสื่อมเสีย (หากมีการฟ้องร้องเกิดขึ้น\nทางสำนักพิมพ์ BOOKBURI จะไม่รับผิดชอบ หรือเข้าไปยุ่งเกี่ยว ไม่ว่ากรณีใด ๆ ทั้งสิ้น)\n*เขียนเรื่องราวอันเป็นการท้าทาย ชักชวน โดยมีเจตนาก่อให้เกิดการทะเลาะวิวาท\nหรือก่อให้เกิดความวุ่นวายขึ้น\n*ใช้พื้นที่ใดๆ ใน BOOKBURI เพื่อการโฆษณาสินค้าและบริการ\n*แอบอ้างชื่อของทีมงาน หรือสำนักพิมพ์ BOOKBURI ไปในทางมิชอบ\n*ละเมิดลิขสิทธิ์ผลงานเขียนของนักเขียนท่านอื่นๆ (รวมถึงผลงานอันมีลิขสิทธิ์ทุกประเภท)\n\n4.สำนักพิมพ์ BOOKBURI สัญญาว่าจะดูแลข้อมูลต่างๆ ของสมาชิกให้ปลอดภัยอย่างสุดความสามารถ\nไม่นับกรณีสุดวิสัยเช่น ความเสียหายที่เกิดจากไวรัส, แฮคเกอร์ หรือการล่มของ Server\n\n5.สมาชิกจะไม่ดำเนินการฟ้องร้องสำนักพิมพ์ BOOKBURI ไม่ว่ากรณีใดๆ ทั้งสิ้น\nอันเกิดจากการใช้งานบนโปรแกรม BOOKBURI\n\n6.สำนักพิมพ์ BOOKBURI สามารถปรับปรุง เปลี่ยนแปลงส่วนต่างๆ ของโปรแกรมโดยไม่ต้องแจ้งล่วงหน้า\n\n7.หากตรวจสอบพบว่าสมาชิกละเมิดข้อตกลงข้างต้น สำนักพิมพ์ BOOKBURI ขอสงวนสิทธิ์\nในการระงับการให้บริการโดยไม่ต้องแจ้งให้ทราบล่วงหน้า");
+        jScrollPane4.setViewportView(jTextArea1);
+
+        javax.swing.GroupLayout Panel1Layout = new javax.swing.GroupLayout(Panel1);
+        Panel1.setLayout(Panel1Layout);
+        Panel1Layout.setHorizontalGroup(
+            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel1Layout.createSequentialGroup()
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(275, 275, 275)
+                        .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 656, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(336, 336, 336)
+                        .addComponent(jButton3)))
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+        Panel1Layout.setVerticalGroup(
+            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        getContentPane().add(Panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -1822,11 +1889,7 @@ private void setAllVisibleFalse(){
             jLabel59.setVisible(false);
             n_book.setVisible(false);
             n_au.setVisible(false);
-            T_book.setVisible(false);
             P_book.setVisible(false);
-            shu.setVisible(false);
-            year_b.setVisible(false);
-            L_book.setVisible(false);
             np.setVisible(false);
             upskill.setVisible(false);
             deskill.setVisible(false);  
@@ -2096,11 +2159,7 @@ private void setVisibleEditfield(Boolean flag){
                 jLabel59.setVisible(flag);
                 n_book.setVisible(flag);
                 n_au.setVisible(flag);
-                T_book.setVisible(flag);
                 P_book.setVisible(flag);
-                shu.setVisible(flag);
-                year_b.setVisible(flag);
-                L_book.setVisible(flag);
                 np.setVisible(flag);
                 upskill.setVisible(flag);
                 deskill.setVisible(flag);
@@ -2125,16 +2184,12 @@ private void setEditBook(BasicDBObject search){
                 
                 n_book.setText((String) dockBook.get("name_Book"));
                 n_au.setText((String) dockBook.get("name_Author"));
-                T_book.setText((String) dockBook.get("Type_Book"));
                 double price =(Double) dockBook.get("Pirce");
                 P_book.setText(Double.toString(price));
 
               DBObject detail = (DBObject) dockBook.get("Detail");
-              shu.setText((String) detail.get("publisher"));
               double year =(Double) detail.get("year");
               int yearint = (int) year;
-              year_b.setText(yearint+"");
-              L_book.setText((String) detail.get("language"));
               double nump =(Double) detail.get("num_pages");
               int numint = (int) nump;
               np.setText(numint+"");
@@ -2174,11 +2229,11 @@ private void editUpdate(){
          
             ndocuments.put("name_Book",n_book.getText());
             ndocuments.put("name_Author",n_au.getText());
-            ndocuments.put("Type_Book",T_book.getText());
+            ndocuments.put("Type_Book",jComboBox3.getSelectedItem());
             ndocuments.put("Pirce",Double.valueOf(P_book.getText()));
-            ndocuments1.put("publisher",shu.getText());
-            ndocuments1.put("year",Double.valueOf(year_b.getText()));
-            ndocuments1.put("language",L_book.getText());
+            ndocuments1.put("publisher",jComboBox4.getSelectedItem());
+            ndocuments1.put("year",(jComboBox5.getSelectedItem()));
+            ndocuments1.put("language",jComboBox2.getSelectedItem());
             ndocuments1.put("num_pages",Double.valueOf(np.getText()));
             ndocuments.put("Detail",ndocuments1);
 
@@ -2206,11 +2261,11 @@ private void addBook(){
             document.put("doc_Type","Book");
             document.put("name_Book",name_book.getText());
             document.put("name_Author",n_author.getText());
-            document.put("Type_Book",type_book.getText());
+            document.put("Type_Book",jComboBox6.getSelectedItem());
             document.put("Pirce",Double.valueOf(jprice.getText()));
-            document1.put("publisher",jpup.getText());
-            document1.put("year",Double.valueOf(jyear.getText()));
-            document1.put("language",jlang.getText());
+            document1.put("publisher",jComboBox7.getSelectedItem());
+            document1.put("year",(jComboBox8.getSelectedItem()));
+            document1.put("language",jComboBox9.getSelectedItem());
             document1.put("num_pages",Double.valueOf(jnum.getText()));
            
             File imageFile = new File(jImgUP.getText());
@@ -2228,20 +2283,14 @@ private void addBook(){
 private void resetTextAdd(){    
            name_book.setText(null);
            n_author.setText(null);
-           type_book.setText(null);
            jprice.setText(null);
-           jpup.setText(null);
-           jyear.setText(null);
-           jlang.setText(null);
            jnum.setText(null);
            jImgUP.setText(null);
            jLabel50.setIcon(null);
 }
 private boolean notNullAdd(){
             if(name_book.getText().isEmpty()|| n_author.getText().isEmpty()
-                    ||type_book.getText().isEmpty()||jprice.getText().isEmpty()
-                    ||jpup.getText().isEmpty()||jyear.getText().isEmpty()
-                    ||jlang.getText().isEmpty()||jnum.getText().isEmpty()
+                    ||jprice.getText().isEmpty()||jnum.getText().isEmpty()
                     ||jImgUP.getText().isEmpty()){
                 return false;
             }return true;
@@ -2256,7 +2305,6 @@ private void createUser() {
             String street =jTextField12.getText();
             String subdis =jTextField10.getText();
             String dis =jTextField11.getText();
-            String prov =jTextField13.getText();
             String zip =jTextField14.getText();
                 BasicDBObject add  = new BasicDBObject();
                 BasicDBObject addD = new BasicDBObject();
@@ -2273,7 +2321,7 @@ private void createUser() {
                 addD.put("street",street);
                 addD.put("sub_district",subdis);
                 addD.put("district",dis);
-                addD.put("province",prov);
+                addD.put("province",jComboBox1.getSelectedItem());
                 addD.put("zip_code",Double.parseDouble(zip));
                 addD.put("email",email);
                 add.put("Address",addD);
@@ -2287,7 +2335,6 @@ private void createUser() {
                 jTextField12.setText(null);
                 jTextField10.setText(null);
                 jTextField11.setText(null);
-                jTextField13.setText(null);
                 jTextField14.setText(null);
                 jCheckBox1.setSelected(false);
                 
@@ -2591,10 +2638,6 @@ private void setOther(){
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField11ActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
-
     private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField14ActionPerformed
@@ -2640,10 +2683,6 @@ private void setOther(){
             setVisibleEditfield(false);   
             setModeil();       
     }//GEN-LAST:event_upskillActionPerformed
-
-    private void T_bookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_T_bookActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_T_bookActionPerformed
 
     private void P_bookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P_bookActionPerformed
         // TODO add your handling code here:
@@ -2726,10 +2765,6 @@ private void setOther(){
     private void creditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creditActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_creditActionPerformed
-
-    private void year_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_year_bActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_year_bActionPerformed
 
     private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
         // TODO add your handling code here:
@@ -2884,10 +2919,6 @@ private void setOther(){
         // TODO add your handling code here:
     }//GEN-LAST:event_jpriceActionPerformed
 
-    private void jpupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpupActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jpupActionPerformed
-
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         panelBook.setVisible(true);
             BasicDBObject search  = new BasicDBObject();
@@ -3036,6 +3067,22 @@ private void setOther(){
             setBook(search);
             panelHome.setVisible(false);
     }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
+    private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox7ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
     public static void main(String args[]) {
           java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -3047,9 +3094,8 @@ private void setOther(){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton EX_book;
     private javax.swing.JButton EX_book2;
-    private javax.swing.JTextField L_book;
     private javax.swing.JTextField P_book;
-    private javax.swing.JTextField T_book;
+    private javax.swing.JPanel Panel1;
     private javax.swing.JTextField credit;
     private javax.swing.JButton deskill;
     private javax.swing.JButton dtskill;
@@ -3071,6 +3117,7 @@ private void setOther(){
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
@@ -3088,6 +3135,15 @@ private void setOther(){
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jComboBox7;
+    private javax.swing.JComboBox<String> jComboBox8;
+    private javax.swing.JComboBox<String> jComboBox9;
     private javax.swing.JTextField jImgUP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -3104,6 +3160,8 @@ private void setOther(){
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel111;
+    private javax.swing.JLabel jLabel112;
+    private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel124;
@@ -3244,12 +3302,13 @@ private void setOther(){
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JPasswordField jTextField16;
@@ -3259,11 +3318,8 @@ private void setOther(){
     private javax.swing.JPasswordField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextField jlang;
     private javax.swing.JTextField jnum;
     private javax.swing.JTextField jprice;
-    private javax.swing.JTextField jpup;
-    private javax.swing.JTextField jyear;
     private javax.swing.JTextField n_au;
     private javax.swing.JTextField n_author;
     private javax.swing.JTextField n_book;
@@ -3281,11 +3337,8 @@ private void setOther(){
     private javax.swing.JPanel panelRegis;
     private javax.swing.JTextField search;
     private javax.swing.JTextField sh_book;
-    private javax.swing.JTextField shu;
     private javax.swing.JPanel statusbar;
-    private javax.swing.JTextField type_book;
     private javax.swing.JButton upskill;
-    private javax.swing.JTextField year_b;
     // End of variables declaration//GEN-END:variables
 
     
