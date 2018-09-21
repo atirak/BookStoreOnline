@@ -1427,7 +1427,7 @@ public void close(){
         jButton3.setBackground(new java.awt.Color(250, 200, 125));
         jButton3.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Add User Male_22px.png"))); // NOI18N
-        jButton3.setText("สมัคร");
+        jButton3.setText("ตกลง");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -2733,9 +2733,11 @@ private void setOther(){
             new File("C:\\imgBS").mkdirs();
             setAllVisibleFalse();
             panelHome.setVisible(true);         
-            uri = new MongoClientURI("mongodb://book:p12345@ds243212.mlab.com:43212/bkstore");
-            mongo = new MongoClient(uri);
-            db = mongo.getDB(uri.getDatabase());
+//            uri = new MongoClientURI("mongodb://book:p12345@ds243212.mlab.com:43212/bkstore");
+//            mongo = new MongoClient(uri);
+//            db = mongo.getDB(uri.getDatabase());
+             mongo = new MongoClient("localhost", 27017);
+             db = mongo.getDB("bkstore");
             user = db.getCollection("users");
             books = db.getCollection("books");
             orders = db.getCollection("order");
