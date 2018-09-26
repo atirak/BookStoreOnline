@@ -229,6 +229,7 @@ public void close(){
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jCheckBox2 = new javax.swing.JCheckBox();
+        jLabel160 = new javax.swing.JLabel();
         panelLogin = new javax.swing.JPanel();
         jLabel67 = new javax.swing.JLabel();
         jTextField15 = new javax.swing.JTextField();
@@ -1435,15 +1436,15 @@ public void close(){
         });
         panelRule.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 410, 100, 40));
 
-        jLabel117.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
+        jLabel117.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel117.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel117.setText("หมายเหตุ ทางสำนักพิมพ์ขอสงวนสิทธิ์ในการเปลี่ยนแปลงเงื่อนไขต่างๆ โดยมีการแจ้งให้ทราบล่วงหน้า");
-        panelRule.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, 544, 40));
+        jLabel117.setText("ทางสำนักพิมพ์ขอสงวนสิทธิ์ในการเปลี่ยนแปลงเงื่อนไขต่างๆ โดยมีการแจ้งให้ทราบล่วงหน้า");
+        panelRule.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 530, 40));
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Ekkamai Standard", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("ยินดีต้อนรับเพื่อนๆ สู่การสมัครสมาชิกของสำนักพิมพ์ BOOKBURI ค่ะ...\nกรุณาอ่านรายละเอียด กฎ กติกาในการเป็นสมาชิกโปรแกรม BOOKBURI ด้านล่างนี้ให้ละเอียด\nก่อนทำการคลิก \"ตกลง\" เพื่อให้การใช้งานโปรแกรมร่วมกันมีแต่ความสุข สนุกสนาน นะจ๊ะ\n\n1.กรุณากรอกรายละเอียดส่วนตัวในใบสมัครให้ถูกต้องตามความเป็นจริง เพื่อผลประโยชน์\nและความสะดวกแก่ตัวสมาชิก ในการรับสิทธิพิเศษต่างๆ จากสำนักพิมพ์ BOOKBURI\n\n2.ชื่อสมาชิก และ รหัสผ่านถือเป็นสมบัติส่วนบุคคลที่เพื่อนๆ จะต้องดูแลรักษา\nเพราะหากเกิดการกระทำไม่สมควร ภายใต้ชื่อสมาชิกในโปรแกรม BOOKBURI\nทางสำนักพิมพ์ BOOKBURI จะไม่รับผิดชอบไม่ว่ากรณีใดๆ\n\n3.สำนักพิมพ์ BOOKBURI จะระงับการให้บริการแก่สมาชิกทันที หากพบว่าสมาชิกมีเจตนา\n\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพ อันนำไปสู่การเสื่อมเสียของสถาบันชาติ ศาสนา พระมหากษัตริย์\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพ อันสื่อไปถึงความลามก อนาจาร\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพถึงผู้อื่นไปในทางเสื่อมเสีย (หากมีการฟ้องร้องเกิดขึ้น\nทางสำนักพิมพ์ BOOKBURI จะไม่รับผิดชอบ หรือเข้าไปยุ่งเกี่ยว ไม่ว่ากรณีใด ๆ ทั้งสิ้น)\n*เขียนเรื่องราวอันเป็นการท้าทาย ชักชวน โดยมีเจตนาก่อให้เกิดการทะเลาะวิวาท\nหรือก่อให้เกิดความวุ่นวายขึ้น\n*ใช้พื้นที่ใดๆ ใน BOOKBURI เพื่อการโฆษณาสินค้าและบริการ\n*แอบอ้างชื่อของทีมงาน หรือสำนักพิมพ์ BOOKBURI ไปในทางมิชอบ\n*ละเมิดลิขสิทธิ์ผลงานเขียนของนักเขียนท่านอื่นๆ (รวมถึงผลงานอันมีลิขสิทธิ์ทุกประเภท)\n\n4.สำนักพิมพ์ BOOKBURI สัญญาว่าจะดูแลข้อมูลต่างๆ ของสมาชิกให้ปลอดภัยอย่างสุดความสามารถ\nไม่นับกรณีสุดวิสัยเช่น ความเสียหายที่เกิดจากไวรัส, แฮคเกอร์ หรือการล่มของ Server\n\n5.สมาชิกจะไม่ดำเนินการฟ้องร้องสำนักพิมพ์ BOOKBURI ไม่ว่ากรณีใดๆ ทั้งสิ้น\nอันเกิดจากการใช้งานบนโปรแกรม BOOKBURI\n\n6.สำนักพิมพ์ BOOKBURI สามารถปรับปรุง เปลี่ยนแปลงส่วนต่างๆ ของโปรแกรมโดยไม่ต้องแจ้งล่วงหน้า\n\n7.หากตรวจสอบพบว่าสมาชิกละเมิดข้อตกลงข้างต้น สำนักพิมพ์ BOOKBURI ขอสงวนสิทธิ์\nในการระงับการให้บริการโดยไม่ต้องแจ้งให้ทราบล่วงหน้า");
+        jTextArea1.setText("ยินดีต้อนรับ สู่การสมัครสมาชิกของสำนักพิมพ์ BOOKBURI ค่ะ...\nกรุณาอ่านรายละเอียด กฎ กติกาในการเป็นสมาชิกโปรแกรม BOOKBURI ด้านล่างนี้ให้ละเอียด\nก่อนทำการคลิก \"ตกลง\" เพื่อให้การใช้งานโปรแกรมร่วมกันมีแต่ความสุข สนุกสนาน นะครับ\n\n1.กรุณากรอกรายละเอียดส่วนตัวในใบสมัครให้ถูกต้องตามความเป็นจริง เพื่อผลประโยชน์\nและความสะดวกแก่ตัวสมาชิก ในการรับสิทธิพิเศษต่างๆ จากสำนักพิมพ์ BOOKBURI\n\n2.ชื่อสมาชิก และ รหัสผ่านถือเป็นสมบัติส่วนบุคคลที่เพื่อนๆ จะต้องดูแลรักษา\nเพราะหากเกิดการกระทำไม่สมควร ภายใต้ชื่อสมาชิกในโปรแกรม BOOKBURI\nทางสำนักพิมพ์ BOOKBURI จะไม่รับผิดชอบไม่ว่ากรณีใดๆ\n\n3.สำนักพิมพ์ BOOKBURI จะระงับการให้บริการแก่สมาชิกทันที หากพบว่าสมาชิกมีเจตนา\n\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพ อันนำไปสู่การเสื่อมเสียของสถาบันชาติ ศาสนา พระมหากษัตริย์\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพ อันสื่อไปถึงความลามก อนาจาร\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพถึงผู้อื่นไปในทางเสื่อมเสีย (หากมีการฟ้องร้องเกิดขึ้น\nทางสำนักพิมพ์ BOOKBURI จะไม่รับผิดชอบ หรือเข้าไปยุ่งเกี่ยว ไม่ว่ากรณีใด ๆ ทั้งสิ้น)\n*เขียนเรื่องราวอันเป็นการท้าทาย ชักชวน โดยมีเจตนาก่อให้เกิดการทะเลาะวิวาท\nหรือก่อให้เกิดความวุ่นวายขึ้น\n*ใช้พื้นที่ใดๆ ใน BOOKBURI เพื่อการโฆษณาสินค้าและบริการ\n*แอบอ้างชื่อของทีมงาน หรือสำนักพิมพ์ BOOKBURI ไปในทางมิชอบ\n*ละเมิดลิขสิทธิ์ผลงานเขียนของนักเขียนท่านอื่นๆ (รวมถึงผลงานอันมีลิขสิทธิ์ทุกประเภท)\n\n4.สำนักพิมพ์ BOOKBURI สัญญาว่าจะดูแลข้อมูลต่างๆ ของสมาชิกให้ปลอดภัยอย่างสุดความสามารถ\nไม่นับกรณีสุดวิสัยเช่น ความเสียหายที่เกิดจากไวรัส, แฮคเกอร์ หรือการล่มของ Server\n\n5.สมาชิกจะไม่ดำเนินการฟ้องร้องสำนักพิมพ์ BOOKBURI ไม่ว่ากรณีใดๆ ทั้งสิ้น\nอันเกิดจากการใช้งานบนโปรแกรม BOOKBURI\n\n6.สำนักพิมพ์ BOOKBURI สามารถปรับปรุง เปลี่ยนแปลงส่วนต่างๆ ของโปรแกรมโดยไม่ต้องแจ้งล่วงหน้า\n\n7.หากตรวจสอบพบว่าสมาชิกละเมิดข้อตกลงข้างต้น สำนักพิมพ์ BOOKBURI ขอสงวนสิทธิ์\nในการระงับการให้บริการโดยไม่ต้องแจ้งให้ทราบล่วงหน้า");
         jScrollPane4.setViewportView(jTextArea1);
 
         panelRule.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 656, 290));
@@ -1457,6 +1458,10 @@ public void close(){
             }
         });
         panelRule.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, -1, -1));
+
+        jLabel160.setFont(new java.awt.Font("Ekkamai Standard", 1, 14)); // NOI18N
+        jLabel160.setText("หมายเหตุ");
+        panelRule.add(jLabel160, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 80, 40));
 
         getContentPane().add(panelRule, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
@@ -3250,10 +3255,6 @@ private void setOther(){
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
-
     private void jLabel118MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel118MouseClicked
         setAllVisibleFalse();
         panelAdd.setVisible(true);
@@ -3274,6 +3275,10 @@ private void setOther(){
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
     public static void main(String args[]) {
           java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -3404,6 +3409,7 @@ private void setOther(){
     private javax.swing.JLabel jLabel158;
     private javax.swing.JLabel jLabel159;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel160;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
