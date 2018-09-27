@@ -33,17 +33,22 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class home extends javax.swing.JFrame {
     public home() {        
         initComponents();
             setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("images/icons8_General_Ledger_50px.png")));
             setWin();
-            setModeil();        
+            setModeil(); 
+            tm.start(); 
     }
 public void close(){
         WindowEvent winclose = new WindowEvent(this,WindowEvent.WINDOW_CLOSING);
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winclose);
+        tm.stop();
     }
    
     @SuppressWarnings("unchecked")
@@ -92,10 +97,10 @@ public void close(){
         EX_book2 = new javax.swing.JButton();
         jLabel61 = new javax.swing.JLabel();
         jLabel118 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<String>();
-        jComboBox4 = new javax.swing.JComboBox<String>();
-        jComboBox5 = new javax.swing.JComboBox<String>();
-        jComboBox2 = new javax.swing.JComboBox<String>();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
         panelAdd = new javax.swing.JPanel();
         jLabel87 = new javax.swing.JLabel();
         jLabel88 = new javax.swing.JLabel();
@@ -116,13 +121,14 @@ public void close(){
         jnum = new javax.swing.JTextField();
         jLabel105 = new javax.swing.JLabel();
         jLabel109 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<String>();
-        jComboBox7 = new javax.swing.JComboBox<String>();
-        jComboBox8 = new javax.swing.JComboBox<String>();
-        jComboBox9 = new javax.swing.JComboBox<String>();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        jComboBox8 = new javax.swing.JComboBox<>();
+        jComboBox9 = new javax.swing.JComboBox<>();
         panelAllBookImg = new javax.swing.JPanel();
         jLabel123 = new javax.swing.JLabel();
         jLabel124 = new javax.swing.JLabel();
+        jButton40 = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         jButton30 = new javax.swing.JButton();
@@ -167,10 +173,9 @@ public void close(){
         jButton39 = new javax.swing.JButton();
         jLabel52 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
         panelAllBook = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<String>();
+        jList3 = new javax.swing.JList<>();
         jLabel37 = new javax.swing.JLabel();
         jButton15 = new javax.swing.JButton();
         jLabel70 = new javax.swing.JLabel();
@@ -220,7 +225,7 @@ public void close(){
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<String>();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel16 = new javax.swing.JPanel();
         panelRule = new javax.swing.JPanel();
         jLabel116 = new javax.swing.JLabel();
@@ -275,7 +280,7 @@ public void close(){
         jLabel8 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<String>();
+        jList2 = new javax.swing.JList<>();
         jButton9 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
@@ -655,7 +660,7 @@ public void close(){
         panelEdit.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, -1, -1));
 
         jComboBox3.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox3ActionPerformed(evt);
@@ -664,7 +669,7 @@ public void close(){
         panelEdit.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, -1, 20));
 
         jComboBox4.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox4ActionPerformed(evt);
@@ -673,11 +678,11 @@ public void close(){
         panelEdit.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, -1, -1));
 
         jComboBox5.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
         panelEdit.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 70, -1));
 
         jComboBox2.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ไทย", "english" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ไทย", "english" }));
         panelEdit.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, 70, -1));
 
         getContentPane().add(panelEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
@@ -796,11 +801,11 @@ public void close(){
         panelAdd.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 180, 100, 130));
 
         jComboBox6.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกประเภท", "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกประเภท", "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
         panelAdd.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 150, -1));
 
         jComboBox7.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกสำนักพิมพ์", "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกสำนักพิมพ์", "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
         jComboBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox7ActionPerformed(evt);
@@ -809,11 +814,11 @@ public void close(){
         panelAdd.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 150, -1));
 
         jComboBox8.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกปี", "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกปี", "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
         panelAdd.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 150, -1));
 
         jComboBox9.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกภาษา", "ไทย", "english" }));
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกภาษา", "ไทย", "english" }));
         panelAdd.add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 150, -1));
 
         getContentPane().add(panelAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
@@ -828,6 +833,19 @@ public void close(){
 
         jLabel124.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Open Book_50px.png"))); // NOI18N
         panelAllBookImg.add(jLabel124, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 50, 40));
+
+        jButton40.setBackground(new java.awt.Color(235, 198, 128));
+        jButton40.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
+        jButton40.setForeground(new java.awt.Color(0, 51, 51));
+        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Detective_18px.png"))); // NOI18N
+        jButton40.setText("แสดงแบบ List");
+        jButton40.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton40ActionPerformed(evt);
+            }
+        });
+        panelAllBookImg.add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 20, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setMinimumSize(new java.awt.Dimension(940, 730));
@@ -1146,17 +1164,6 @@ public void close(){
         });
         panelAllBookImg.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 425, -1, -1));
 
-        jLabel55.setFont(new java.awt.Font("Ekkamai Standard", 3, 14)); // NOI18N
-        jLabel55.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel55.setText("แสดงแบบ List");
-        jLabel55.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel55.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel55MouseClicked(evt);
-            }
-        });
-        panelAllBookImg.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 40, -1, -1));
-
         getContentPane().add(panelAllBookImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
         panelAllBook.setBackground(new java.awt.Color(255, 255, 255));
@@ -1192,7 +1199,7 @@ public void close(){
         panelBook.add(imgs, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 310, 360));
 
         jSpinner1.setFont(new java.awt.Font("Ekkamai Standard", 1, 24)); // NOI18N
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(1), Integer.valueOf(1), null, Integer.valueOf(1)));
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         jSpinner1.setVerifyInputWhenFocusTarget(false);
         jSpinner1.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
@@ -1216,7 +1223,7 @@ public void close(){
         });
         panelBook.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 410, 160, 40));
 
-        jLabel16.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Ekkamai Standard", 1, 18)); // NOI18N
         panelBook.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, 320, 50));
 
         jLabel17.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
@@ -1428,7 +1435,7 @@ public void close(){
         panelRegis.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 290, 30, 30));
 
         jComboBox1.setFont(new java.awt.Font("Ekkamai Standard", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกจังหวัด", "กรุงเทพมหานคร ", "กระบี่ ", "กาญจนบุรี ", "กาฬสินธุ์ ", "กำแพงเพชร ", "ขอนแก่น ", "จันทบุรี ", "ฉะเชิงเทรา ", "ชลบุรี ", "ชัยนาท ", "ชัยภูมิ ", "ชุมพร ", "เชียงราย ", "เชียงใหม่ ", "ตรัง ", "ตราด ", "ตาก ", "นครนายก ", "นครปฐม ", "นครพนม ", "นครราชสีมา ", "นครศรีธรรมราช ", "นครสวรรค์ ", "นนทบุรี ", "นราธิวาส ", "น่าน ", "บึงกาฬ ", "บุรีรัมย์ ", "ปทุมธานี ", "ประจวบคีรีขันธ์ ", "ปราจีนบุรี ", "ปัตตานี ", "พระนครศรีอยุธยา ", "พังงา ", "พัทลุง ", "พิจิตร ", "พิษณุโลก ", "เพชรบุรี ", "เพชรบูรณ์ ", "แพร่ ", "พะเยา ", "ภูเก็ต ", "มหาสารคาม ", "มุกดาหาร ", "แม่ฮ่องสอน ", "ยะลา ", "ยโสธร ", "ร้อยเอ็ด ", "ระนอง ", "ระยอง ", "ราชบุรี ", "ลพบุรี ", "ลำปาง ", "ลำพูน ", "เลย ", "ศรีสะเกษ ", "สกลนคร ", "สงขลา ", "สตูล ", "สมุทรปราการ ", "สมุทรสงคราม ", "สมุทรสาคร ", "สระแก้ว ", "สระบุรี ", "สิงห์บุรี ", "สุโขทัย ", "สุพรรณบุรี ", "สุราษฎร์ธานี ", "สุรินทร์ ", "หนองคาย ", "หนองบัวลำภู ", "อ่างทอง ", "อุดรธานี ", "อุทัยธานี ", "อุตรดิตถ์ ", "อุบลราชธานี ", "อำนาจเจริญ " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกจังหวัด", "กรุงเทพมหานคร ", "กระบี่ ", "กาญจนบุรี ", "กาฬสินธุ์ ", "กำแพงเพชร ", "ขอนแก่น ", "จันทบุรี ", "ฉะเชิงเทรา ", "ชลบุรี ", "ชัยนาท ", "ชัยภูมิ ", "ชุมพร ", "เชียงราย ", "เชียงใหม่ ", "ตรัง ", "ตราด ", "ตาก ", "นครนายก ", "นครปฐม ", "นครพนม ", "นครราชสีมา ", "นครศรีธรรมราช ", "นครสวรรค์ ", "นนทบุรี ", "นราธิวาส ", "น่าน ", "บึงกาฬ ", "บุรีรัมย์ ", "ปทุมธานี ", "ประจวบคีรีขันธ์ ", "ปราจีนบุรี ", "ปัตตานี ", "พระนครศรีอยุธยา ", "พังงา ", "พัทลุง ", "พิจิตร ", "พิษณุโลก ", "เพชรบุรี ", "เพชรบูรณ์ ", "แพร่ ", "พะเยา ", "ภูเก็ต ", "มหาสารคาม ", "มุกดาหาร ", "แม่ฮ่องสอน ", "ยะลา ", "ยโสธร ", "ร้อยเอ็ด ", "ระนอง ", "ระยอง ", "ราชบุรี ", "ลพบุรี ", "ลำปาง ", "ลำพูน ", "เลย ", "ศรีสะเกษ ", "สกลนคร ", "สงขลา ", "สตูล ", "สมุทรปราการ ", "สมุทรสงคราม ", "สมุทรสาคร ", "สระแก้ว ", "สระบุรี ", "สิงห์บุรี ", "สุโขทัย ", "สุพรรณบุรี ", "สุราษฎร์ธานี ", "สุรินทร์ ", "หนองคาย ", "หนองบัวลำภู ", "อ่างทอง ", "อุดรธานี ", "อุทัยธานี ", "อุตรดิตถ์ ", "อุบลราชธานี ", "อำนาจเจริญ " }));
         jComboBox1.setBorder(null);
         jComboBox1.setFocusable(false);
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -1667,7 +1674,7 @@ public void close(){
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(76, 76, 76))
+                .addGap(91, 91, 91))
         );
 
         panelRule.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, -1, 770));
@@ -2224,6 +2231,8 @@ public  ArrayList<Integer> Value = new ArrayList<>();
 static double lastidbook;  
 static DefaultListModel modeil;
 static int countBook=0;
+Timer tm;
+int ban = 2;
 private void setid(int id,boolean admin){
     id_user = id;
     this.admin = admin;
@@ -2960,7 +2969,18 @@ private void setOther(){
             setOther();
             createArray();
             randomBook();
-            setScroll();            
+            setScroll(); 
+            tm = new Timer(2500,new ActionListener() {
+            public void actionPerformed(ActionEvent e) {                
+               if(ban==1){                   
+                    jLabel113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/แบนเนอร์แก้ (3).png")));
+                    ban=2;
+               }else{
+                   jLabel113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/แบนเนอร์แจกที่คั่น.png")));
+                   ban=1;
+               }
+            }
+        });
            
         }catch (IOException ex) {
             jLabel85.setText("status : Offline");
@@ -3406,11 +3426,6 @@ private void setOther(){
         setScrollRe();
     }//GEN-LAST:event_jLabel52MouseClicked
 
-    private void jLabel55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel55MouseClicked
-        setAllVisibleFalse();
-        panelAllBook.setVisible(true);
-    }//GEN-LAST:event_jLabel55MouseClicked
-
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
        panelBook.setVisible(true);
             BasicDBObject search  = new BasicDBObject();
@@ -3479,6 +3494,11 @@ private void setOther(){
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+       setAllVisibleFalse();
+        panelAllBook.setVisible(true);
+    }//GEN-LAST:event_jButton40ActionPerformed
     public static void main(String args[]) {
           java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -3524,6 +3544,7 @@ private void setOther(){
     private javax.swing.JButton jButton38;
     private javax.swing.JButton jButton39;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -3678,7 +3699,6 @@ private void setOther(){
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
