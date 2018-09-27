@@ -226,10 +226,36 @@ public void close(){
         jLabel116 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel117 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jCheckBox2 = new javax.swing.JCheckBox();
         jLabel160 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel161 = new javax.swing.JLabel();
+        jLabel162 = new javax.swing.JLabel();
+        jLabel163 = new javax.swing.JLabel();
+        jLabel164 = new javax.swing.JLabel();
+        jLabel165 = new javax.swing.JLabel();
+        jLabel166 = new javax.swing.JLabel();
+        jLabel167 = new javax.swing.JLabel();
+        jLabel168 = new javax.swing.JLabel();
+        jLabel169 = new javax.swing.JLabel();
+        jLabel170 = new javax.swing.JLabel();
+        jLabel171 = new javax.swing.JLabel();
+        jLabel172 = new javax.swing.JLabel();
+        jLabel173 = new javax.swing.JLabel();
+        jLabel174 = new javax.swing.JLabel();
+        jLabel175 = new javax.swing.JLabel();
+        jLabel176 = new javax.swing.JLabel();
+        jLabel177 = new javax.swing.JLabel();
+        jLabel178 = new javax.swing.JLabel();
+        jLabel179 = new javax.swing.JLabel();
+        jLabel180 = new javax.swing.JLabel();
+        jLabel181 = new javax.swing.JLabel();
+        jLabel182 = new javax.swing.JLabel();
+        jLabel183 = new javax.swing.JLabel();
+        jLabel184 = new javax.swing.JLabel();
+        jLabel185 = new javax.swing.JLabel();
+        jLabel186 = new javax.swing.JLabel();
+        jLabel187 = new javax.swing.JLabel();
         panelLogin = new javax.swing.JPanel();
         jLabel67 = new javax.swing.JLabel();
         jTextField15 = new javax.swing.JTextField();
@@ -1434,34 +1460,214 @@ public void close(){
                 jButton3ActionPerformed(evt);
             }
         });
-        panelRule.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 410, 100, 40));
+        panelRule.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 850, 100, 40));
 
         jLabel117.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel117.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel117.setText("ทางสำนักพิมพ์ขอสงวนสิทธิ์ในการเปลี่ยนแปลงเงื่อนไขต่างๆ โดยมีการแจ้งให้ทราบล่วงหน้า");
-        panelRule.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 530, 40));
+        panelRule.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 900, 530, 40));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Ekkamai Standard", 0, 13)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("ยินดีต้อนรับ สู่การสมัครสมาชิกของสำนักพิมพ์ BOOKBURI ค่ะ...\nกรุณาอ่านรายละเอียด กฎ กติกาในการเป็นสมาชิกโปรแกรม BOOKBURI ด้านล่างนี้ให้ละเอียด\nก่อนทำการคลิก \"ตกลง\" เพื่อให้การใช้งานโปรแกรมร่วมกันมีแต่ความสุข สนุกสนาน นะครับ\n\n1.กรุณากรอกรายละเอียดส่วนตัวในใบสมัครให้ถูกต้องตามความเป็นจริง เพื่อผลประโยชน์\nและความสะดวกแก่ตัวสมาชิก ในการรับสิทธิพิเศษต่างๆ จากสำนักพิมพ์ BOOKBURI\n\n2.ชื่อสมาชิก และ รหัสผ่านถือเป็นสมบัติส่วนบุคคลที่เพื่อนๆ จะต้องดูแลรักษา\nเพราะหากเกิดการกระทำไม่สมควร ภายใต้ชื่อสมาชิกในโปรแกรม BOOKBURI\nทางสำนักพิมพ์ BOOKBURI จะไม่รับผิดชอบไม่ว่ากรณีใดๆ\n\n3.สำนักพิมพ์ BOOKBURI จะระงับการให้บริการแก่สมาชิกทันที หากพบว่าสมาชิกมีเจตนา\n\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพ อันนำไปสู่การเสื่อมเสียของสถาบันชาติ ศาสนา พระมหากษัตริย์\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพ อันสื่อไปถึงความลามก อนาจาร\n*เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพถึงผู้อื่นไปในทางเสื่อมเสีย (หากมีการฟ้องร้องเกิดขึ้น\nทางสำนักพิมพ์ BOOKBURI จะไม่รับผิดชอบ หรือเข้าไปยุ่งเกี่ยว ไม่ว่ากรณีใด ๆ ทั้งสิ้น)\n*เขียนเรื่องราวอันเป็นการท้าทาย ชักชวน โดยมีเจตนาก่อให้เกิดการทะเลาะวิวาท\nหรือก่อให้เกิดความวุ่นวายขึ้น\n*ใช้พื้นที่ใดๆ ใน BOOKBURI เพื่อการโฆษณาสินค้าและบริการ\n*แอบอ้างชื่อของทีมงาน หรือสำนักพิมพ์ BOOKBURI ไปในทางมิชอบ\n*ละเมิดลิขสิทธิ์ผลงานเขียนของนักเขียนท่านอื่นๆ (รวมถึงผลงานอันมีลิขสิทธิ์ทุกประเภท)\n\n4.สำนักพิมพ์ BOOKBURI สัญญาว่าจะดูแลข้อมูลต่างๆ ของสมาชิกให้ปลอดภัยอย่างสุดความสามารถ\nไม่นับกรณีสุดวิสัยเช่น ความเสียหายที่เกิดจากไวรัส, แฮคเกอร์ หรือการล่มของ Server\n\n5.สมาชิกจะไม่ดำเนินการฟ้องร้องสำนักพิมพ์ BOOKBURI ไม่ว่ากรณีใดๆ ทั้งสิ้น\nอันเกิดจากการใช้งานบนโปรแกรม BOOKBURI\n\n6.สำนักพิมพ์ BOOKBURI สามารถปรับปรุง เปลี่ยนแปลงส่วนต่างๆ ของโปรแกรมโดยไม่ต้องแจ้งล่วงหน้า\n\n7.หากตรวจสอบพบว่าสมาชิกละเมิดข้อตกลงข้างต้น สำนักพิมพ์ BOOKBURI ขอสงวนสิทธิ์\nในการระงับการให้บริการโดยไม่ต้องแจ้งให้ทราบล่วงหน้า");
-        jScrollPane4.setViewportView(jTextArea1);
-
-        panelRule.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 656, 290));
-
-        jCheckBox2.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
-        jCheckBox2.setText("ฉันยอมรับเงื่อนไขทั้งหมด");
-        jCheckBox2.setFocusable(false);
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
-            }
-        });
-        panelRule.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, -1, -1));
-
-        jLabel160.setFont(new java.awt.Font("Ekkamai Standard", 1, 14)); // NOI18N
+        jLabel160.setFont(new java.awt.Font("Ekkamai Standard", 1, 16)); // NOI18N
         jLabel160.setText("หมายเหตุ");
-        panelRule.add(jLabel160, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 80, 40));
+        panelRule.add(jLabel160, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 900, 80, 40));
+
+        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel161.setFont(new java.awt.Font("Ekkamai Standard", 1, 14)); // NOI18N
+        jLabel161.setText("กรุณาอ่านรายละเอียด กฎ กติกาในการเป็นสมาชิกโปรแกรม BOOKBURI ด้านล่างนี้ให้ละเอียด");
+
+        jLabel162.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel162.setText("ก่อนทำการคลิก \"ตกลง\" เพื่อให้การใช้งานโปรแกรมร่วมกันมีแต่ความสุข สนุกสนาน นะครับ");
+
+        jLabel163.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel163.setText("                  1. กรุณากรอกรายละเอียดส่วนตัวในใบสมัครให้ถูกต้องตามความเป็นจริง เพื่อผลประโยชน์\n");
+
+        jLabel164.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel164.setText("                    และความสะดวกแก่ตัวสมาชิก ในการรับสิทธิพิเศษต่างๆ จากสำนักพิมพ์");
+
+        jLabel165.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel165.setText("                 2. ชื่อสมาชิก และ รหัสผ่านถือเป็นสมบัติส่วนบุคคลที่เพื่อนๆ จะต้องดูแลรักษา");
+
+        jLabel166.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel166.setText("                    เพราะหากเกิดการกระทำไม่สมควร ภายใต้ชื่อสมาชิกในโปรแกรม BOOKBURI");
+
+        jLabel167.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel167.setText("                    ทางสำนักพิมพ์ BOOKBURI จะไม่รับผิดชอบไม่ว่ากรณีใดๆ");
+
+        jLabel168.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel168.setText("                 3. สำนักพิมพ์ BOOKBURI จะระงับการให้บริการแก่สมาชิกทันที หากพบว่าสมาชิกมีเจตนา");
+
+        jLabel169.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel169.setText("                     *  เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพ อันนำไปสู่การเสื่อมเสียของสถาบันชาติ ศาสนา");
+
+        jLabel170.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel170.setText("                     *  เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพ อันสื่อไปถึงความลามก อนาจาร");
+
+        jLabel171.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel171.setText("                     *  ใช้พื้นที่ใดๆ ใน BOOKBURI เพื่อการโฆษณาสินค้าและบริการ");
+
+        jLabel172.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel172.setText("                     *  เขียนเรื่องราวอันเป็นการท้าทาย ชักชวน โดยมีเจตนาก่อให้เกิดการทะเลาะวิวาท");
+
+        jLabel173.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel173.setText("                     *  เขียนเรื่องราว เนื้อหา หรือ โพสต์รูปภาพถึงผู้อื่นไปในทางเสื่อมเสีย (หากมีการฟ้องร้องเกิดขึ้น");
+
+        jLabel174.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel174.setText("                        ทางสำนักพิมพ์ BOOKBURI จะไม่รับผิดชอบ หรือเข้าไปยุ่งเกี่ยว ไม่ว่ากรณีใด ๆ ทั้งสิ้น)");
+
+        jLabel175.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel175.setText("                     *  แอบอ้างชื่อของทีมงาน หรือสำนักพิมพ์ BOOKBURI ไปในทางมิชอบ");
+
+        jLabel176.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel176.setText("                     *  ละเมิดลิขสิทธิ์ผลงานเขียนของนักเขียนท่านอื่นๆ (รวมถึงผลงานอันมีลิขสิทธิ์ทุกประเภท)");
+
+        jLabel177.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel177.setText("                     ไม่นับกรณีสุดวิสัยเช่น ความเสียหายที่เกิดจากไวรัส, แฮคเกอร์ หรือการล่มของ Server\n");
+
+        jLabel178.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel178.setText("                 4. สำนักพิมพ์ BOOKBURI สัญญาว่าจะดูแลข้อมูลต่างๆ ของสมาชิกให้ปลอดภัยอย่างสุดความสามารถ");
+
+        jLabel179.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel179.setText("                 5. สมาชิกจะไม่ดำเนินการฟ้องร้องสำนักพิมพ์ BOOKBURI ไม่ว่ากรณีใดๆ ทั้งสิ้น");
+
+        jLabel180.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel180.setText("                    อันเกิดจากการใช้งานบนโปรแกรม BOOKBURI");
+
+        jLabel181.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel181.setText("                 6. สำนักพิมพ์ BOOKBURI สามารถปรับปรุง เปลี่ยนแปลงส่วนต่างๆ ของโปรแกรม");
+
+        jLabel182.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel182.setText("                 7. หากตรวจสอบพบว่าสมาชิกละเมิดข้อตกลงข้างต้น สำนักพิมพ์ BOOKBURI ขอสงวนสิทธิ์");
+
+        jLabel183.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel183.setText("                     โดยไม่ต้องแจ้งล่วงหน้าในการระงับการให้บริการโดยไม่ต้องแจ้งให้ทราบล่วงหน้า");
+
+        jLabel184.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel184.setText("ยินดีต้อนรับ สู่การสมัครสมาชิกของสำนักพิมพ์ BOOKBURI ครับ");
+
+        jLabel185.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel185.setText("                    ในการระงับการให้บริการโดยไม่ต้องแจ้งให้ทราบล่วงหน้า");
+
+        jLabel186.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel186.setText("                        หรือก่อให้เกิดความวุ่นวายขึ้น");
+
+        jLabel187.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jLabel187.setText("                        พระมหากษัตริย์");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel184, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel161, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel162, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel166, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel167, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel176, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel175, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel171, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel172, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel174, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel173, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel168, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel169, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel170, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel180, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel179, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel177, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel178, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel183, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel181, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel163, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel164, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel165, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel182, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel185, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel187, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel186, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel184, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel161)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel162)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel163)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel164)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel165)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel166)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel167)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel168)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel169)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel187)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel170)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel173)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel174)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel172)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel186)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel171)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel175)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel176)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel178)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel177)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel179)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel180)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel181)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel183)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel182)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel185)
+                .addGap(26, 26, 26))
+        );
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(76, 76, 76))
+        );
+
+        panelRule.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, -1, 770));
 
         getContentPane().add(panelRule, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
@@ -2945,7 +3151,6 @@ private void setOther(){
 
     private void jLabel66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel66MouseClicked
          setAllVisibleFalse();
-         jScrollPane4.getVerticalScrollBar().setValue(0);
        panelRule.setVisible(true);
     }//GEN-LAST:event_jLabel66MouseClicked
 
@@ -3247,12 +3452,7 @@ private void setOther(){
     }//GEN-LAST:event_sh_bookMouseClicked
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        if(jCheckBox2.isSelected()){
-            setAllVisibleFalse();
-            panelRegis.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(this, "กรุณายอมรับเงื่อนไข");
-        }
+   
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jLabel118MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel118MouseClicked
@@ -3275,10 +3475,6 @@ private void setOther(){
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
     public static void main(String args[]) {
           java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -3330,7 +3526,6 @@ private void setOther(){
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -3410,8 +3605,35 @@ private void setOther(){
     private javax.swing.JLabel jLabel159;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel160;
+    private javax.swing.JLabel jLabel161;
+    private javax.swing.JLabel jLabel162;
+    private javax.swing.JLabel jLabel163;
+    private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel165;
+    private javax.swing.JLabel jLabel166;
+    private javax.swing.JLabel jLabel167;
+    private javax.swing.JLabel jLabel168;
+    private javax.swing.JLabel jLabel169;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel170;
+    private javax.swing.JLabel jLabel171;
+    private javax.swing.JLabel jLabel172;
+    private javax.swing.JLabel jLabel173;
+    private javax.swing.JLabel jLabel174;
+    private javax.swing.JLabel jLabel175;
+    private javax.swing.JLabel jLabel176;
+    private javax.swing.JLabel jLabel177;
+    private javax.swing.JLabel jLabel178;
+    private javax.swing.JLabel jLabel179;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel180;
+    private javax.swing.JLabel jLabel181;
+    private javax.swing.JLabel jLabel182;
+    private javax.swing.JLabel jLabel183;
+    private javax.swing.JLabel jLabel184;
+    private javax.swing.JLabel jLabel185;
+    private javax.swing.JLabel jLabel186;
+    private javax.swing.JLabel jLabel187;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -3510,13 +3732,13 @@ private void setOther(){
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
