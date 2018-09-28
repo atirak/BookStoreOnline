@@ -55,7 +55,6 @@ public void close(){
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenu1 = new javax.swing.JMenu();
         statusbar = new javax.swing.JPanel();
         jLabel84 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
@@ -232,6 +231,7 @@ public void close(){
         jButton3 = new javax.swing.JButton();
         jLabel117 = new javax.swing.JLabel();
         jLabel160 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel161 = new javax.swing.JLabel();
@@ -261,6 +261,7 @@ public void close(){
         jLabel185 = new javax.swing.JLabel();
         jLabel186 = new javax.swing.JLabel();
         jLabel187 = new javax.swing.JLabel();
+        jCheckBox2 = new javax.swing.JCheckBox();
         panelLogin = new javax.swing.JPanel();
         jLabel67 = new javax.swing.JLabel();
         jTextField15 = new javax.swing.JTextField();
@@ -290,14 +291,6 @@ public void close(){
         panelHome = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel15 = new javax.swing.JPanel();
-        jLabel159 = new javax.swing.JLabel();
-        jLabel158 = new javax.swing.JLabel();
-        jLabel120 = new javax.swing.JLabel();
-        jLabel156 = new javax.swing.JLabel();
-        jLabel155 = new javax.swing.JLabel();
-        jLabel157 = new javax.swing.JLabel();
-        jLabel122 = new javax.swing.JLabel();
-        jLabel121 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
@@ -345,8 +338,6 @@ public void close(){
         jLabel115 = new javax.swing.JLabel();
         jLabel119 = new javax.swing.JLabel();
 
-        jMenu1.setText("jMenu1");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Bookburi : Book Online Shopping");
         setResizable(false);
@@ -354,7 +345,7 @@ public void close(){
 
         statusbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel84.setText("version : 1.3.0");
+        jLabel84.setText("version : 1.4.0");
         statusbar.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, -1));
 
         jLabel85.setText("status : Online");
@@ -837,7 +828,7 @@ public void close(){
         jButton40.setBackground(new java.awt.Color(235, 198, 128));
         jButton40.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jButton40.setForeground(new java.awt.Color(0, 51, 51));
-        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Detective_18px.png"))); // NOI18N
+        jButton40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_List_18px.png"))); // NOI18N
         jButton40.setText("แสดงแบบ List");
         jButton40.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton40.addActionListener(new java.awt.event.ActionListener() {
@@ -1458,10 +1449,10 @@ public void close(){
         jLabel116.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
         jLabel116.setForeground(new java.awt.Color(255, 153, 51));
         jLabel116.setText("เงื่อนไขสมัครสมาชิก BOOKBURI");
-        panelRule.add(jLabel116, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 20, 240, 42));
+        panelRule.add(jLabel116, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 240, 42));
 
         jButton3.setBackground(new java.awt.Color(235, 198, 128));
-        jButton3.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Add User Male_22px.png"))); // NOI18N
         jButton3.setText("ตกลง");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -1469,19 +1460,21 @@ public void close(){
                 jButton3ActionPerformed(evt);
             }
         });
-        panelRule.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 850, 100, 40));
+        panelRule.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, 100, 40));
 
         jLabel117.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel117.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel117.setText("ทางสำนักพิมพ์ขอสงวนสิทธิ์ในการเปลี่ยนแปลงเงื่อนไขต่างๆ โดยมีการแจ้งให้ทราบล่วงหน้า");
-        panelRule.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 900, 530, 40));
+        panelRule.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, 530, 40));
 
         jLabel160.setFont(new java.awt.Font("Ekkamai Standard", 1, 16)); // NOI18N
         jLabel160.setForeground(new java.awt.Color(255, 153, 51));
         jLabel160.setText("หมายเหตุ");
-        panelRule.add(jLabel160, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 900, 80, 40));
+        panelRule.add(jLabel160, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 80, 40));
 
-        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel161.setFont(new java.awt.Font("Ekkamai Standard", 1, 14)); // NOI18N
         jLabel161.setText("กรุณาอ่านรายละเอียด กฎ กติกาในการเป็นสมาชิกโปรแกรม BOOKBURI ด้านล่างนี้ให้ละเอียด");
@@ -1552,7 +1545,7 @@ public void close(){
         jLabel183.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel183.setText("                     โดยไม่ต้องแจ้งล่วงหน้าในการระงับการให้บริการโดยไม่ต้องแจ้งให้ทราบล่วงหน้า");
 
-        jLabel184.setFont(new java.awt.Font("Ekkamai Standard", 1, 14)); // NOI18N
+        jLabel184.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel184.setText("ยินดีต้อนรับ สู่การสมัครสมาชิกของสำนักพิมพ์ BOOKBURI ครับ");
 
         jLabel185.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
@@ -1569,7 +1562,7 @@ public void close(){
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(1, 1, 1)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel184, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel161, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1588,7 +1581,7 @@ public void close(){
                     .addComponent(jLabel180, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel179, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel177, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel178, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel178, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
                     .addComponent(jLabel183, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel181, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel163, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1598,12 +1591,12 @@ public void close(){
                     .addComponent(jLabel185, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel187, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel186, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGap(1, 1, 1))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(1, 1, 1)
                 .addComponent(jLabel184, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(jLabel161)
@@ -1664,20 +1657,26 @@ public void close(){
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(91, 91, 91))
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1))
         );
 
-        panelRule.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, -1, 770));
+        jScrollPane4.setViewportView(jPanel3);
+
+        panelRule.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 720, 290));
+
+        jCheckBox2.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox2.setFont(new java.awt.Font("Ekkamai Standard", 0, 13)); // NOI18N
+        jCheckBox2.setText("ยอมรับเงื่อนการสมัครสมาชิก");
+        panelRule.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, -1, -1));
 
         getContentPane().add(panelRule, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
@@ -1835,40 +1834,6 @@ public void close(){
         jPanel15.setMinimumSize(new java.awt.Dimension(1050, 1200));
         jPanel15.setPreferredSize(new java.awt.Dimension(0, 1200));
         jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel159.setFont(new java.awt.Font("Ekkamai Standard", 1, 18)); // NOI18N
-        jLabel159.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/gmail (3).png"))); // NOI18N
-        jLabel159.setText(": bookburi@gmail.com");
-        jPanel15.add(jLabel159, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 1060, 240, 60));
-
-        jLabel158.setFont(new java.awt.Font("Ekkamai Standard", 1, 20)); // NOI18N
-        jLabel158.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel158.setText("0 2 345 6789");
-        jPanel15.add(jLabel158, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1130, 230, 90));
-
-        jLabel120.setFont(new java.awt.Font("Ekkamai Standard", 1, 24)); // NOI18N
-        jLabel120.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel120.setText("ติดต่อ สอบถามเพิ่มเติม");
-        jPanel15.add(jLabel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1110, 250, 60));
-
-        jLabel156.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/nml.jpg"))); // NOI18N
-        jPanel15.add(jLabel156, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 1140, -1, -1));
-
-        jLabel155.setFont(new java.awt.Font("Ekkamai Standard", 1, 18)); // NOI18N
-        jLabel155.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel155.setText("ระบบขนส่ง");
-        jPanel15.add(jLabel155, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 1140, 90, 40));
-
-        jLabel157.setFont(new java.awt.Font("Ekkamai Standard", 1, 18)); // NOI18N
-        jLabel157.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/facebook.jpg"))); // NOI18N
-        jLabel157.setText("  :  BookBuri");
-        jPanel15.add(jLabel157, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 1060, 150, 60));
-
-        jLabel122.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/kerry.png"))); // NOI18N
-        jPanel15.add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 1140, -1, -1));
-
-        jLabel121.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/ems.jpg"))); // NOI18N
-        jPanel15.add(jLabel121, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 1140, 200, 40));
 
         jLabel2.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 102));
@@ -2190,9 +2155,9 @@ public void close(){
         jPanel15.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 630, 210, 50));
 
         jLabel119.setBackground(new java.awt.Color(235, 198, 128));
-        jLabel119.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/rsz_footer_nowwwwww.png"))); // NOI18N
+        jLabel119.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/footer (4).png"))); // NOI18N
         jLabel119.setText("jLabel119");
-        jPanel15.add(jLabel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1064, 1040, 140));
+        jPanel15.add(jLabel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1044, 1040, 160));
 
         jScrollPane1.setViewportView(jPanel15);
 
@@ -2950,7 +2915,8 @@ private void setScrollRe(){
 }
 private void setOther(){
     jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
-    jScrollPane6.getVerticalScrollBar().setUnitIncrement(16);     
+    jScrollPane6.getVerticalScrollBar().setUnitIncrement(16);  
+    jScrollPane4.getVerticalScrollBar().setUnitIncrement(16); 
 }
     private void setWin(){
         try {
@@ -3176,6 +3142,7 @@ private void setOther(){
     private void jLabel66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel66MouseClicked
          setAllVisibleFalse();
        panelRule.setVisible(true);
+       jScrollPane4.getVerticalScrollBar().setValue(0);   
     }//GEN-LAST:event_jLabel66MouseClicked
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
@@ -3471,7 +3438,12 @@ private void setOther(){
     }//GEN-LAST:event_sh_bookMouseClicked
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-   
+        if(jCheckBox2.isSelected()){
+            setAllVisibleFalse();
+            panelRegis.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(this, "กรุณายอมรับเงื่อนไข");
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jLabel118MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel118MouseClicked
@@ -3551,6 +3523,7 @@ private void setOther(){
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -3585,9 +3558,6 @@ private void setOther(){
     private javax.swing.JLabel jLabel118;
     private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel120;
-    private javax.swing.JLabel jLabel121;
-    private javax.swing.JLabel jLabel122;
     private javax.swing.JLabel jLabel123;
     private javax.swing.JLabel jLabel124;
     private javax.swing.JLabel jLabel125;
@@ -3623,11 +3593,6 @@ private void setOther(){
     private javax.swing.JLabel jLabel152;
     private javax.swing.JLabel jLabel153;
     private javax.swing.JLabel jLabel154;
-    private javax.swing.JLabel jLabel155;
-    private javax.swing.JLabel jLabel156;
-    private javax.swing.JLabel jLabel157;
-    private javax.swing.JLabel jLabel158;
-    private javax.swing.JLabel jLabel159;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel160;
     private javax.swing.JLabel jLabel161;
@@ -3749,7 +3714,6 @@ private void setOther(){
     private javax.swing.JLabel jLabel99;
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
@@ -3761,6 +3725,7 @@ private void setOther(){
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField jTextField10;
