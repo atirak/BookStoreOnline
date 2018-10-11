@@ -75,7 +75,6 @@ public void close(){
         jLabel38 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
         n_book = new javax.swing.JTextField();
         jButton20 = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
@@ -85,7 +84,6 @@ public void close(){
         P_book = new javax.swing.JTextField();
         jLabel49 = new javax.swing.JLabel();
         upskill = new javax.swing.JButton();
-        deskill = new javax.swing.JButton();
         jLabel53 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
@@ -96,10 +94,12 @@ public void close(){
         EX_book2 = new javax.swing.JButton();
         jLabel61 = new javax.swing.JLabel();
         jLabel118 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox<String>();
+        jComboBox4 = new javax.swing.JComboBox<String>();
+        jComboBox5 = new javax.swing.JComboBox<String>();
+        jComboBox2 = new javax.swing.JComboBox<String>();
+        deskill = new javax.swing.JButton();
+        jPanel17 = new javax.swing.JPanel();
         panelAdd = new javax.swing.JPanel();
         jLabel87 = new javax.swing.JLabel();
         jLabel88 = new javax.swing.JLabel();
@@ -120,10 +120,11 @@ public void close(){
         jnum = new javax.swing.JTextField();
         jLabel105 = new javax.swing.JLabel();
         jLabel109 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox7 = new javax.swing.JComboBox<>();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        jComboBox9 = new javax.swing.JComboBox<>();
+        jComboBox6 = new javax.swing.JComboBox<String>();
+        jComboBox7 = new javax.swing.JComboBox<String>();
+        jComboBox8 = new javax.swing.JComboBox<String>();
+        jComboBox9 = new javax.swing.JComboBox<String>();
+        jPanel20 = new javax.swing.JPanel();
         panelAllBookImg = new javax.swing.JPanel();
         jLabel123 = new javax.swing.JLabel();
         jLabel124 = new javax.swing.JLabel();
@@ -174,7 +175,7 @@ public void close(){
         jLabel54 = new javax.swing.JLabel();
         panelAllBook = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
+        jList3 = new javax.swing.JList<String>();
         jLabel37 = new javax.swing.JLabel();
         jButton15 = new javax.swing.JButton();
         jLabel70 = new javax.swing.JLabel();
@@ -224,7 +225,7 @@ public void close(){
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<String>();
         jPanel16 = new javax.swing.JPanel();
         panelRule = new javax.swing.JPanel();
         jLabel116 = new javax.swing.JLabel();
@@ -281,13 +282,14 @@ public void close(){
         jLabel8 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
+        jList2 = new javax.swing.JList<String>();
         jButton9 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
         credit = new javax.swing.JTextField();
         jLabel64 = new javax.swing.JLabel();
+        jPanel21 = new javax.swing.JPanel();
         panelHome = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel15 = new javax.swing.JPanel();
@@ -369,7 +371,7 @@ public void close(){
         jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton4.setBackground(new java.awt.Color(235, 198, 128));
-        jButton4.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Ekkamai Standard", 0, 17)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Open Book_26px.png"))); // NOI18N
         jButton4.setText("หนังสือทั้งหมด");
         jButton4.setBorder(null);
@@ -384,7 +386,7 @@ public void close(){
         jPanel14.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 160, 40));
 
         jButton17.setBackground(new java.awt.Color(235, 198, 128));
-        jButton17.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
+        jButton17.setFont(new java.awt.Font("Ekkamai Standard", 0, 17)); // NOI18N
         jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_Home_26px_1.png"))); // NOI18N
         jButton17.setText("หน้าหลัก");
         jButton17.setBorder(null);
@@ -460,7 +462,7 @@ public void close(){
         jPanel14.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(685, 5, 30, 30));
 
         jButton2.setBackground(new java.awt.Color(235, 198, 128));
-        jButton2.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Ekkamai Standard", 0, 17)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Edit Column_26px white.png"))); // NOI18N
         jButton2.setText("แก้ไขหนังสือ");
         jButton2.setBorder(null);
@@ -489,35 +491,36 @@ public void close(){
         panelEdit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel38.setFont(new java.awt.Font("Ekkamai Standard", 1, 24)); // NOI18N
-        jLabel38.setForeground(java.awt.Color.gray);
-        jLabel38.setText("แก้ไขและลบ");
-        panelEdit.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, 140, 40));
+        jLabel38.setForeground(java.awt.Color.darkGray);
+        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Edit_26px.png"))); // NOI18N
+        jLabel38.setText("แก้ไขและลบหนังสือ");
+        panelEdit.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, 260, 40));
 
         jLabel44.setFont(new java.awt.Font("Ekkamai Standard", 1, 16)); // NOI18N
         jLabel44.setForeground(java.awt.Color.darkGray);
+        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Search_21px.png"))); // NOI18N
         jLabel44.setText("ค้นหาหนังสือ");
-        panelEdit.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
+        panelEdit.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 130, 30));
 
         jLabel45.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel45.setForeground(java.awt.Color.darkGray);
+        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Book_21px.png"))); // NOI18N
         jLabel45.setText("ชื่อหนังสือ");
-        panelEdit.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
+        panelEdit.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 120, 30));
 
-        jLabel46.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
-        jLabel46.setForeground(java.awt.Color.darkGray);
-        jLabel46.setText("ชื่อหนังสือ");
-        panelEdit.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 80, 30));
-
-        n_book.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
+        n_book.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
         n_book.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n_bookActionPerformed(evt);
             }
         });
-        panelEdit.add(n_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 171, -1));
+        panelEdit.add(n_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 190, 30));
 
         jButton20.setBackground(new java.awt.Color(235, 198, 128));
-        jButton20.setFont(new java.awt.Font("Ekkamai Standard", 0, 12)); // NOI18N
+        jButton20.setFont(new java.awt.Font("Ekkamai Standard", 1, 15)); // NOI18N
         jButton20.setForeground(new java.awt.Color(51, 51, 51));
         jButton20.setText("ค้นหา");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
@@ -525,108 +528,114 @@ public void close(){
                 jButton20ActionPerformed(evt);
             }
         });
-        panelEdit.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 90, 30));
+        panelEdit.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, 90, 30));
 
         jLabel47.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel47.setForeground(java.awt.Color.darkGray);
+        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Pricing_20px.png"))); // NOI18N
         jLabel47.setText("ราคา");
-        panelEdit.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
+        panelEdit.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 120, 30));
 
         jLabel48.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel48.setForeground(java.awt.Color.darkGray);
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Administrator Male_20px.png"))); // NOI18N
         jLabel48.setText("ชื่อผู้แต่ง");
-        panelEdit.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
+        panelEdit.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 120, 30));
 
-        search.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
+        search.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
         search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchActionPerformed(evt);
             }
         });
-        panelEdit.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 171, 30));
+        panelEdit.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, 200, 30));
 
-        n_au.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
+        n_au.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
         n_au.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n_auActionPerformed(evt);
             }
         });
-        panelEdit.add(n_au, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 171, -1));
+        panelEdit.add(n_au, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 190, 30));
 
-        P_book.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
+        P_book.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
         P_book.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 P_bookActionPerformed(evt);
             }
         });
-        panelEdit.add(P_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 171, -1));
+        panelEdit.add(P_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 190, 30));
 
         jLabel49.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel49.setForeground(java.awt.Color.darkGray);
+        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Bulleted List_20px.png"))); // NOI18N
         jLabel49.setText("ประเภทหนังสือ");
-        panelEdit.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, -1));
+        panelEdit.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 140, 30));
 
         upskill.setBackground(new java.awt.Color(235, 198, 128));
         upskill.setFont(new java.awt.Font("Ekkamai Standard", 1, 12)); // NOI18N
         upskill.setForeground(new java.awt.Color(51, 51, 51));
+        upskill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Save_20px.png"))); // NOI18N
         upskill.setText("บันทึกการแก้ไข");
         upskill.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 upskillActionPerformed(evt);
             }
         });
-        panelEdit.add(upskill, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, 130, 40));
-
-        deskill.setBackground(new java.awt.Color(235, 198, 128));
-        deskill.setFont(new java.awt.Font("Ekkamai Standard", 1, 12)); // NOI18N
-        deskill.setForeground(new java.awt.Color(51, 51, 51));
-        deskill.setText("ลบหนังสือ");
-        deskill.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deskillActionPerformed(evt);
-            }
-        });
-        panelEdit.add(deskill, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 400, 110, 40));
+        panelEdit.add(upskill, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 400, 160, 40));
 
         jLabel53.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel53.setForeground(java.awt.Color.darkGray);
+        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Today_20px.png"))); // NOI18N
         jLabel53.setText("ปีที่พิมพ์");
-        panelEdit.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, -1, -1));
+        panelEdit.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, 120, -1));
 
         jLabel56.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel56.setForeground(java.awt.Color.darkGray);
-        jLabel56.setText("สำนักพิมพิ์");
-        panelEdit.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, -1, -1));
+        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Apartment_20px.png"))); // NOI18N
+        jLabel56.setText("สำนักพิมพ์");
+        panelEdit.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, 120, -1));
 
         jLabel58.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel58.setForeground(java.awt.Color.darkGray);
+        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Geography_20px.png"))); // NOI18N
         jLabel58.setText("ภาษาที่ใช้เขียน");
-        panelEdit.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, -1, -1));
+        panelEdit.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 130, 30));
 
         jLabel59.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel59.setForeground(java.awt.Color.darkGray);
+        jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Xlarge Icons_20px.png"))); // NOI18N
         jLabel59.setText("รูปหนังสือ");
-        panelEdit.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, -1, -1));
+        panelEdit.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 110, 30));
 
-        np.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
-        panelEdit.add(np, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 171, -1));
+        np.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
+        panelEdit.add(np, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 190, 30));
 
         jLabel60.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel60.setForeground(java.awt.Color.darkGray);
+        jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Literature_20px.png"))); // NOI18N
         jLabel60.setText("จำนวนหน้า");
-        panelEdit.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 300, -1, -1));
+        panelEdit.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 120, 30));
 
         im_book.setEditable(false);
-        im_book.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
+        im_book.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
         im_book.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 im_bookActionPerformed(evt);
             }
         });
-        panelEdit.add(im_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, 170, -1));
+        panelEdit.add(im_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, 70, -1));
 
-        EX_book2.setBackground(new java.awt.Color(255, 204, 102));
-        EX_book2.setFont(new java.awt.Font("Ekkamai Standard", 0, 12)); // NOI18N
+        EX_book2.setBackground(new java.awt.Color(235, 198, 128));
+        EX_book2.setFont(new java.awt.Font("Ekkamai Standard", 1, 13)); // NOI18N
         EX_book2.setForeground(new java.awt.Color(51, 51, 51));
         EX_book2.setText("อัพโหลดรูป");
         EX_book2.addActionListener(new java.awt.event.ActionListener() {
@@ -634,13 +643,16 @@ public void close(){
                 EX_book2ActionPerformed(evt);
             }
         });
-        panelEdit.add(EX_book2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 330, 100, 30));
+        panelEdit.add(EX_book2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 120, 30));
 
         jLabel61.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
         jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelEdit.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 180, 100, 130));
+        panelEdit.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, 140, 170));
 
+        jLabel118.setFont(new java.awt.Font("Ekkamai Standard", 1, 12)); // NOI18N
         jLabel118.setForeground(new java.awt.Color(0, 102, 204));
+        jLabel118.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Add Folder น้ำเงิน_15px.png"))); // NOI18N
         jLabel118.setText("เพิ่มหนังสือ");
         jLabel118.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel118.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -648,33 +660,48 @@ public void close(){
                 jLabel118MouseClicked(evt);
             }
         });
-        panelEdit.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, -1, -1));
+        panelEdit.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, 140, -1));
 
-        jComboBox3.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
+        jComboBox3.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox3ActionPerformed(evt);
             }
         });
-        panelEdit.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, -1, 20));
+        panelEdit.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 190, 30));
 
-        jComboBox4.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
+        jComboBox4.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox4ActionPerformed(evt);
             }
         });
-        panelEdit.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, -1, -1));
+        panelEdit.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 200, 30));
 
-        jComboBox5.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
-        panelEdit.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 70, -1));
+        jComboBox5.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
+        panelEdit.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, 70, -1));
 
-        jComboBox2.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ไทย", "english" }));
-        panelEdit.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, 70, -1));
+        jComboBox2.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ไทย", "english" }));
+        panelEdit.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 100, 30));
+
+        deskill.setBackground(new java.awt.Color(235, 198, 128));
+        deskill.setFont(new java.awt.Font("Ekkamai Standard", 1, 13)); // NOI18N
+        deskill.setForeground(new java.awt.Color(51, 51, 51));
+        deskill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Trash_20px.png"))); // NOI18N
+        deskill.setText("ลบหนังสือ");
+        deskill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deskillActionPerformed(evt);
+            }
+        });
+        panelEdit.add(deskill, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 350, 160, 40));
+
+        jPanel17.setBackground(new java.awt.Color(255, 250, 240));
+        panelEdit.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 900, 490));
 
         getContentPane().add(panelEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
@@ -682,135 +709,160 @@ public void close(){
         panelAdd.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel87.setFont(new java.awt.Font("Ekkamai Standard", 1, 24)); // NOI18N
-        jLabel87.setForeground(java.awt.Color.gray);
-        jLabel87.setText("เพิ่มข้อมูล");
-        panelAdd.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, 150, 50));
+        jLabel87.setForeground(java.awt.Color.darkGray);
+        jLabel87.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Add Folder_24px.png"))); // NOI18N
+        jLabel87.setText("เพิ่มข้อมูลหนังสือ");
+        panelAdd.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, 270, 50));
 
         jLabel88.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel88.setForeground(java.awt.Color.darkGray);
+        jLabel88.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Book_21px.png"))); // NOI18N
         jLabel88.setText("ชื่อหนังสือ");
-        panelAdd.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, -1, -1));
+        panelAdd.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 140, 30));
 
         jLabel89.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel89.setForeground(java.awt.Color.darkGray);
+        jLabel89.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Administrator Male_20px.png"))); // NOI18N
         jLabel89.setText("ชื่อผู้แต่ง");
-        panelAdd.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, -1, -1));
+        panelAdd.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 140, 30));
 
         jLabel90.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel90.setForeground(java.awt.Color.darkGray);
-        jLabel90.setText("ตัวอย่างหนังสือ");
-        panelAdd.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, -1, -1));
+        jLabel90.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Xlarge Icons_20px.png"))); // NOI18N
+        jLabel90.setText("รูปหนังสือ");
+        panelAdd.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 130, 30));
 
         jLabel91.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel91.setForeground(java.awt.Color.darkGray);
+        jLabel91.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel91.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Bulleted List_20px.png"))); // NOI18N
         jLabel91.setText("ประเภทหนังสือ");
-        panelAdd.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, -1, -1));
+        panelAdd.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 140, 30));
 
-        n_author.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
+        n_author.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         n_author.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 n_authorActionPerformed(evt);
             }
         });
-        panelAdd.add(n_author, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 221, -1));
+        panelAdd.add(n_author, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 221, -1));
 
-        name_book.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
-        panelAdd.add(name_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 221, -1));
+        name_book.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
+        panelAdd.add(name_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 100, 221, -1));
 
         jImgUP.setEditable(false);
-        jImgUP.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
+        jImgUP.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
         jImgUP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jImgUPActionPerformed(evt);
             }
         });
-        panelAdd.add(jImgUP, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 220, -1));
+        panelAdd.add(jImgUP, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 260, 80, 30));
 
-        EX_book.setBackground(new java.awt.Color(255, 204, 102));
-        EX_book.setFont(new java.awt.Font("Ekkamai Standard", 0, 12)); // NOI18N
+        EX_book.setBackground(new java.awt.Color(235, 198, 128));
+        EX_book.setFont(new java.awt.Font("Ekkamai Standard", 1, 14)); // NOI18N
         EX_book.setForeground(new java.awt.Color(51, 51, 51));
+        EX_book.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/FTP_24px.png"))); // NOI18N
         EX_book.setText("อัพโหลดรูป");
         EX_book.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EX_bookActionPerformed(evt);
             }
         });
-        panelAdd.add(EX_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 340, 100, 30));
+        panelAdd.add(EX_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 170, 30));
 
         dtskill.setBackground(new java.awt.Color(235, 198, 128));
-        dtskill.setFont(new java.awt.Font("Ekkamai Standard", 1, 12)); // NOI18N
+        dtskill.setFont(new java.awt.Font("Ekkamai Standard", 1, 14)); // NOI18N
         dtskill.setForeground(new java.awt.Color(51, 51, 51));
-        dtskill.setText("บันทึกการเพิ่ม");
+        dtskill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Save_20px.png"))); // NOI18N
+        dtskill.setText("บันทึกการเพิ่มข้อมูล");
         dtskill.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dtskillActionPerformed(evt);
             }
         });
-        panelAdd.add(dtskill, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 120, 40));
+        panelAdd.add(dtskill, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 360, 190, 60));
 
         jLabel50.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
         jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelAdd.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 160, 120, 160));
+        panelAdd.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 90, 120, 160));
 
         jLabel99.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel99.setForeground(java.awt.Color.darkGray);
+        jLabel99.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Pricing_20px.png"))); // NOI18N
         jLabel99.setText("ราคา");
-        panelAdd.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, -1, -1));
+        panelAdd.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 140, 30));
 
-        jprice.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
+        jprice.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jprice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jpriceActionPerformed(evt);
             }
         });
-        panelAdd.add(jprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 221, -1));
+        panelAdd.add(jprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 221, -1));
 
         jLabel100.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel100.setForeground(java.awt.Color.darkGray);
-        jLabel100.setText("สำนักพิมพิ์");
-        panelAdd.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, -1, -1));
+        jLabel100.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Apartment_20px.png"))); // NOI18N
+        jLabel100.setText("สำนักพิมพ์");
+        panelAdd.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 140, 30));
 
         jLabel102.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel102.setForeground(java.awt.Color.darkGray);
+        jLabel102.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel102.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Geography_20px.png"))); // NOI18N
         jLabel102.setText("ภาษาที่ใช้เขียน");
-        panelAdd.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, -1, -1));
+        panelAdd.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 140, 30));
 
         jLabel103.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel103.setForeground(java.awt.Color.darkGray);
+        jLabel103.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Literature_20px.png"))); // NOI18N
         jLabel103.setText("จำนวนหน้า");
-        panelAdd.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, -1, -1));
+        panelAdd.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 140, 30));
 
-        jnum.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
-        panelAdd.add(jnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, 221, -1));
+        jnum.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
+        panelAdd.add(jnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, 221, -1));
 
         jLabel105.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel105.setForeground(java.awt.Color.darkGray);
+        jLabel105.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel105.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Today_20px.png"))); // NOI18N
         jLabel105.setText("ปีที่พิมพ์");
-        panelAdd.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
+        panelAdd.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 140, 30));
 
         jLabel109.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
-        panelAdd.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 180, 100, 130));
+        panelAdd.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 90, 120, 160));
 
-        jComboBox6.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกประเภท", "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
-        panelAdd.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 150, -1));
+        jComboBox6.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกประเภท", "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
+        panelAdd.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 150, -1));
 
-        jComboBox7.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกสำนักพิมพ์", "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
+        jComboBox7.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกสำนักพิมพ์", "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
         jComboBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox7ActionPerformed(evt);
             }
         });
-        panelAdd.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 150, -1));
+        panelAdd.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 150, -1));
 
-        jComboBox8.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกปี", "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
-        panelAdd.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 150, -1));
+        jComboBox8.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกปี", "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
+        panelAdd.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 150, -1));
 
-        jComboBox9.setFont(new java.awt.Font("Ekkamai Standard", 0, 11)); // NOI18N
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกภาษา", "ไทย", "english" }));
-        panelAdd.add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 150, -1));
+        jComboBox9.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกภาษา", "ไทย", "english" }));
+        panelAdd.add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, 150, -1));
+
+        jPanel20.setBackground(new java.awt.Color(255, 250, 240));
+        panelAdd.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 900, 490));
 
         getContentPane().add(panelAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
@@ -1187,10 +1239,10 @@ public void close(){
 
         panelBook.setBackground(new java.awt.Color(255, 255, 255));
         panelBook.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelBook.add(imgs, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 310, 360));
+        panelBook.add(imgs, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 310, 370));
 
         jSpinner1.setFont(new java.awt.Font("Ekkamai Standard", 1, 24)); // NOI18N
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(1), Integer.valueOf(1), null, Integer.valueOf(1)));
         jSpinner1.setVerifyInputWhenFocusTarget(false);
         jSpinner1.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
@@ -1201,7 +1253,7 @@ public void close(){
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-        panelBook.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 410, 110, 40));
+        panelBook.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 110, 40));
 
         jButton13.setBackground(new java.awt.Color(235, 198, 128));
         jButton13.setFont(new java.awt.Font("Ekkamai Standard", 1, 14)); // NOI18N
@@ -1212,34 +1264,34 @@ public void close(){
                 jButton13ActionPerformed(evt);
             }
         });
-        panelBook.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 410, 160, 40));
+        panelBook.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 390, 160, 40));
 
         jLabel16.setFont(new java.awt.Font("Ekkamai Standard", 1, 18)); // NOI18N
-        panelBook.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, 320, 50));
+        panelBook.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 80, 320, 50));
 
         jLabel17.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
-        panelBook.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 270, 50));
+        panelBook.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 270, 50));
 
         jLabel18.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
-        panelBook.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 270, 50));
+        panelBook.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 270, 50));
 
         jLabel19.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
-        panelBook.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 270, 50));
+        panelBook.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, 270, 50));
 
         jLabel20.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
-        panelBook.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 270, 50));
+        panelBook.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 270, 50));
 
         jLabel21.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
-        panelBook.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, 270, 50));
+        panelBook.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 230, 270, 50));
 
         jLabel22.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
-        panelBook.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, 270, 50));
+        panelBook.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 270, 50));
 
         jLabel23.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
-        panelBook.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, 270, 50));
+        panelBook.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 290, 270, 50));
 
         jPanel13.setBackground(new java.awt.Color(255, 255, 204));
-        panelBook.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 420, 320));
+        panelBook.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 420, 320));
 
         getContentPane().add(panelBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
@@ -1426,7 +1478,7 @@ public void close(){
         panelRegis.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 290, 30, 30));
 
         jComboBox1.setFont(new java.awt.Font("Ekkamai Standard", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกจังหวัด", "กรุงเทพมหานคร ", "กระบี่ ", "กาญจนบุรี ", "กาฬสินธุ์ ", "กำแพงเพชร ", "ขอนแก่น ", "จันทบุรี ", "ฉะเชิงเทรา ", "ชลบุรี ", "ชัยนาท ", "ชัยภูมิ ", "ชุมพร ", "เชียงราย ", "เชียงใหม่ ", "ตรัง ", "ตราด ", "ตาก ", "นครนายก ", "นครปฐม ", "นครพนม ", "นครราชสีมา ", "นครศรีธรรมราช ", "นครสวรรค์ ", "นนทบุรี ", "นราธิวาส ", "น่าน ", "บึงกาฬ ", "บุรีรัมย์ ", "ปทุมธานี ", "ประจวบคีรีขันธ์ ", "ปราจีนบุรี ", "ปัตตานี ", "พระนครศรีอยุธยา ", "พังงา ", "พัทลุง ", "พิจิตร ", "พิษณุโลก ", "เพชรบุรี ", "เพชรบูรณ์ ", "แพร่ ", "พะเยา ", "ภูเก็ต ", "มหาสารคาม ", "มุกดาหาร ", "แม่ฮ่องสอน ", "ยะลา ", "ยโสธร ", "ร้อยเอ็ด ", "ระนอง ", "ระยอง ", "ราชบุรี ", "ลพบุรี ", "ลำปาง ", "ลำพูน ", "เลย ", "ศรีสะเกษ ", "สกลนคร ", "สงขลา ", "สตูล ", "สมุทรปราการ ", "สมุทรสงคราม ", "สมุทรสาคร ", "สระแก้ว ", "สระบุรี ", "สิงห์บุรี ", "สุโขทัย ", "สุพรรณบุรี ", "สุราษฎร์ธานี ", "สุรินทร์ ", "หนองคาย ", "หนองบัวลำภู ", "อ่างทอง ", "อุดรธานี ", "อุทัยธานี ", "อุตรดิตถ์ ", "อุบลราชธานี ", "อำนาจเจริญ " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกจังหวัด", "กรุงเทพมหานคร ", "กระบี่ ", "กาญจนบุรี ", "กาฬสินธุ์ ", "กำแพงเพชร ", "ขอนแก่น ", "จันทบุรี ", "ฉะเชิงเทรา ", "ชลบุรี ", "ชัยนาท ", "ชัยภูมิ ", "ชุมพร ", "เชียงราย ", "เชียงใหม่ ", "ตรัง ", "ตราด ", "ตาก ", "นครนายก ", "นครปฐม ", "นครพนม ", "นครราชสีมา ", "นครศรีธรรมราช ", "นครสวรรค์ ", "นนทบุรี ", "นราธิวาส ", "น่าน ", "บึงกาฬ ", "บุรีรัมย์ ", "ปทุมธานี ", "ประจวบคีรีขันธ์ ", "ปราจีนบุรี ", "ปัตตานี ", "พระนครศรีอยุธยา ", "พังงา ", "พัทลุง ", "พิจิตร ", "พิษณุโลก ", "เพชรบุรี ", "เพชรบูรณ์ ", "แพร่ ", "พะเยา ", "ภูเก็ต ", "มหาสารคาม ", "มุกดาหาร ", "แม่ฮ่องสอน ", "ยะลา ", "ยโสธร ", "ร้อยเอ็ด ", "ระนอง ", "ระยอง ", "ราชบุรี ", "ลพบุรี ", "ลำปาง ", "ลำพูน ", "เลย ", "ศรีสะเกษ ", "สกลนคร ", "สงขลา ", "สตูล ", "สมุทรปราการ ", "สมุทรสงคราม ", "สมุทรสาคร ", "สระแก้ว ", "สระบุรี ", "สิงห์บุรี ", "สุโขทัย ", "สุพรรณบุรี ", "สุราษฎร์ธานี ", "สุรินทร์ ", "หนองคาย ", "หนองบัวลำภู ", "อ่างทอง ", "อุดรธานี ", "อุทัยธานี ", "อุตรดิตถ์ ", "อุบลราชธานี ", "อำนาจเจริญ " }));
         jComboBox1.setBorder(null);
         jComboBox1.setFocusable(false);
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -1614,7 +1666,7 @@ public void close(){
                 .addComponent(jLabel167)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel168)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 14, Short.MAX_VALUE)
                 .addComponent(jLabel169)
                 .addGap(1, 1, 1)
                 .addComponent(jLabel187)
@@ -1665,7 +1717,7 @@ public void close(){
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1))
         );
 
@@ -1757,34 +1809,35 @@ public void close(){
         panelBasket.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextField2.setEditable(false);
-        jTextField2.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Ekkamai Standard", 0, 17)); // NOI18N
         jTextField2.setForeground(java.awt.Color.darkGray);
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
-        panelBasket.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 340, 150, -1));
+        panelBasket.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, 150, -1));
 
         jLabel8.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel8.setForeground(java.awt.Color.darkGray);
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Analyze_20px.png"))); // NOI18N
         jLabel8.setText("กรอกเลขบัตรเครดิตเพื่อทำการชำระเงิน");
-        panelBasket.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 270, -1));
+        panelBasket.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 340, -1));
 
         jLabel14.setFont(new java.awt.Font("Ekkamai Standard", 1, 20)); // NOI18N
         jLabel14.setForeground(java.awt.Color.darkGray);
         jLabel14.setText("ตะกร้าสินค้า");
-        panelBasket.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+        panelBasket.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 130, 40));
 
         jScrollPane2.setForeground(java.awt.Color.darkGray);
 
         jList2.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
         jScrollPane2.setViewportView(jList2);
 
-        panelBasket.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 650, 210));
+        panelBasket.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 650, 210));
 
-        jButton9.setBackground(new java.awt.Color(255, 153, 51));
+        jButton9.setBackground(new java.awt.Color(235, 198, 128));
         jButton9.setFont(new java.awt.Font("Ekkamai Standard", 1, 16)); // NOI18N
         jButton9.setForeground(java.awt.Color.darkGray);
         jButton9.setText("เสร็จสิ้น");
@@ -1793,22 +1846,25 @@ public void close(){
                 jButton9ActionPerformed(evt);
             }
         });
-        panelBasket.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 120, 40));
+        panelBasket.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 400, 130, 50));
 
         jLabel15.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
         jLabel15.setForeground(java.awt.Color.darkGray);
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/icons8_List_18px.png"))); // NOI18N
         jLabel15.setText("สรุปรายการสั่งซื้อ");
-        panelBasket.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, -1, -1));
+        panelBasket.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 220, -1));
 
-        jLabel62.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
+        jLabel62.setFont(new java.awt.Font("Ekkamai Standard", 0, 17)); // NOI18N
         jLabel62.setForeground(java.awt.Color.darkGray);
         jLabel62.setText("บาท");
-        panelBasket.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 350, -1, -1));
+        panelBasket.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 340, 50, 40));
 
-        jLabel63.setFont(new java.awt.Font("Ekkamai Standard", 0, 18)); // NOI18N
+        jLabel63.setFont(new java.awt.Font("Ekkamai Standard", 0, 17)); // NOI18N
         jLabel63.setForeground(java.awt.Color.darkGray);
+        jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Pricing_20px.png"))); // NOI18N
         jLabel63.setText("ราคาสุทธิ");
-        panelBasket.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 350, -1, -1));
+        panelBasket.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, 120, 40));
 
         credit.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         credit.setForeground(java.awt.Color.darkGray);
@@ -1817,10 +1873,13 @@ public void close(){
                 creditActionPerformed(evt);
             }
         });
-        panelBasket.add(credit, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 290, -1));
+        panelBasket.add(credit, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 340, -1));
 
         jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Shopping Cart_26px tarang.png"))); // NOI18N
-        panelBasket.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 30, 30));
+        panelBasket.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 50, 40));
+
+        jPanel21.setBackground(new java.awt.Color(255, 250, 240));
+        panelBasket.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 900, 490));
 
         getContentPane().add(panelBasket, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1050, 480));
 
@@ -1859,7 +1918,7 @@ public void close(){
                 jButton8ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 580, 120, -1));
+        jPanel15.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 580, 130, -1));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("jLabel7");
@@ -1893,7 +1952,7 @@ public void close(){
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 580, 120, -1));
+        jPanel15.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 580, 130, -1));
 
         jLabel10.setFont(new java.awt.Font("Ekkamai Standard", 1, 26)); // NOI18N
         jLabel10.setForeground(java.awt.Color.darkGray);
@@ -1921,7 +1980,7 @@ public void close(){
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 580, 120, -1));
+        jPanel15.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 580, 130, -1));
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("jLabel5");
@@ -1957,7 +2016,7 @@ public void close(){
                 jButton10ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 580, 120, -1));
+        jPanel15.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 580, 130, -1));
 
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel41.setText("jLabel6");
@@ -1987,7 +2046,7 @@ public void close(){
                 jButton14ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 580, 120, -1));
+        jPanel15.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 580, 130, -1));
 
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel51.setText("jLabel6");
@@ -1996,23 +2055,23 @@ public void close(){
         jLabel57.setFont(new java.awt.Font("Ekkamai Standard", 1, 26)); // NOI18N
         jLabel57.setForeground(java.awt.Color.darkGray);
         jLabel57.setText("หนังสือใหม่");
-        jPanel15.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 630, 160, 50));
+        jPanel15.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 630, 160, 50));
 
         jLabel86.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel86.setText("jLabel7");
-        jPanel15.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 690, 150, 210));
+        jPanel15.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 690, 150, 210));
 
         jLabel92.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel92.setForeground(new java.awt.Color(0, 0, 102));
         jLabel92.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel92.setText("name");
-        jPanel15.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 920, 150, -1));
+        jPanel15.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 920, 150, -1));
 
         jLabel93.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel93.setForeground(new java.awt.Color(0, 0, 102));
         jLabel93.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel93.setText("price");
-        jPanel15.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 950, 130, -1));
+        jPanel15.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 950, 130, -1));
 
         jButton16.setBackground(new java.awt.Color(235, 198, 128));
         jButton16.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
@@ -2025,7 +2084,7 @@ public void close(){
                 jButton16ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 980, 120, -1));
+        jPanel15.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 980, 130, -1));
 
         jButton19.setBackground(new java.awt.Color(235, 198, 128));
         jButton19.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
@@ -2038,39 +2097,39 @@ public void close(){
                 jButton19ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 980, 120, -1));
+        jPanel15.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 980, 130, -1));
 
         jLabel94.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel94.setForeground(new java.awt.Color(0, 0, 102));
         jLabel94.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel94.setText("price");
-        jPanel15.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 950, 130, -1));
+        jPanel15.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 950, 130, -1));
 
         jLabel95.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel95.setForeground(new java.awt.Color(0, 0, 102));
         jLabel95.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel95.setText("name");
-        jPanel15.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 920, 150, -1));
+        jPanel15.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 920, 150, -1));
 
         jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel96.setText("jLabel5");
-        jPanel15.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 690, 150, 210));
+        jPanel15.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 690, 150, 210));
 
         jLabel97.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel97.setText("jLabel6");
-        jPanel15.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 690, 150, 210));
+        jPanel15.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 690, 150, 210));
 
         jLabel98.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel98.setForeground(new java.awt.Color(0, 0, 102));
         jLabel98.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel98.setText("name");
-        jPanel15.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 920, 150, -1));
+        jPanel15.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 920, 150, -1));
 
         jLabel101.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel101.setForeground(new java.awt.Color(0, 0, 102));
         jLabel101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel101.setText("price");
-        jPanel15.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 950, 130, -1));
+        jPanel15.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 950, 130, -1));
 
         jButton21.setBackground(new java.awt.Color(235, 198, 128));
         jButton21.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
@@ -2083,7 +2142,7 @@ public void close(){
                 jButton21ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 980, 120, -1));
+        jPanel15.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 980, 130, -1));
 
         jButton22.setBackground(new java.awt.Color(235, 198, 128));
         jButton22.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
@@ -2096,23 +2155,23 @@ public void close(){
                 jButton22ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 980, 110, -1));
+        jPanel15.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 980, 130, -1));
 
         jLabel104.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel104.setForeground(new java.awt.Color(0, 0, 102));
         jLabel104.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel104.setText("price");
-        jPanel15.add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 950, 130, -1));
+        jPanel15.add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 950, 130, -1));
 
         jLabel106.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel106.setForeground(new java.awt.Color(0, 0, 102));
         jLabel106.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel106.setText("name");
-        jPanel15.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 920, 150, -1));
+        jPanel15.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 920, 150, -1));
 
         jLabel107.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel107.setText("jLabel6");
-        jPanel15.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 690, 160, 210));
+        jPanel15.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 690, 160, 210));
 
         jButton23.setBackground(new java.awt.Color(235, 198, 128));
         jButton23.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
@@ -2125,23 +2184,23 @@ public void close(){
                 jButton23ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 980, 120, -1));
+        jPanel15.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 980, 130, -1));
 
         jLabel108.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel108.setForeground(new java.awt.Color(0, 0, 102));
         jLabel108.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel108.setText("price");
-        jPanel15.add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 950, 130, -1));
+        jPanel15.add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 950, 130, -1));
 
         jLabel110.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
         jLabel110.setForeground(new java.awt.Color(0, 0, 102));
         jLabel110.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel110.setText("name");
-        jPanel15.add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 920, 150, -1));
+        jPanel15.add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 920, 150, -1));
 
         jLabel111.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel111.setText("jLabel6");
-        jPanel15.add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 690, 150, 210));
+        jPanel15.add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 690, 150, 210));
 
         jLabel113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/แบนเนอร์แก้ (3).png"))); // NOI18N
         jLabel113.setPreferredSize(new java.awt.Dimension(815, 239));
@@ -2152,7 +2211,7 @@ public void close(){
         jPanel15.add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 220, 60));
 
         jLabel115.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/BANNERR PURPLE (1).png"))); // NOI18N
-        jPanel15.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 630, 210, 50));
+        jPanel15.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 630, 210, 50));
 
         jLabel119.setBackground(new java.awt.Color(235, 198, 128));
         jLabel119.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/footer (4).png"))); // NOI18N
@@ -2518,12 +2577,12 @@ private void setEditBook(BasicDBObject search){
             try{
             dockBook= books.findOne(search);
             if(dockBook==null){
-                JOptionPane.showMessageDialog(this, "ไม่มี หนังสือ นี้ในระบบ");
+                JOptionPane.showMessageDialog(this, "ไม่มีหนังสือนี้ในระบบ");
                 setVisibleEditfield(false);
 
             }else{
                 
-                JOptionPane.showMessageDialog(this, "มี หนังสือ นี้ในระบบ");
+                JOptionPane.showMessageDialog(this, "พบหนังสือนี้ในระบบ");
                 setVisibleEditfield(true);
                 
                 n_book.setText((String) dockBook.get("name_Book"));
@@ -2624,7 +2683,7 @@ private void addBook(){
 
             document.put("Detail",document1);
             books.insert(document);
-            JOptionPane.showMessageDialog(this, "เพิ่มข็อมูลรียบร้อย");                        
+            JOptionPane.showMessageDialog(this, "เพิ่มข้อมูลเรียบร้อย");                        
         } catch (IOException ex) {            
         }
 }
@@ -2695,7 +2754,7 @@ private void createUser() {
                 setAllVisibleFalse();
                 panelLogin.setVisible(true);
                 }catch(NumberFormatException e){
-                    JOptionPane.showMessageDialog(this, "โปรดใส่เลขไปรษณีให้ถูกต้อง");
+                    JOptionPane.showMessageDialog(this, "โปรดใส่เลขไปรษณีย์ให้ถูกต้อง");
                     jTextField14.setText(null);
                 }               
     }
@@ -3023,7 +3082,7 @@ private void setOther(){
             searchQuery.put("username", ID);
             dockUser = user.findOne(searchQuery);
             if(dockUser!=null){
-                JOptionPane.showMessageDialog(this, "username ซ้ำ");
+                JOptionPane.showMessageDialog(this, "Username ซ้ำ");
                 
             }else{
                 if(!passs.equals(passf)){
@@ -3039,7 +3098,7 @@ private void setOther(){
 
     private void deskillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deskillActionPerformed
             deleteBook();
-            JOptionPane.showMessageDialog(this, "ลบเรียบร้อยแล้ว");
+            JOptionPane.showMessageDialog(this, "ลบข้อมูลเรียบร้อย");
             setVisibleEditfield(false);  
             search.setText(null);
             setModeil();
@@ -3048,7 +3107,7 @@ private void setOther(){
 
     private void upskillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upskillActionPerformed
             editUpdate();    
-            JOptionPane.showMessageDialog(this, "แก้ไขเรียบร้อย");            
+            JOptionPane.showMessageDialog(this, "แก้ไขข้อมูลเรียบร้อย");            
             setVisibleEditfield(false);   
             setModeil();       
     }//GEN-LAST:event_upskillActionPerformed
@@ -3281,7 +3340,7 @@ private void setOther(){
             resetTextAdd();
             setModeil();
         }else{
-            JOptionPane.showMessageDialog(this, "คุณใส่รายละเอียดไม่ครบ");
+            JOptionPane.showMessageDialog(this, "โปรดใส่รายละเอียดให้ครบถ้วน");
         }
     }//GEN-LAST:event_dtskillActionPerformed
 
@@ -3654,7 +3713,6 @@ private void setOther(){
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
@@ -3718,8 +3776,12 @@ private void setOther(){
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
