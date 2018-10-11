@@ -93,12 +93,12 @@ public void close(){
         im_book = new javax.swing.JTextField();
         EX_book2 = new javax.swing.JButton();
         jLabel61 = new javax.swing.JLabel();
-        jLabel118 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<String>();
-        jComboBox4 = new javax.swing.JComboBox<String>();
-        jComboBox5 = new javax.swing.JComboBox<String>();
-        jComboBox2 = new javax.swing.JComboBox<String>();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
         deskill = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         panelAdd = new javax.swing.JPanel();
         jLabel87 = new javax.swing.JLabel();
@@ -119,11 +119,10 @@ public void close(){
         jLabel103 = new javax.swing.JLabel();
         jnum = new javax.swing.JTextField();
         jLabel105 = new javax.swing.JLabel();
-        jLabel109 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<String>();
-        jComboBox7 = new javax.swing.JComboBox<String>();
-        jComboBox8 = new javax.swing.JComboBox<String>();
-        jComboBox9 = new javax.swing.JComboBox<String>();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        jComboBox8 = new javax.swing.JComboBox<>();
+        jComboBox9 = new javax.swing.JComboBox<>();
         jPanel20 = new javax.swing.JPanel();
         panelAllBookImg = new javax.swing.JPanel();
         jLabel123 = new javax.swing.JLabel();
@@ -175,7 +174,7 @@ public void close(){
         jLabel54 = new javax.swing.JLabel();
         panelAllBook = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<String>();
+        jList3 = new javax.swing.JList<>();
         jLabel37 = new javax.swing.JLabel();
         jButton15 = new javax.swing.JButton();
         jLabel70 = new javax.swing.JLabel();
@@ -225,7 +224,7 @@ public void close(){
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<String>();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel16 = new javax.swing.JPanel();
         panelRule = new javax.swing.JPanel();
         jLabel116 = new javax.swing.JLabel();
@@ -282,7 +281,7 @@ public void close(){
         jLabel8 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<String>();
+        jList2 = new javax.swing.JList<>();
         jButton9 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
@@ -632,7 +631,7 @@ public void close(){
                 im_bookActionPerformed(evt);
             }
         });
-        panelEdit.add(im_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, 70, -1));
+        panelEdit.add(im_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, 180, 30));
 
         EX_book2.setBackground(new java.awt.Color(235, 198, 128));
         EX_book2.setFont(new java.awt.Font("Ekkamai Standard", 1, 13)); // NOI18N
@@ -643,27 +642,14 @@ public void close(){
                 EX_book2ActionPerformed(evt);
             }
         });
-        panelEdit.add(EX_book2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 120, 30));
+        panelEdit.add(EX_book2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 230, 120, 30));
 
         jLabel61.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
         jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         panelEdit.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, 140, 170));
 
-        jLabel118.setFont(new java.awt.Font("Ekkamai Standard", 1, 12)); // NOI18N
-        jLabel118.setForeground(new java.awt.Color(0, 102, 204));
-        jLabel118.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Add Folder น้ำเงิน_15px.png"))); // NOI18N
-        jLabel118.setText("เพิ่มหนังสือ");
-        jLabel118.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel118.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel118MouseClicked(evt);
-            }
-        });
-        panelEdit.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, 140, -1));
-
         jComboBox3.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox3ActionPerformed(evt);
@@ -672,7 +658,7 @@ public void close(){
         panelEdit.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 190, 30));
 
         jComboBox4.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox4ActionPerformed(evt);
@@ -681,11 +667,11 @@ public void close(){
         panelEdit.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 200, 30));
 
         jComboBox5.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
         panelEdit.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, 70, -1));
 
         jComboBox2.setFont(new java.awt.Font("Ekkamai Standard", 0, 14)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ไทย", "english" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ไทย", "english" }));
         panelEdit.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 100, 30));
 
         deskill.setBackground(new java.awt.Color(235, 198, 128));
@@ -699,6 +685,18 @@ public void close(){
             }
         });
         panelEdit.add(deskill, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 350, 160, 40));
+
+        jButton24.setBackground(new java.awt.Color(235, 198, 128));
+        jButton24.setFont(new java.awt.Font("Ekkamai Standard", 1, 15)); // NOI18N
+        jButton24.setForeground(new java.awt.Color(51, 51, 51));
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Add Folder_15px.png"))); // NOI18N
+        jButton24.setText("เพิ่มหนังสือ");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
+        panelEdit.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 17, 130, 30));
 
         jPanel17.setBackground(new java.awt.Color(255, 250, 240));
         panelEdit.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 900, 490));
@@ -734,7 +732,7 @@ public void close(){
         jLabel90.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/java/myapp/images/Xlarge Icons_20px.png"))); // NOI18N
         jLabel90.setText("รูปหนังสือ");
-        panelAdd.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 130, 30));
+        panelAdd.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 130, 30));
 
         jLabel91.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel91.setForeground(java.awt.Color.darkGray);
@@ -761,7 +759,7 @@ public void close(){
                 jImgUPActionPerformed(evt);
             }
         });
-        panelAdd.add(jImgUP, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 260, 80, 30));
+        panelAdd.add(jImgUP, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 287, 170, 30));
 
         EX_book.setBackground(new java.awt.Color(235, 198, 128));
         EX_book.setFont(new java.awt.Font("Ekkamai Standard", 1, 14)); // NOI18N
@@ -773,7 +771,7 @@ public void close(){
                 EX_bookActionPerformed(evt);
             }
         });
-        panelAdd.add(EX_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 170, 30));
+        panelAdd.add(EX_book, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 320, 170, 30));
 
         dtskill.setBackground(new java.awt.Color(235, 198, 128));
         dtskill.setFont(new java.awt.Font("Ekkamai Standard", 1, 14)); // NOI18N
@@ -789,7 +787,7 @@ public void close(){
 
         jLabel50.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
         jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        panelAdd.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 90, 120, 160));
+        panelAdd.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 90, 120, 160));
 
         jLabel99.setFont(new java.awt.Font("Ekkamai Standard", 0, 16)); // NOI18N
         jLabel99.setForeground(java.awt.Color.darkGray);
@@ -837,15 +835,12 @@ public void close(){
         jLabel105.setText("ปีที่พิมพ์");
         panelAdd.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 140, 30));
 
-        jLabel109.setFont(new java.awt.Font("Ekkamai Standard", 0, 10)); // NOI18N
-        panelAdd.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 90, 120, 160));
-
         jComboBox6.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกประเภท", "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกประเภท", "วรรณกรรม", "ประวัติศาสตร์", "วรรณคดีไทย", "สุขภาพ-ความงาม", "ชีวประวัติ", "สารคดี", "ปรัชญา", "นวนิยาย", "ความเชื่อ", "อัตชีวประวัติ", "ภาษา", "วิทยาศาสตร์", "โหราศาสตร์", "นวนิยาย", "จิตวิทยา", "พระราชประวัติ" }));
         panelAdd.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 150, -1));
 
         jComboBox7.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกสำนักพิมพ์", "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกสำนักพิมพ์", "สำนักพิมพ์แสงดาว", "สำนักพิมพ์โนเบิ้ลบุ๊คส์", "สำนักพิมพ์บีเวลล์ สปีเชียล" }));
         jComboBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox7ActionPerformed(evt);
@@ -854,11 +849,11 @@ public void close(){
         panelAdd.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 150, -1));
 
         jComboBox8.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกปี", "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกปี", "2540", "2541", "2542", "2543", "2544", "2545", "2546", "2547", "2548", "2549", "2550", "2551", "2252", "2553", "2554", "2555", "2556", "2557", "2558", "2559", "2560", "2561" }));
         panelAdd.add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 150, -1));
 
         jComboBox9.setFont(new java.awt.Font("Ekkamai Standard", 0, 15)); // NOI18N
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกภาษา", "ไทย", "english" }));
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกภาษา", "ไทย", "english" }));
         panelAdd.add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, 150, -1));
 
         jPanel20.setBackground(new java.awt.Color(255, 250, 240));
@@ -1242,7 +1237,7 @@ public void close(){
         panelBook.add(imgs, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 310, 370));
 
         jSpinner1.setFont(new java.awt.Font("Ekkamai Standard", 1, 24)); // NOI18N
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(1), Integer.valueOf(1), null, Integer.valueOf(1)));
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         jSpinner1.setVerifyInputWhenFocusTarget(false);
         jSpinner1.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
@@ -1478,7 +1473,7 @@ public void close(){
         panelRegis.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 290, 30, 30));
 
         jComboBox1.setFont(new java.awt.Font("Ekkamai Standard", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "เลือกจังหวัด", "กรุงเทพมหานคร ", "กระบี่ ", "กาญจนบุรี ", "กาฬสินธุ์ ", "กำแพงเพชร ", "ขอนแก่น ", "จันทบุรี ", "ฉะเชิงเทรา ", "ชลบุรี ", "ชัยนาท ", "ชัยภูมิ ", "ชุมพร ", "เชียงราย ", "เชียงใหม่ ", "ตรัง ", "ตราด ", "ตาก ", "นครนายก ", "นครปฐม ", "นครพนม ", "นครราชสีมา ", "นครศรีธรรมราช ", "นครสวรรค์ ", "นนทบุรี ", "นราธิวาส ", "น่าน ", "บึงกาฬ ", "บุรีรัมย์ ", "ปทุมธานี ", "ประจวบคีรีขันธ์ ", "ปราจีนบุรี ", "ปัตตานี ", "พระนครศรีอยุธยา ", "พังงา ", "พัทลุง ", "พิจิตร ", "พิษณุโลก ", "เพชรบุรี ", "เพชรบูรณ์ ", "แพร่ ", "พะเยา ", "ภูเก็ต ", "มหาสารคาม ", "มุกดาหาร ", "แม่ฮ่องสอน ", "ยะลา ", "ยโสธร ", "ร้อยเอ็ด ", "ระนอง ", "ระยอง ", "ราชบุรี ", "ลพบุรี ", "ลำปาง ", "ลำพูน ", "เลย ", "ศรีสะเกษ ", "สกลนคร ", "สงขลา ", "สตูล ", "สมุทรปราการ ", "สมุทรสงคราม ", "สมุทรสาคร ", "สระแก้ว ", "สระบุรี ", "สิงห์บุรี ", "สุโขทัย ", "สุพรรณบุรี ", "สุราษฎร์ธานี ", "สุรินทร์ ", "หนองคาย ", "หนองบัวลำภู ", "อ่างทอง ", "อุดรธานี ", "อุทัยธานี ", "อุตรดิตถ์ ", "อุบลราชธานี ", "อำนาจเจริญ " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "เลือกจังหวัด", "กรุงเทพมหานคร ", "กระบี่ ", "กาญจนบุรี ", "กาฬสินธุ์ ", "กำแพงเพชร ", "ขอนแก่น ", "จันทบุรี ", "ฉะเชิงเทรา ", "ชลบุรี ", "ชัยนาท ", "ชัยภูมิ ", "ชุมพร ", "เชียงราย ", "เชียงใหม่ ", "ตรัง ", "ตราด ", "ตาก ", "นครนายก ", "นครปฐม ", "นครพนม ", "นครราชสีมา ", "นครศรีธรรมราช ", "นครสวรรค์ ", "นนทบุรี ", "นราธิวาส ", "น่าน ", "บึงกาฬ ", "บุรีรัมย์ ", "ปทุมธานี ", "ประจวบคีรีขันธ์ ", "ปราจีนบุรี ", "ปัตตานี ", "พระนครศรีอยุธยา ", "พังงา ", "พัทลุง ", "พิจิตร ", "พิษณุโลก ", "เพชรบุรี ", "เพชรบูรณ์ ", "แพร่ ", "พะเยา ", "ภูเก็ต ", "มหาสารคาม ", "มุกดาหาร ", "แม่ฮ่องสอน ", "ยะลา ", "ยโสธร ", "ร้อยเอ็ด ", "ระนอง ", "ระยอง ", "ราชบุรี ", "ลพบุรี ", "ลำปาง ", "ลำพูน ", "เลย ", "ศรีสะเกษ ", "สกลนคร ", "สงขลา ", "สตูล ", "สมุทรปราการ ", "สมุทรสงคราม ", "สมุทรสาคร ", "สระแก้ว ", "สระบุรี ", "สิงห์บุรี ", "สุโขทัย ", "สุพรรณบุรี ", "สุราษฎร์ธานี ", "สุรินทร์ ", "หนองคาย ", "หนองบัวลำภู ", "อ่างทอง ", "อุดรธานี ", "อุทัยธานี ", "อุตรดิตถ์ ", "อุบลราชธานี ", "อำนาจเจริญ " }));
         jComboBox1.setBorder(null);
         jComboBox1.setFocusable(false);
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -2293,8 +2288,7 @@ private void setAllVisibleFalse(){
             EX_book2.setVisible(false);
             jButton2.setVisible(false);
             jButton5.setVisible(false);
-            jButton13.setVisible(false);
-            jSpinner1.setVisible(false);
+            
             jLabel61.setVisible(false);
             jComboBox3.setVisible(false);
             jComboBox4.setVisible(false);
@@ -2402,8 +2396,7 @@ private void checkUserAndSet(){
                jButton2.setVisible(true);
             }else if(id_user!=0){
                jButton5.setVisible(true);
-               jButton13.setVisible(true);
-               jSpinner1.setVisible(true);
+               
             }
             if(id_user!=0){
                 jButton1.setText("ออกจากระบบ");
@@ -2414,8 +2407,7 @@ private void checkUserAndSet(){
                 jButton1.setText("เข้าสู่ระบบ");
                 jButton2.setVisible(false);
                 jButton5.setVisible(false);
-                jButton13.setVisible(false);
-                jSpinner1.setVisible(false);
+                
                 jButton5.setText("0");
             }
 }
@@ -2499,6 +2491,9 @@ private boolean setBook(BasicDBObject search){
                 try{
                     DBObject a = books.findOne(search);
                 if(a!=null){
+                jSpinner1.setVisible(true);
+                jButton13.setVisible(true);
+                 jSpinner1.setValue(1);
                 String name = (String) a.get("name_Book");
                 String author = (String) a.get("name_Author");
                 String type = (String) a.get("Type_Book");
@@ -2536,10 +2531,7 @@ private boolean setBook(BasicDBObject search){
 
                      newImage = img.getScaledInstance(imgs.getWidth(), imgs.getHeight(), Image.SCALE_DEFAULT);
                     imgs.setIcon(new ImageIcon(newImage));
-                    if(admin!=true&&id_user!=0){
-                        jButton13.setVisible(true);
-                        jSpinner1.setVisible(true);
-                    }
+                   
                     return false;
                 } 
                 }
@@ -3019,8 +3011,11 @@ private void setOther(){
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         
-         if(jLabel23.getText()==null){
-             JOptionPane.showMessageDialog(this, "ต้องค้นหาสินค้า หรือเลือกสินค้าก่อนใส่ตะกร้า");
+         if(id_user==0){
+              setAllVisibleFalse();
+            panelLogin.setVisible(true);
+         }else if(admin==true){
+             JOptionPane.showMessageDialog(this, "แอดมินไม่สามารถสั่งซื้อสินค้าได้");
          }else{
             orderList();
             JOptionPane.showMessageDialog(this, "ใส่ตะกร้าแล้ว");
@@ -3289,7 +3284,7 @@ private void setOther(){
             String type = (String) dockUser.get("id_type");
 
             if(pass.equals(PASS)){
-                JOptionPane.showMessageDialog(this, "success");
+                JOptionPane.showMessageDialog(this, "เข้าสู่ระบบสำเร็จ");
                 nameuse=ID;
                 double id_userdb = (double)dockUser.get("id_user");
                 int id_use = (int) id_userdb;
@@ -3505,11 +3500,6 @@ private void setOther(){
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jLabel118MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel118MouseClicked
-        setAllVisibleFalse();
-        panelAdd.setVisible(true);
-    }//GEN-LAST:event_jLabel118MouseClicked
-
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox3ActionPerformed
@@ -3530,6 +3520,11 @@ private void setOther(){
        setAllVisibleFalse();
         panelAllBook.setVisible(true);
     }//GEN-LAST:event_jButton40ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+       setAllVisibleFalse();
+        panelAdd.setVisible(true);
+    }//GEN-LAST:event_jButton24ActionPerformed
     public static void main(String args[]) {
           java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -3563,6 +3558,7 @@ private void setOther(){
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
@@ -3604,7 +3600,6 @@ private void setOther(){
     private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
-    private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel111;
@@ -3614,7 +3609,6 @@ private void setOther(){
     private javax.swing.JLabel jLabel115;
     private javax.swing.JLabel jLabel116;
     private javax.swing.JLabel jLabel117;
-    private javax.swing.JLabel jLabel118;
     private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel123;
@@ -3778,7 +3772,6 @@ private void setOther(){
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
